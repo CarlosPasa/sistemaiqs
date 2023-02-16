@@ -190,7 +190,7 @@ public function new_pass()
 			'reset_token'	=>	'',
 		]);
 
-		$this->session->set_flashdata('message', 'Se ha actualizado la nueva contraseña, puede iniciar sesión ahora');
+		$this->session->set_flashdata('message', 'Se ha actualizado la nueva contraseï¿½a, puede iniciar sesiï¿½n ahora');
 		$this->session->set_flashdata('message_type', 'success');
 		redirect('login', 'refresh');
 

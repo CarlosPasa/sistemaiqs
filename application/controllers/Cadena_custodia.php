@@ -8,6 +8,7 @@ class Cadena_custodia extends MY_Controller {
 		parent::__construct();
 		//Models
 		$this->load->model('obra_model');
+		$this->load->model('cliente_model');
 		//Textos
 		$this->page_data['page']->title = 'Cadena de Custodia';
 		$this->page_data['page']->menu = 'cadeba custodia';
@@ -26,13 +27,25 @@ class Cadena_custodia extends MY_Controller {
 	public function nuevo()
 	{
 		ifPermissions('obra_add');
-		$this->page_data['accion'] = "Nuevo cadena_custodia";
+		$this->page_data['accion'] = "Cadena de custodia 202302";
 		$this->page_data['return_url'] = "cadena_custodia";
 		$this->page_data['postAction'] = "cadena_custodia/nuevoAction";
 		$data = array(
 					'id' => "0",
-					'txtNombre' => "",
-					'txtMonto' => ""
+					'cbCliente' => "",
+					'txtDireccion'=>"",
+					'txtDistrito'=>"",
+					'txtProvincia'=>"Talara",
+					'txtDepartamento'=>"Piura",
+					'txtEmail'=>"",
+					'txtTelefono'=>"",
+					'txtCelular'=>"",
+					'txtFecha'=>"",
+					'chkCliente'=>"",
+					'chkIQS'=>"",
+					'txtMuestrador'=>"",
+					'txtAntecedentes'=>"",
+					'cliente_data' => $this->cliente_model->getActive()
 				);
 		$this->load->view('cadena_custodia/cadena_custodia_f', $this->page_data + $data);
 	}

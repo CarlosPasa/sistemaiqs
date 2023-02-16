@@ -18,8 +18,8 @@
 
       <div class="box-tools pull-right">
         <?php 
-        if (hasPermissions('factura_add'))
-          vButtonDefault("btnFacturaNuevo", "Nuevo", "", "fa fa-plus", "btn btn-primary", "onFactura_nuevo()","", false);
+        if (hasPermissions('cliente_add'))
+          vButtonDefault("btnClienteNuevo", "Nuevo", "", "fa fa-plus", "btn btn-primary", "onCliente_nuevo()","", false);
         ?>
         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                 title="Collapse">
@@ -34,15 +34,14 @@
       <?php
       
         $Actions = array();
-          if (hasPermissions('factura_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("factura/edit"),"id"));
-          if (hasPermissions('factura_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("factura/deleteAction"),"id"));
+          if (hasPermissions('cliente_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("cliente/edit"),"id"));
+          if (hasPermissions('cliente_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("cliente/deleteAction"),"id"));
         $modelField = array(
           new modelFieldItem(array("nombre"=>"ID", "nombreData"=>"id","hAlign"=>"center","ancho"=>"60px")),
-          new modelFieldItem(array("nombre"=>"Serie", "nombreData"=>"serie")),
-          new modelFieldItem(array("nombre"=>"Correlativo", "nombreData"=>"correlativo")),
+          new modelFieldItem(array("nombre"=>"Nombre del cliente", "nombreData"=>"nombre_cliente")),
           new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
         );
-        vTable($modelField, stdToArray($facturas), 0, 'tlbListado');
+        vTable($modelField, stdToArray($clientes), 0, 'tlbListado');
       ?>
     </div>
     <!-- /.box-body -->
@@ -52,7 +51,7 @@
 </section>
 <!-- /.content -->
 
-<div id="divFactura"></div>
+<div id="divCliente"></div>
 
 <?php include viewPath('includes/footer'); ?>
 
@@ -60,27 +59,27 @@
   $('table').DataTable({"autoWidth": false});
 </script>
 
-<!-- Factura: Modal -->
+<!-- Cliente: Modal -->
 <script type="text/javascript">
-  function onFactura_nuevo() {
-    $url = '<?php echo site_url('factura/nuevoModal') ?>';
-    $titulo = "Agregar Factura";
+  function onCliente_nuevo() {
+    $url = '<?php echo site_url('cliente/nuevoModal') ?>';
+    $titulo = "Agregar Cliente";
     $("#pageSpin").show();
     $.ajax({
       type: 'GET',
       url: $url,
-      data: { "idFactura": 0 },
+      data: { "idCliente": 0 },
       dataType: 'html',
       success: function (html) {
         $("#pageSpin").hide();
-        $('#divFactura').html(html);
-        $('#modal_factura').modal('show');
-        $('#modal_factura .modal-title').text($titulo);
+        $('#divCliente').html(html);
+        $('#modal_cliente').modal('show');
+        $('#modal_cliente .modal-title').text($titulo);
       }
     });
   }
 
-  function onFactura_close() {
-    $('#modal_factura').modal('hide');
+  function onCliente_close() {
+    $('#modal_cliente').modal('hide');
   }
 </script>

@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Factura_model extends MY_Model {
+class Cliente_model extends MY_Model {
 
-	public $table = 'factura';
+	public $table = 'cliente';
 
 	public function __construct()
 	{
@@ -28,19 +28,7 @@ class Factura_model extends MY_Model {
 		]);
 	}
 
-	public function getDetalle($idFactura)
-	{
-		$this->db->select('factura_detalle.*');
-		$this->db->select('producto.nombre as "producto.nombre"');
-		$this->db->from('factura_detalle')
-			->join('producto', 'factura_detalle.id_producto = producto.id','left');
-		$this->db->where('factura_detalle.estado','1');
-		$this->db->where('factura_detalle.id_factura',$idFactura);
-		$query = $this->db->get();
-		return $query->result();
-	}
-
 }
 
-/* End of file Factura_model.php */
-/* Location: ./application/models/Factura_model.php */
+/* End of file Cliente_model.php */
+/* Location: ./application/models/Cliente_model.php */

@@ -197,7 +197,8 @@ if (!function_exists('logged')) {
 		$logged = !empty($CI->session->userdata('login')) ? $CI->users_model->getById($CI->session->userdata('logged')['id']) : false;
 
 		if(!$logged)
-			$logged = $CI->users_model->getById( json_decode(get_cookie('logged'))->id );
+			//$logged = $CI->users_model->getById( json_decode(get_cookie('logged'))->id );
+			$logged = $CI->users_model->getById(get_cookie('loginId'));
 
 		return (!$key)?$logged:$logged->{$key};
 

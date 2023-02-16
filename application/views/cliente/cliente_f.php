@@ -33,53 +33,11 @@
 			<?php vHidden('id', $id); ?>
 			<div class="form-group">
 				<?php vLabel('txtSerie','Serie'); ?>
-				<?php vTextBox('txtSerie',$txtSerie, 'Ingrese serie',null,null,null,null,false,"required"); ?>
+				<?php vTextBox('txtNombreCliente',$txtNombreCliente, 'Ingrese serie',null,null,null,null,false,"required"); ?>
 			</div>
-			<div class="form-group">
-				<?php vLabel('txtCorrelativo','Correlativo'); ?>
-				<?php vTextBox('txtCorrelativo',$txtCorrelativo, 'Ingrese correlativo',null,null,null,null,false,"required"); ?>
-			</div>
-			<br />
 		</div>
 	</div>
 	<?php echo form_close(); ?>
-	
-	<div class="col-lg-12">
-	<div class="box-header with-border">
-		<h3 class="box-title">Detalle</h3>
-		<div class="row text-right" style="padding-right: 1.5%;">
-			<?php
-			vButtonDefault("btnDetalleNuevo", "Agregar", "", "fa fa-plus", "btn btn-primary", "onDetalle_nuevo()","",false);
-			?>
-		</div>
-		<div id="gridDetalle" >
-			<?php
-				$Actions = array(
-					new modelFieldAction(array("class"=>"btn btn-sm btn-info", 
-												"icono"=>"glyphicon glyphicon-pencil",
-												"tooltip"=>"Modificar",
-												"columnNameID"=>"id",
-												"onClick"=>"onDetalle_edit(_id_)")
-										),
-					new modelFieldAction(array("class"=>"btn btn-sm btn-danger", 
-												"icono"=>"glyphicon glyphicon-trash",
-												"tooltip"=>"Eliminar",
-												"columnNameID"=>"id",
-												"onClick"=>"onDetalle_delete(_id_)")
-										)
-					);
-				$modelFieldDetalle = array();
-				array_push($modelFieldDetalle, new modelFieldItem(array("nombre"=>"Cantidad", "nombreData"=>"cantidad")) );
-				array_push($modelFieldDetalle, new modelFieldItem(array("nombre"=>"Producto", "nombreData"=>"producto.nombre")) );
-				array_push($modelFieldDetalle, new modelFieldItem(array("nombre"=>"Precio", "nombreData"=>"precio")) );
-				array_push($modelFieldDetalle,
-								new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
-								);
-			?>
-		</div>
-		<div id="divDetalle"></div>
-	</div>
-	</div>
 
     <div class="box-footer">
 		<button type="button" class="btn btn-flat btn-primary" onClick="onDetalleSubmit()">Guardar</button>

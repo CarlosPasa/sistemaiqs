@@ -36,9 +36,9 @@
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
-            <label>
+            <!--label>
               <input type="checkbox" <?php echo post('remember_me')?'checked':'' ?> name="remember_me" /> Remember Me
-            </label>
+            </label-->
           </div>
         </div>
         <!-- /.col -->
