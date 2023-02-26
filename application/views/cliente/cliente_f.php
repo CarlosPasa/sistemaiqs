@@ -19,11 +19,11 @@
         <a href="<?php echo url('/'.$return_url) ?>" class="btn btn-flat btn-default">
           <i class="fa fa-arrow-left"></i> &nbsp;&nbsp; Regresar
         </a>
-        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+        <!--button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                 title="Collapse">
           <i class="fa fa-minus"></i></button>
         <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-          <i class="fa fa-times"></i></button>
+          <i class="fa fa-times"></i></button-->
       </div>
     </div>
 
@@ -87,14 +87,16 @@ function onDetalleSubmit(){
 			console.log(obj);
 			if (obj['STATUS']=='true'){
 				if (obj['mensaje'] != null ){
-					ShowDialogInformation('Mensaje', obj['mensaje'], obj['redirect_url'])
+					alerta('success',obj['mensaje'],'¡Importante!');					
+					//ShowDialogInformation('Mensaje', obj['mensaje'], obj['redirect_url'])
 				}
 				if (obj['redirect_url'] != null){
 					window.location.href = obj['redirect_url'];
 				}
 			}
 			else{
-				ShowDialogWarning('Información', obj['mensaje'],'');
+				alerta('error',obj['mensaje'],'¡Importante!');
+				//ShowDialogWarning('Información', obj['mensaje'],'');
 			}
 		},
 		error: function(request, status, error){

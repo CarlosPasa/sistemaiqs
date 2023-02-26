@@ -124,3 +124,42 @@ function ajaxPost(postURL, data, button, divSpin = null){
 			}
 		});
 }
+function alerta(tipo,mensaje,titulo){
+
+	toastr.options = {
+
+		"closeButton": true, //Si se muestra un botón de cierre
+
+		"debug": false,//En caso de que los detalles de la depuración sean enviados a la consola
+
+		"newestOnTop": false,//Establezca la notificacion más nueva para que aparezca en la parte superior
+
+		"progressBar": true, //Aparece la barra de progreso
+
+		"positionClass": "toast-top-right",// en posicion en la parte de abajo a la derecha
+
+		"preventDuplicates": true,//evitar la duplicidad de alertas
+
+		"onclick": null,//Función para ejecutar en clic tostado
+
+		"showDuration": "10000",//Tiempo en milisegundos que debe durar la notificacion
+
+		"hideDuration": "1000",//Tiempo en milisegundos que debe durar la notificacion oculta
+
+		"timeOut": "10000",//Tiempo que deja de aparecer la notificacion
+
+		"extendedTimeOut": "10000",//Tiempo en milisegundos, que la notificacion debe mostrarse después de pasar el mouse
+
+		"showEasing": "swing",
+
+		"hideEasing": "linear",
+
+		"showMethod": "fadeIn",
+
+		"hideMethod": "fadeOut"
+
+	};
+
+	toastr[""+ tipo +""]("" + mensaje +"",""+ titulo +"");
+
+}

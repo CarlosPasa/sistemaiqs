@@ -47,7 +47,10 @@
   <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+  <!-- Toastr -->
+  <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/toastr/toastr.css">
+	<!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/iCheck/all.css">
   <!-- Uncomment the below code if you want to use official AdminLte Theme -->
   <!-- Theme style -->
   <!-- <link rel="stylesheet" href="<?php echo $url->assets ?>css/AdminLTE.min.css"> -->
@@ -92,7 +95,8 @@
 
   <!-- FormValidator -->
   <script src="<?php echo $url->assets ?>componentes/vForm/vFormValidator.js"></script>
-
+  <!-- toastr -->
+  <script src="<?php echo $url->assets ?>plugins/toastr/toastr.js"></script>
   <style>
     .img-avtar{
       border-radius: 50%;

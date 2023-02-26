@@ -64,12 +64,14 @@ function onClienteSubmit(){
 			console.log(obj);
 			if (obj['STATUS']=='true'){
 				onCliente_close();
-				if (obj['redirect_url'] != null){
+				alerta('success',obj['mensaje'],'¡Importante!');
+				if (obj['redirect_url'] != null){					
 					window.location.href = obj['redirect_url'];
 				}
 			}
 			else{
-				ShowDialogWarning('Información', obj['mensaje'],'');
+				alerta('error',obj['mensaje'],'¡Importante!');
+				//ShowDialogWarning('Información', obj['mensaje'],'');
 			}
 		},
 		error: function(request, status, error){
