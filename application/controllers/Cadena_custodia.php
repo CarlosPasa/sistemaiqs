@@ -9,6 +9,8 @@ class Cadena_custodia extends MY_Controller {
 		//Models
 		$this->load->model('obra_model');
 		$this->load->model('cliente_model');
+		$this->load->model('empleado_model');
+		$this->load->model('proyecto_model');
 		//Textos
 		$this->page_data['page']->title = 'Cadena de Custodia';
 		$this->page_data['page']->menu = 'cadeba custodia';
@@ -18,7 +20,7 @@ class Cadena_custodia extends MY_Controller {
 
 	public function index()
 	{
-		ifPermissions('obra_list');
+		ifPermissions('cadena_custodia_list');
   		$this->page_data['tablaTitulo'] = "Lista de Cadena de custodias";
 		$this->page_data['obra'] = $this->obra_model->getActive();
 		$this->load->view('cadena_custodia/cadena_custodia_l', $this->page_data);
@@ -26,13 +28,14 @@ class Cadena_custodia extends MY_Controller {
 
 	public function nuevo()
 	{
-		ifPermissions('obra_add');
+		ifPermissions('cadena_custodia_add');
 		$this->page_data['accion'] = "Cadena de custodia 202302";
 		$this->page_data['return_url'] = "cadena_custodia";
 		$this->page_data['postAction'] = "cadena_custodia/nuevoAction";
 		$data = array(
 					'id' => "0",
 					'cbCliente' => "",
+					'cbProyecto' => "",
 					'txtDireccion'=>"",
 					'txtDistrito'=>"",
 					'txtProvincia'=>"Talara",
@@ -43,16 +46,18 @@ class Cadena_custodia extends MY_Controller {
 					'txtFecha'=>"",
 					'chkCliente'=>"",
 					'chkIQS'=>"",
-					'txtMuestrador'=>"",
+					'cbEmpleado'=>"",
 					'txtAntecedentes'=>"",
-					'cliente_data' => $this->cliente_model->getActive()
+					'cliente_data' => $this->cliente_model->getActive(),
+					'empleado_data' => $this->empleado_model->getActive(),
+					'proyecto_data' => $this->proyecto_model->getActive()
 				);
 		$this->load->view('cadena_custodia/cadena_custodia_f', $this->page_data + $data);
 	}
 
 	public function nuevoAction()
 	{
-		ifPermissions('obra_add');
+		ifPermissions('cadena_custodia_add');
 		postAllowed();
 		$obra = $this->obra_model->create([
 			'o_nombre' => $this->input->post('txtNombre'),
@@ -68,7 +73,7 @@ class Cadena_custodia extends MY_Controller {
 
 	public function edit($id)
 	{
-		ifPermissions('obra_edit');
+		ifPermissions('cadena_custodia_edit');
 		$this->page_data['accion'] = "Editar cadena_custodia";
 		$this->page_data['return_url'] = "cadena_custodia";
 		$this->page_data['postAction'] = "cadena_custodia/editAction";
@@ -83,7 +88,7 @@ class Cadena_custodia extends MY_Controller {
 
 	public function editAction()
 	{
-		ifPermissions('obra_edit');
+		ifPermissions('cadena_custodia_edit');
 		postAllowed();
 		$id = $this->input->post('id');
 		$data = [
@@ -100,7 +105,7 @@ class Cadena_custodia extends MY_Controller {
 
 	public function deleteAction($id)
 	{
-		ifPermissions('obra_delete');
+		ifPermissions('cadena_custodia_delete');
 		$id = $this->obra_model->delete_logic($id);
 		$this->activity_model->action_delete("Obra", $id);
 		$status = array(

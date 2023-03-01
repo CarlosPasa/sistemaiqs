@@ -19,11 +19,11 @@
         <a href="<?php echo url('/'.$return_url) ?>" class="btn btn-flat btn-default">
           <i class="fa fa-arrow-left"></i> &nbsp;&nbsp; Regresar
         </a>
-        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+        <!--button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                 title="Collapse">
           <i class="fa fa-minus"></i></button>
         <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-          <i class="fa fa-times"></i></button>
+          <i class="fa fa-times"></i></button-->
       </div>
     </div>
 
@@ -49,7 +49,7 @@
           <?php vComboBoxLiveSearch('cbCliente', stdToArray($cliente_data), 'id', 'nombre_cliente',NULL,$cbCliente); ?>
       	</div>
         <div class="col-xs-4">
-          <?php vComboBoxLiveSearch('cbCliente', stdToArray($cliente_data), 'id', 'nombre_cliente',NULL,$cbCliente); ?>
+          <?php vComboBoxLiveSearch('cbProyecto', stdToArray($proyecto_data), 'id', 'nombre_proyecto',NULL,$cbProyecto); ?>
       	</div>
       </div>
       <br>
@@ -113,7 +113,7 @@
       <br>
       <div class="row">
         <div class="col-xs-1"><?php vLabel('txtCliente','Muestrado por:'); ?></div>
-        <div class="col-xs-3"><?php vTextBox('txtMuestrador',$txtMuestrador, 'Ingrese nombre',null,null,null,null,false,"required"); ?></div>
+        <div class="col-xs-3"><?php vComboBoxLiveSearch('cbEmpleado', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$cbEmpleado); ?></div>
         <div class="col-xs-1"><?php  vCheckBox('chkCliente','Cliente',$chkCliente, null,'1');?></div>
         <div class="col-xs-1"><?php  vCheckBox('chkIQS','IQS',$chkIQS, null,'1');?></div>
         

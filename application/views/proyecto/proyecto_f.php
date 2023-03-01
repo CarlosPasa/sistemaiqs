@@ -32,8 +32,8 @@
 		<div class="box-body col-lg-6">
 			<?php vHidden('id', $id); ?>
 			<div class="form-group">
-				<?php vLabel('txtSerie','Empleado'); ?>
-				<?php vTextBox('txtNombreCliente',$txtNombreCliente, 'Ingrese serie',null,null,null,null,false,"required"); ?>
+				<?php vLabel('txtSerie','Proyecto'); ?>
+				<?php vTextBox('txtNombreProyecto',$txtNombreProyecto, 'Ingrese serie',null,null,null,null,false,"required"); ?>
 			</div>
 		</div>
 	</div>

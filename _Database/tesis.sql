@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-02-2023 a las 15:21:16
+-- Tiempo de generación: 01-03-2023 a las 02:35:20
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -68,22 +68,156 @@ INSERT INTO `activity_logs` (`id`, `title`, `user`, `ip_address`, `created_at`, 
 (25, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-09 14:02:47', '2023-02-09 14:02:47'),
 (26, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-09 14:02:50', '2023-02-09 14:02:50'),
 (27, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-09 14:18:08', '2023-02-09 14:18:08'),
-(28, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-09 14:18:12', '2023-02-09 14:18:12');
+(28, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-09 14:18:12', '2023-02-09 14:18:12'),
+(29, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-09 14:22:48', '2023-02-09 14:22:48'),
+(30, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-09 14:22:52', '2023-02-09 14:22:52'),
+(31, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-09 14:24:30', '2023-02-09 14:24:30'),
+(32, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-09 14:24:33', '2023-02-09 14:24:33'),
+(33, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-09 14:24:53', '2023-02-09 14:24:53'),
+(34, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-10 01:41:34', '2023-02-10 01:41:34'),
+(35, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-10 01:41:42', '2023-02-10 01:41:42'),
+(36, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-10 01:41:47', '2023-02-10 01:41:47'),
+(37, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-10 01:41:55', '2023-02-10 01:41:55'),
+(38, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-10 01:42:01', '2023-02-10 01:42:01'),
+(39, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-10 01:59:58', '2023-02-10 01:59:58'),
+(40, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-10 02:00:02', '2023-02-10 02:00:02'),
+(41, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-10 02:01:19', '2023-02-10 02:01:19'),
+(42, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-10 02:01:23', '2023-02-10 02:01:23'),
+(43, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-10 02:25:58', '2023-02-10 02:25:58'),
+(44, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-10 02:26:02', '2023-02-10 02:26:02'),
+(45, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-10 03:54:16', '2023-02-10 03:54:16'),
+(46, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-13 13:02:16', '2023-02-13 13:02:16'),
+(47, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-13 13:19:39', '2023-02-13 13:19:39'),
+(48, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 14:52:40', '2023-02-15 14:52:40'),
+(49, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 14:52:53', '2023-02-15 14:52:53'),
+(50, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 14:53:46', '2023-02-15 14:53:46'),
+(51, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 14:55:23', '2023-02-15 14:55:23'),
+(52, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 14:55:28', '2023-02-15 14:55:28'),
+(53, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:05:59', '2023-02-15 15:05:59'),
+(54, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:06:08', '2023-02-15 15:06:08'),
+(55, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:07:21', '2023-02-15 15:07:21'),
+(56, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:07:27', '2023-02-15 15:07:27'),
+(57, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:08:01', '2023-02-15 15:08:01'),
+(58, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:08:07', '2023-02-15 15:08:07'),
+(59, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:08:46', '2023-02-15 15:08:46'),
+(60, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:08:51', '2023-02-15 15:08:51'),
+(61, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:09:19', '2023-02-15 15:09:19'),
+(62, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:09:24', '2023-02-15 15:09:24'),
+(63, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:10:12', '2023-02-15 15:10:12'),
+(64, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:11:13', '2023-02-15 15:11:13'),
+(65, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:11:58', '2023-02-15 15:11:58'),
+(66, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:18:38', '2023-02-15 15:18:38'),
+(67, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:22:59', '2023-02-15 15:22:59'),
+(68, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:23:04', '2023-02-15 15:23:04'),
+(69, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:24:15', '2023-02-15 15:24:15'),
+(70, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:24:20', '2023-02-15 15:24:20'),
+(71, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:28:13', '2023-02-15 15:28:13'),
+(72, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:28:19', '2023-02-15 15:28:19'),
+(73, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:30:53', '2023-02-15 15:30:53'),
+(74, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:30:58', '2023-02-15 15:30:58'),
+(75, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:31:18', '2023-02-15 15:31:18'),
+(76, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:31:24', '2023-02-15 15:31:24'),
+(77, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:32:10', '2023-02-15 15:32:10'),
+(78, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:32:16', '2023-02-15 15:32:16'),
+(79, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:32:32', '2023-02-15 15:32:32'),
+(80, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:32:37', '2023-02-15 15:32:37'),
+(81, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:32:49', '2023-02-15 15:32:49'),
+(82, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:32:54', '2023-02-15 15:32:54'),
+(83, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:35:10', '2023-02-15 15:35:10'),
+(84, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:35:15', '2023-02-15 15:35:15'),
+(85, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:36:04', '2023-02-15 15:36:04'),
+(86, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:36:09', '2023-02-15 15:36:09'),
+(87, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:36:44', '2023-02-15 15:36:44'),
+(88, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:36:49', '2023-02-15 15:36:49'),
+(89, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:37:04', '2023-02-15 15:37:04'),
+(90, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:37:08', '2023-02-15 15:37:08'),
+(91, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:40:47', '2023-02-15 15:40:47'),
+(92, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:40:52', '2023-02-15 15:40:52'),
+(93, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:41:30', '2023-02-15 15:41:30'),
+(94, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:41:34', '2023-02-15 15:41:34'),
+(95, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:42:29', '2023-02-15 15:42:29'),
+(96, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:42:34', '2023-02-15 15:42:34'),
+(97, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:44:28', '2023-02-15 15:44:28'),
+(98, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:47:24', '2023-02-15 15:47:24'),
+(99, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:47:29', '2023-02-15 15:47:29'),
+(100, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 15:47:59', '2023-02-15 15:47:59'),
+(101, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:48:04', '2023-02-15 15:48:04'),
+(102, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 15:52:21', '2023-02-15 15:52:21'),
+(103, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 16:01:49', '2023-02-15 16:01:49'),
+(104, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 16:13:12', '2023-02-15 16:13:12'),
+(105, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 16:13:16', '2023-02-15 16:13:16'),
+(106, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-15 16:20:45', '2023-02-15 16:20:45'),
+(107, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-15 16:20:49', '2023-02-15 16:20:49'),
+(108, 'Nuevo #Clientes creado por el usuario:Administrator', '1', '127.0.0.1', '2023-02-15 16:26:15', '2023-02-15 16:26:15'),
+(109, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-16 03:00:42', '2023-02-16 03:00:42'),
+(110, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-16 03:14:00', '2023-02-16 03:14:00'),
+(111, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-16 03:40:34', '2023-02-16 03:40:34'),
+(112, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-16 03:44:27', '2023-02-16 03:44:27'),
+(113, 'Administrator Logged in', '1', '::1', '2023-02-23 19:50:07', '2023-02-23 19:50:07'),
+(114, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-26 23:46:59', '2023-02-26 23:46:59'),
+(115, 'Administrator Logged in', '1', '::1', '2023-02-26 23:48:19', '2023-02-26 23:48:19'),
+(116, 'Company Settings Updated by User: #1', '1', '::1', '2023-02-27 00:02:36', '2023-02-27 00:02:36'),
+(117, 'Role #1 Updated by User: #1', '1', '::1', '2023-02-27 00:04:12', '2023-02-27 00:04:12'),
+(118, 'User: Administrator Logged Out', '1', '::1', '2023-02-27 00:04:19', '2023-02-27 00:04:19'),
+(119, 'Administrator Logged in', '1', '::1', '2023-02-27 00:04:25', '2023-02-27 00:04:25'),
+(120, 'Role #1 Updated by User: #1', '1', '::1', '2023-02-27 00:04:43', '2023-02-27 00:04:43'),
+(121, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-27 22:29:27', '2023-02-27 22:29:27'),
+(122, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-27 23:28:32', '2023-02-27 23:28:32'),
+(123, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-27 23:28:37', '2023-02-27 23:28:37'),
+(124, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-02-27 23:30:44', '2023-02-27 23:30:44'),
+(125, 'Administrator Logged in', '1', '127.0.0.1', '2023-02-27 23:30:47', '2023-02-27 23:30:47'),
+(126, 'Nuevo #Empleados creado por el usuario:Administrator', '1', '127.0.0.1', '2023-02-27 23:33:27', '2023-02-27 23:33:27'),
+(127, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 00:59:57', '2023-03-01 00:59:57'),
+(128, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-01 01:17:37', '2023-03-01 01:17:37'),
+(129, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 01:17:41', '2023-03-01 01:17:41'),
+(130, 'Nuevo #Proyectos creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 01:20:43', '2023-03-01 01:20:43'),
+(131, 'Nuevo #Proyectos creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 01:22:21', '2023-03-01 01:22:21'),
+(132, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-01 01:30:37', '2023-03-01 01:30:37'),
+(133, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 01:30:43', '2023-03-01 01:30:43'),
+(134, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-01 01:34:23', '2023-03-01 01:34:23'),
+(135, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 01:34:27', '2023-03-01 01:34:27');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `factura`
+-- Estructura de tabla para la tabla `cliente`
 --
 
-CREATE TABLE `factura` (
+CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
-  `serie` varchar(5) NOT NULL,
-  `correlativo` varchar(20) NOT NULL,
-  `estado` int(11) NOT NULL,
+  `nombre_cliente` varchar(255) NOT NULL,
+  `estado` bit(1) NOT NULL DEFAULT b'1',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `nombre_cliente`, `estado`, `created_at`, `updated_at`) VALUES
+(1, 'Fiorella Eunice Ancajima Socola', b'1', '2023-02-15 16:26:15', '2023-02-27 23:14:17');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `empleado`
+--
+
+CREATE TABLE `empleado` (
+  `id` int(11) NOT NULL,
+  `nombre_empleado` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `estado` bit(1) DEFAULT b'1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `empleado`
+--
+
+INSERT INTO `empleado` (`id`, `nombre_empleado`, `created_at`, `updated_at`, `estado`) VALUES
+(1, 'Leandro Neira Chunga', '2023-02-27 23:33:27', '2023-02-27 23:33:35', b'1');
 
 -- --------------------------------------------------------
 
@@ -135,8 +269,10 @@ INSERT INTO `menu` (`id`, `name`, `title`, `icon`, `type_object`, `object`, `ord
 (6, 'permissions', 'Manage Permissions', 'fa fa-lock', 'Action', 'permissions', '2.4', 2, 1, '2020-04-20 05:00:00', NULL),
 (7, 'settings', 'Settings', 'fa fa-cog', 'Menu', '-', '3', 0, 1, '2020-04-20 05:00:00', NULL),
 (8, 'company', 'Company Settings', 'fa fa-circle-o', 'Action', 'settings/company', '3.1', 7, 1, '2020-04-20 05:00:00', NULL),
-(9, 'factura', 'Factura', 'fa fa-dollar', 'Action', '/factura', '1', 0, 1, '2023-02-01 20:34:57', '2023-02-01 20:34:57'),
-(10, 'cadena_custodia', 'Cadena de custodia', 'fa fa-book fa-fw', 'Action', '/cadena_custodia', '1', 0, 1, '2023-02-09 13:43:52', '2023-02-09 13:43:52');
+(9, 'cliente', 'Cliente', 'fa fa-users', 'Action', '/cliente', '1', 0, 1, '2023-02-01 20:34:57', '2023-02-01 20:34:57'),
+(10, 'cadena_custodia', 'Cadena de custodia', 'fa fa-archive', 'Action', '/cadena_custodia', '1', 0, 1, '2023-02-09 13:43:52', '2023-02-09 13:43:52'),
+(11, 'empleado', 'Empleado', 'fa fa-users', 'Action', '/empleado', '2', 0, 1, NULL, NULL),
+(12, 'proyecto', 'Proyecto', 'fa fa-archive', 'Action', '/proyecto', '2', 0, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -175,21 +311,26 @@ INSERT INTO `permissions` (`id`, `title`, `code`) VALUES
 (18, 'menu_edit', 'menu_edit'),
 (19, 'menu_delete', 'menu_delete'),
 (20, 'menu_view', 'menu_view'),
-(21, 'factura_list', 'factura_list'),
-(22, 'factura_add', 'factura_add'),
-(23, 'factura_edit', 'factura_edit'),
-(24, 'factura_delete', 'factura_delete'),
-(25, 'factura_view', 'factura_view'),
-(26, 'factura_detalle_list', 'factura_detalle_list'),
-(27, 'factura_detalle_add', 'factura_detalle_add'),
-(28, 'factura_detalle_edit', 'factura_detalle_edit'),
-(29, 'factura_detalle_delete', 'factura_detalle_delete'),
-(30, 'factura_detalle_view', 'factura_detalle_view'),
-(31, 'obra_list', 'obra_list'),
-(32, 'obra_add', 'obra_add'),
-(33, 'obra_edit', 'obra_edit'),
-(34, 'obra_delete', 'obra_delete'),
-(35, 'obra_view', 'obra_view');
+(21, 'cliente_list', 'cliente_list'),
+(22, 'cliente_add', 'cliente_add'),
+(23, 'cliente_edit', 'cliente_edit'),
+(24, 'cliente_delete', 'cliente_delete'),
+(25, 'cliente_view', 'cliente_view'),
+(26, 'proyecto_list', 'proyecto_list'),
+(27, 'proyecto_add', 'proyecto_add'),
+(28, 'proyecto_edit', 'proyecto_edit'),
+(29, 'proyecto_delete', 'proyecto_delete'),
+(30, 'proyecto_view', 'proyecto_view'),
+(31, 'obra_list', 'cadena_custodia_list'),
+(32, 'obra_add', 'cadena_custodia_add'),
+(33, 'obra_edit', 'cadena_custodia_edit'),
+(34, 'obra_delete', 'cadena_custodia_delete'),
+(35, 'obra_view', 'cadena_custodia_view'),
+(36, 'empleado_list', 'empleado_list'),
+(37, 'empleado_add', 'empleado_add'),
+(38, 'empleado_edit', 'empleado_edit'),
+(39, 'empleado_delete', 'empleado_delete'),
+(40, 'empleado_view', 'view');
 
 -- --------------------------------------------------------
 
@@ -218,6 +359,27 @@ INSERT INTO `producto` (`id`, `nombre`, `estado`, `created_at`, `updated_at`) VA
 (6, 'Cuaderno', 1, '2023-02-01 20:34:31', '2023-02-01 20:34:31'),
 (7, 'Lapicero', 1, '2023-02-01 20:34:31', '2023-02-01 20:34:31'),
 (8, 'Lapiz', 1, '2023-02-01 20:34:31', '2023-02-01 20:34:31');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `proyecto`
+--
+
+CREATE TABLE `proyecto` (
+  `id` int(11) NOT NULL,
+  `nombre_proyecto` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `estado` bit(1) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `proyecto`
+--
+
+INSERT INTO `proyecto` (`id`, `nombre_proyecto`, `estado`, `created_at`, `updated_at`) VALUES
+(1, 'Monitore de calidad agua de inyeccion', b'1', '2023-03-01 01:22:21', '2023-03-01 01:22:45');
 
 -- --------------------------------------------------------
 
@@ -284,8 +446,10 @@ INSERT INTO `role_menus` (`id`, `role`, `menu`) VALUES
 (6, 1, 'permissions'),
 (7, 1, 'settings'),
 (8, 1, 'company'),
-(10, 1, 'factura'),
-(11, 1, 'cadena_custodia');
+(11, 1, 'cadena_custodia'),
+(12, 1, 'cliente'),
+(13, 1, 'empleado'),
+(14, 1, 'proyecto');
 
 -- --------------------------------------------------------
 
@@ -324,21 +488,26 @@ INSERT INTO `role_permissions` (`id`, `role`, `permission`) VALUES
 (18, 1, 'menu_edit'),
 (19, 1, 'menu_delete'),
 (20, 1, 'menu_view'),
-(21, 1, 'factura_list'),
-(22, 1, 'factura_add'),
-(23, 1, 'factura_edit'),
-(24, 1, 'factura_delete'),
-(25, 1, 'factura_view'),
-(26, 1, 'factura_detalle_list'),
-(27, 1, 'factura_detalle_add'),
-(28, 1, 'factura_detalle_edit'),
-(29, 1, 'factura_detalle_delete'),
-(30, 1, 'factura_detalle_view'),
-(31, 1, 'obra_list'),
-(32, 1, 'obra_add'),
-(33, 1, 'obra_edit'),
-(34, 1, 'obra_delete'),
-(35, 1, 'obra_view');
+(21, 1, 'cliente_list'),
+(22, 1, 'cliente_add'),
+(23, 1, 'cliente_edit'),
+(24, 1, 'cliente_delete'),
+(25, 1, 'cliente_view'),
+(26, 1, 'empleado_list'),
+(27, 1, 'empleado_add'),
+(28, 1, 'empleado_edit'),
+(29, 1, 'empleado_delete'),
+(30, 1, 'empleado_view'),
+(31, 1, 'proyecto_list'),
+(32, 1, 'proyecto_add'),
+(33, 1, 'proyecto_edit'),
+(34, 1, 'proyecto_delete'),
+(35, 1, 'proyecto_view'),
+(36, 1, 'cadena_custodia_list'),
+(37, 1, 'cadena_custodia_add'),
+(38, 1, 'cadena_custodia_edit'),
+(39, 1, 'cadena_custodia_delete'),
+(40, 1, 'cadena_custodia_view');
 
 -- --------------------------------------------------------
 
@@ -360,7 +529,7 @@ CREATE TABLE `settings` (
 INSERT INTO `settings` (`id`, `key`, `value`, `created_at`) VALUES
 (1, 'company_name', 'Company Name', '2018-06-21 22:37:59'),
 (2, 'company_email', 'testcompany@gmail.com', '2018-07-11 16:09:58'),
-(3, 'timezone', 'Asia/Kolkata', '2018-07-16 00:54:17');
+(3, 'timezone', 'America/Lima', '2018-07-16 00:54:17');
 
 -- --------------------------------------------------------
 
@@ -388,7 +557,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `phone`, `address`, `last_login`, `role`, `reset_token`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-02-10 00:02:48', 1, '', '2018-06-27 23:30:16', '0000-00-00 00:00:00');
+(1, 'Administrator', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-03-01 01:02:34', 1, '', '2018-06-27 23:30:16', '0000-00-00 00:00:00');
 
 --
 -- Índices para tablas volcadas
@@ -401,9 +570,15 @@ ALTER TABLE `activity_logs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `factura`
+-- Indices de la tabla `cliente`
 --
-ALTER TABLE `factura`
+ALTER TABLE `cliente`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `empleado`
+--
+ALTER TABLE `empleado`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -428,6 +603,12 @@ ALTER TABLE `permissions`
 -- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `proyecto`
+--
+ALTER TABLE `proyecto`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -474,13 +655,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `activity_logs`
 --
 ALTER TABLE `activity_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
 
 --
--- AUTO_INCREMENT de la tabla `factura`
+-- AUTO_INCREMENT de la tabla `cliente`
 --
-ALTER TABLE `factura`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `cliente`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `empleado`
+--
+ALTER TABLE `empleado`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `factura_detalle`
@@ -492,19 +679,25 @@ ALTER TABLE `factura_detalle`
 -- AUTO_INCREMENT de la tabla `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `proyecto`
+--
+ALTER TABLE `proyecto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `q_obra`
@@ -522,13 +715,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `role_menus`
 --
 ALTER TABLE `role_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `role_permissions`
 --
 ALTER TABLE `role_permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `settings`

@@ -33,7 +33,7 @@
 			<?php vHidden('id', $id); ?>
 			<div class="form-group">
 				<?php vLabel('txtSerie','Empleado'); ?>
-				<?php vTextBox('txtNombreCliente',$txtNombreCliente, 'Ingrese serie',null,null,null,null,false,"required"); ?>
+				<?php vTextBox('txtNombreEmpleado',$txtNombreEmpleado, 'Ingrese serie',null,null,null,null,false,"required"); ?>
 			</div>
 		</div>
 	</div>
