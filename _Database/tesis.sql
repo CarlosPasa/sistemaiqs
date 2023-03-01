@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2023 a las 02:35:20
+-- Tiempo de generación: 01-03-2023 a las 03:58:45
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -175,7 +175,30 @@ INSERT INTO `activity_logs` (`id`, `title`, `user`, `ip_address`, `created_at`, 
 (132, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-01 01:30:37', '2023-03-01 01:30:37'),
 (133, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 01:30:43', '2023-03-01 01:30:43'),
 (134, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-01 01:34:23', '2023-03-01 01:34:23'),
-(135, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 01:34:27', '2023-03-01 01:34:27');
+(135, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 01:34:27', '2023-03-01 01:34:27'),
+(136, 'Nuevo #Cadena de Custodia creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 02:51:17', '2023-03-01 02:51:17');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cadena_custodia`
+--
+
+CREATE TABLE `cadena_custodia` (
+  `id` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
+  `id_cliente` int(11) DEFAULT NULL,
+  `id_contacto` int(11) DEFAULT NULL,
+  `id_proyecto` int(11) DEFAULT NULL,
+  `id_empleado` int(11) DEFAULT NULL,
+  `estado` bit(1) DEFAULT NULL,
+  `direccion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `distrito` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `provincia` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `departamento` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -570,6 +593,12 @@ ALTER TABLE `activity_logs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `cadena_custodia`
+--
+ALTER TABLE `cadena_custodia`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `cliente`
 --
 ALTER TABLE `cliente`
@@ -655,7 +684,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `activity_logs`
 --
 ALTER TABLE `activity_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`

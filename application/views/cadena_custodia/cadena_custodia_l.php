@@ -33,15 +33,15 @@
 
       <?php
         $Actions = array();
-          if (hasPermissions('cadena_custodia_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("obra/edit"),"id"));
-          if (hasPermissions('cadena_custodia_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("obra/deleteAction"),"id"));
+          if (hasPermissions('cadena_custodia_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("cadena_custodia/edit"),"id"));
+          if (hasPermissions('cadena_custodia_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("cadena_custodia/deleteAction"),"id"));
         $modelField = array(
           new modelFieldItem(array("nombre"=>"ID", "nombreData"=>"id","hAlign"=>"center","ancho"=>"60px")),
-          new modelFieldItem(array("nombre"=>"Nombre", "nombreData"=>"o_nombre")),
-          new modelFieldItem(array("nombre"=>"Monto", "nombreData"=>"o_monto","hAlign"=>"right")),
+          new modelFieldItem(array("nombre"=>"Nombre", "nombreData"=>"id_cliente")),
+          new modelFieldItem(array("nombre"=>"Monto", "nombreData"=>"id_empleado","hAlign"=>"right")),
           new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
         );
-        vTable($modelField, stdToArray($obra), 0, 'tlbListado');
+        vTable($modelField, stdToArray($cadena), 0, 'tlbListado');
       ?>
     </div>
     <!-- /.box-body -->
