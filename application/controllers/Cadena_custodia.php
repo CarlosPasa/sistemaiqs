@@ -22,7 +22,7 @@ class Cadena_custodia extends MY_Controller {
 	{
 		ifPermissions('cadena_custodia_list');
   		$this->page_data['tablaTitulo'] = "Lista de Cadena de custodias";
-		$this->page_data['cadena'] = $this->cadena_model->getActive();
+		$this->page_data['cadena'] = $this->cadena_model->getAllCabecera();
 		$this->load->view('cadena_custodia/cadena_custodia_l', $this->page_data);
 	}
 
@@ -59,8 +59,11 @@ class Cadena_custodia extends MY_Controller {
 	{
 		ifPermissions('cadena_custodia_add');
 		postAllowed();
-		$obra = $this->cadena_model->create([
-			'id'=>'2030201',
+		$cadena_custodia = $this->cadena_model->create([
+			'id'=>'2023020001',
+			'direccion'=>$this->input->post('txtDireccion'),
+			'distrito'=>$this->input->post('txtDistrito'),
+			'fecha'=>$this->format_date($this->input->post('txtFecha')),
 			'id_cliente' => $this->input->post('cbCliente'),
 			'id_contacto' => $this->input->post('cbCliente'),
 			'id_proyecto' => $this->input->post('cbProyecto'),
@@ -113,6 +116,8 @@ class Cadena_custodia extends MY_Controller {
 		$data = [
 			'id_cliente' => $this->input->post('cbCliente'),
 			'direccion'=>$this->input->post('txtDireccion'),
+			'distrito'=>$this->input->post('txtDistrito'),
+			'fecha'=>$this->format_date($this->input->post('txtFecha')),
 			'id_contacto' => $this->input->post('cbCliente'),
 			'id_proyecto' => $this->input->post('cbProyecto'),
 			'id_proyecto' => $this->input->post('cbProyecto'),
@@ -123,7 +128,7 @@ class Cadena_custodia extends MY_Controller {
 		$this->activity_model->action_edit("Cadena_custodia", $id);
 		$this->session->set_flashdata('alert-type', 'success');
 		$this->session->set_flashdata('alert', 'Registro actualizado satisfactoriamente');
-		redirect('obra');
+		redirect('cadena_custodia');
 	}
 
 	public function deleteAction($id)

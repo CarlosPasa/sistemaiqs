@@ -37,6 +37,14 @@ class MY_Controller extends CI_Controller {
 
 	}
 
+	public function format_date($fecha){
+        $fecha2 = explode("/", $fecha);
+        $fecha_old=$fecha2[1]."/".$fecha2[0]."/".$fecha2[2];
+		$fecha_new = strtotime($fecha_old);
+		$fecha = date('Y-m-d',$fecha_new);
+		return $fecha;
+	}
+
 }
 
 /* End of file My_Controller.php */

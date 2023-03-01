@@ -28,6 +28,21 @@ class Cadena_model extends MY_Model {
 		]);
 	}
 
+	public function getAllCabecera()
+	{
+		$this->db->select("cadena_custodia.id as id ,cadena_custodia.distrito");
+		$this->db->select("DATE_FORMAT(fecha,'%d/%m/%Y') as fecha");
+		$this->db->select('cliente.nombre_cliente as cliente');
+		$this->db->select('empleado.nombre_empleado as empleado');
+		$this->db->from('cadena_custodia')
+			->join('cliente', 'cadena_custodia.id_cliente = cliente.id  ','inner')
+            ->join('empleado', 'cadena_custodia.id_empleado = empleado.id','inner');
+		$this->db->where('cadena_custodia.estado','1');
+		$this->db->group_by('cadena_custodia.id');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 }
 
 /* End of file Cadena_model.php */

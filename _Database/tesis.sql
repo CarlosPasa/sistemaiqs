@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2023 a las 03:58:45
+-- Tiempo de generación: 01-03-2023 a las 04:55:27
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -176,7 +176,14 @@ INSERT INTO `activity_logs` (`id`, `title`, `user`, `ip_address`, `created_at`, 
 (133, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 01:30:43', '2023-03-01 01:30:43'),
 (134, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-01 01:34:23', '2023-03-01 01:34:23'),
 (135, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 01:34:27', '2023-03-01 01:34:27'),
-(136, 'Nuevo #Cadena de Custodia creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 02:51:17', '2023-03-01 02:51:17');
+(136, 'Nuevo #Cadena de Custodia creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 02:51:17', '2023-03-01 02:51:17'),
+(137, 'Nuevo #Cadena de Custodia creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:34:19', '2023-03-01 03:34:19'),
+(138, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:34:33', '2023-03-01 03:34:33'),
+(139, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:36:14', '2023-03-01 03:36:14'),
+(140, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:44:42', '2023-03-01 03:44:42'),
+(141, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:44:52', '2023-03-01 03:44:52'),
+(142, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:52:53', '2023-03-01 03:52:53'),
+(143, 'Nuevo #Cadena de Custodia creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:53:46', '2023-03-01 03:53:46');
 
 -- --------------------------------------------------------
 
@@ -199,6 +206,14 @@ CREATE TABLE `cadena_custodia` (
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `cadena_custodia`
+--
+
+INSERT INTO `cadena_custodia` (`id`, `id_cliente`, `id_contacto`, `id_proyecto`, `id_empleado`, `estado`, `direccion`, `distrito`, `provincia`, `departamento`, `fecha`, `created_at`, `updated_at`) VALUES
+('20230200', 1, 1, 1, 1, b'1', 'Paitr', 'Paita', NULL, NULL, '2023-02-09 00:00:00', '2023-03-01 03:53:46', NULL),
+('2030201', 1, 1, 1, 1, b'1', 'Hola', 'Hola', NULL, NULL, '2023-02-28 00:00:00', '2023-03-01 03:34:19', '2023-03-01 03:52:53');
 
 -- --------------------------------------------------------
 
@@ -344,11 +359,11 @@ INSERT INTO `permissions` (`id`, `title`, `code`) VALUES
 (28, 'proyecto_edit', 'proyecto_edit'),
 (29, 'proyecto_delete', 'proyecto_delete'),
 (30, 'proyecto_view', 'proyecto_view'),
-(31, 'obra_list', 'cadena_custodia_list'),
-(32, 'obra_add', 'cadena_custodia_add'),
-(33, 'obra_edit', 'cadena_custodia_edit'),
-(34, 'obra_delete', 'cadena_custodia_delete'),
-(35, 'obra_view', 'cadena_custodia_view'),
+(31, 'cadena_custodia_list', 'cadena_custodia_list'),
+(32, 'cadena_custodia_add', 'cadena_custodia_add'),
+(33, 'cadena_custodia_edit', 'cadena_custodia_edit'),
+(34, 'cadena_custodia_delete', 'cadena_custodia_delete'),
+(35, 'cadena_custodia_view', 'cadena_custodia_view'),
 (36, 'empleado_list', 'empleado_list'),
 (37, 'empleado_add', 'empleado_add'),
 (38, 'empleado_edit', 'empleado_edit'),
@@ -684,7 +699,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `activity_logs`
 --
 ALTER TABLE `activity_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
