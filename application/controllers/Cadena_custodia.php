@@ -86,10 +86,10 @@ class Cadena_custodia extends MY_Controller {
 					'id' => $registro->id,
 					'cbCliente' => $registro->id_cliente,
 					'txtDistrito' => $registro->distrito,
-					'txtDireccion'=>"",
-					'txtDistrito'=>"",
-					'txtProvincia'=>"Talara",
-					'txtDepartamento'=>"Piura",
+					'txtDireccion'=>$registro->direccion,
+					'cbProyecto'=>"",
+					'txtProvincia'=>$registro->provincia,
+					'txtDepartamento'=>$registro->departamento,
 					'txtEmail'=>"",
 					'txtTelefono'=>"",
 					'txtCelular'=>"",
@@ -111,8 +111,12 @@ class Cadena_custodia extends MY_Controller {
 		postAllowed();
 		$id = $this->input->post('id');
 		$data = [
-			'id_cliente' => $this->input->post('txtNombre'),
-			'id_contacto' => $this->input->post('txtMonto'),
+			'id_cliente' => $this->input->post('cbCliente'),
+			'direccion'=>$this->input->post('txtDireccion'),
+			'id_contacto' => $this->input->post('cbCliente'),
+			'id_proyecto' => $this->input->post('cbProyecto'),
+			'id_proyecto' => $this->input->post('cbProyecto'),
+			'id_empleado' => $this->input->post('cbEmpleado'),
 			'updated_at' => date("Y-m-d H:i:s"),
 		];
 		$registro = $this->cadena_model->update($id, $data);

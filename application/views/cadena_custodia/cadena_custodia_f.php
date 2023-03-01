@@ -98,13 +98,13 @@
       </div>
       <div class="row">
 				<div class="col-xs-3">
-          <?php vTextBox('txtEmail',$txtEmail, 'Ingrese email',null,null,null,null,false,"required"); ?>
+          <?php vTextBox('txtEmail',$txtEmail, 'Ingrese email',null,null,null,null,false,""); ?>
       	</div>
         <div class="col-xs-3">
-          <?php vTextBox('txtTelefono',$txtTelefono, 'Ingrese Teléfono',null,null,null,null,false,"required"); ?>
+          <?php vTextBox('txtTelefono',$txtTelefono, 'Ingrese Teléfono',null,null,null,null,false,""); ?>
       	</div>
         <div class="col-xs-3">
-          <?php vTextBox('txtCelular',$txtCelular, 'Ingrese Celular',null,null,null,null,false,"required"); ?>
+          <?php vTextBox('txtCelular',$txtCelular, 'Ingrese Celular',null,null,null,null,false,""); ?>
       	</div>
         <div class="col-xs-2">
           <?php vDateTimePicker('txtFecha',$txtFecha, null,null,true,true); ?>
