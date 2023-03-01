@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <?php echo form_open_multipart($postAction, [ 'class' => 'form-validate' ]); ?>
+    <?php echo form_open_multipart($postAction,vFormAtributos("frmCadenaCustodia"), [ 'class' => 'form-validate' ]); ?>
     <div class="box-body">
       <?php vHidden('id', $id); ?>
       <div class="row">
@@ -75,10 +75,10 @@
           <?php vTextBox('txtDistrito',$txtDistrito, 'Ingrese Distrito',null,null,null,null,false,"required"); ?>
       	</div>
         <div class="col-xs-3">
-          <?php vTextBox('txtProvincia',$txtProvincia, 'Ingrese Provincia',null,null,null,null,false,"required",true); ?>
+          <?php vTextBox('txtProvincia',$txtProvincia, 'Ingrese Provincia',null,null,null,null,false,"required"); ?>
       	</div>
         <div class="col-xs-3">
-          <?php vTextBox('txtDepartamento',$txtDepartamento, 'Ingrese Departamento',null,null,null,null,false,"required",true); ?>
+          <?php vTextBox('txtDepartamento',$txtDepartamento, 'Ingrese Departamento',null,null,null,null,false,"required"); ?>
       	</div>
       </div>
       <br>
@@ -101,10 +101,10 @@
           <?php vTextBox('txtEmail',$txtEmail, 'Ingrese email',null,null,null,null,false,""); ?>
       	</div>
         <div class="col-xs-3">
-          <?php vTextBox('txtTelefono',$txtTelefono, 'Ingrese Teléfono',null,null,null,null,false,""); ?>
+          <?php vTextBox('txtTelefono',$txtTelefono, 'Ingrese Teléfono',null,null,null,null,false,"",null,9); ?>
       	</div>
         <div class="col-xs-3">
-          <?php vTextBox('txtCelular',$txtCelular, 'Ingrese Celular',null,null,null,null,false,""); ?>
+          <?php vTextBox('txtCelular',$txtCelular, 'Ingrese Celular',null,null,null,null,false,"",null,9); ?>
       	</div>
         <div class="col-xs-2">
           <?php vDateTimePicker('txtFecha',$txtFecha, null,null,true,true); ?>
@@ -113,7 +113,8 @@
       <br>
       <div class="row">
         <div class="col-xs-1"><?php vLabel('txtCliente','Muestrado por:'); ?></div>
-        <div class="col-xs-3"><?php vComboBoxLiveSearch('cbEmpleado', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$cbEmpleado); ?></div>
+        <div class="col-xs-3"><?php vComboBoxMultiple('cbEmpleado','empleado[]', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$empleados,"Seleccione Muestrador"); ?></div>
+        <!--div class="col-xs-3"><select class="form-control select2" multiple="multiple" data-placeholder="Seleccione Muestreador" style="width: 100%;" id="cbEmpleado"></select></div-->
         <div class="col-xs-1"><?php  vCheckBox('chkCliente','Cliente',$chkCliente, null,'1');?></div>
         <div class="col-xs-1"><?php  vCheckBox('chkIQS','IQS',$chkIQS, null,'1');?></div>
         
@@ -139,8 +140,15 @@
 
 <script>
   $(document).ready(function() {
+    //Para activar el js del combo multiple
+    $('#cbEmpleado').select2();
     $('.form-validate').validate();
-    $('#txtFecha').datepicker({ format: 'dd/mm/yyyy' }).datepicker("setDate", new Date());
+    //traemos de los campos la fecha
+    var date = $('#txtFecha').val();
+    //reemplazamos los - por / porque sino da un dia antes
+    var fecha = new Date(date.replace(/-/g, '\/'));
+    //Ponemos la fecha en el formato correcto
+    $('#txtFecha').datepicker({ format: 'dd/mm/yyyy' }).datepicker("setDate", new Date(fecha));
     $('#chkCliente').change(function () {
         if ($(this).prop('checked')) {
             $('#chkIQS').prop('checked', false);
@@ -153,6 +161,9 @@
         }
     });
   })
+  //Validacion de que solo acepte numeros los input 
+  vFormValidator_number('#frmCadenaCustodia #txtTelefono');
+  vFormValidator_number('#frmCadenaCustodia #txtCelular');
 </script>
 
 <?php include viewPath('includes/footer'); ?>

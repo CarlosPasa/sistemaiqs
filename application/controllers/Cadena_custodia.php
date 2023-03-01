@@ -60,15 +60,29 @@ class Cadena_custodia extends MY_Controller {
 	{
 		ifPermissions('cadena_custodia_add');
 		postAllowed();
+		$id_empleados="";		
+		if(isset($_POST["empleado"])){
+			$empleados=$_POST["empleado"];
+			for ($i=0;$i<count($empleados);$i++)    
+			{
+				if($i==0){$id_empleados="".$empleados[$i];}
+				else{$id_empleados=$id_empleados.",".$empleados[$i];}
+			}
+		}
 		$cadena_custodia = $this->cadena_model->create([
 			'id'=>'2023020001',
 			'direccion'=>$this->input->post('txtDireccion'),
 			'distrito'=>$this->input->post('txtDistrito'),
+			'provincia'=>$this->input->post('txtProvincia'),
+			'departamento'=>$this->input->post('txtDepartamento'),
 			'fecha'=>$this->format_date($this->input->post('txtFecha')),
 			'id_cliente' => $this->input->post('cbCliente'),
 			'id_contacto' => $this->input->post('cbContacto'),
 			'id_proyecto' => $this->input->post('cbProyecto'),
-			'id_empleado' => $this->input->post('cbEmpleado'),
+			'id_empleado' => $id_empleados,
+			'telefono' => $this->input->post('txtTelefono'),
+			'celular' => $this->input->post('txtCelular'),
+			'email' => $this->input->post('txtEmail'),
 			'created_at' => date("Y-m-d H:i:s"),
 			'estado' => '1'
 		]);
@@ -94,17 +108,18 @@ class Cadena_custodia extends MY_Controller {
 					'cbProyecto'=>"",
 					'txtProvincia'=>$registro->provincia,
 					'txtDepartamento'=>$registro->departamento,
-					'txtEmail'=>"",
-					'txtTelefono'=>"",
-					'txtCelular'=>"",
-					'txtFecha'=>"",
+					'txtEmail'=>$registro->email,
+					'txtTelefono'=>$registro->telefono,
+					'txtCelular'=>$registro->celular,
+					'txtFecha'=>$registro->fecha,
 					'chkCliente'=>"",
 					'chkIQS'=>"",
 					'cbEmpleado'=>"",
 					'txtAntecedentes'=>"",
 					'cliente_data' => $this->cliente_model->getActive(),
 					'empleado_data' => $this->empleado_model->getActive(),
-					'proyecto_data' => $this->proyecto_model->getActive()
+					'proyecto_data' => $this->proyecto_model->getActive(),
+					'empleados'=>explode(",",$registro->id_empleado)
 				);
 		$this->load->view('cadena_custodia/cadena_custodia_f', $this->page_data + $data);
 	}
@@ -114,14 +129,28 @@ class Cadena_custodia extends MY_Controller {
 		ifPermissions('cadena_custodia_edit');
 		postAllowed();
 		$id = $this->input->post('id');
+		$id_empleados="";		
+		if(isset($_POST["empleado"])){
+			$empleados=$_POST["empleado"];
+			for ($i=0;$i<count($empleados);$i++)    
+			{
+				if($i==0){$id_empleados="".$empleados[$i];}
+				else{$id_empleados=$id_empleados.",".$empleados[$i];}
+			}
+		}
 		$data = [
 			'id_cliente' => $this->input->post('cbCliente'),
 			'direccion'=>$this->input->post('txtDireccion'),
 			'distrito'=>$this->input->post('txtDistrito'),
+			'provincia'=>$this->input->post('txtProvincia'),
+			'departamento'=>$this->input->post('txtDepartamento'),
 			'fecha'=>$this->format_date($this->input->post('txtFecha')),
 			'id_contacto' => $this->input->post('cbContacto'),
 			'id_proyecto' => $this->input->post('cbProyecto'),
-			'id_empleado' => $this->input->post('cbEmpleado'),
+			'id_empleado' => $id_empleados,
+			'telefono' => $this->input->post('txtTelefono'),
+			'celular' => $this->input->post('txtCelular'),
+			'email' => $this->input->post('txtEmail'),
 			'updated_at' => date("Y-m-d H:i:s"),
 		];
 		$registro = $this->cadena_model->update($id, $data);
@@ -143,8 +172,6 @@ class Cadena_custodia extends MY_Controller {
 						);
 		echo json_encode($status);
 	}
-
-
 }
 
 /* End of file Cadena_custodia.php */

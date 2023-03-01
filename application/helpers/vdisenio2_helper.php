@@ -96,7 +96,7 @@ if(!function_exists('vArchivoPDF')){
 
 if(!function_exists('vTextBox')){
 
-	function vTextBox($id, $campoValor,$placeholder=null,$icon=null,$mask=null,$js=NULL, $dis=NULL, $iconRight=false, $required=null, $disabled=false){
+	function vTextBox($id, $campoValor,$placeholder=null,$icon=null,$mask=null,$js=NULL, $dis=NULL, $iconRight=false, $required=null, $disabled=false,$maxlength=null){
 
 		if($icon != ''){
 
@@ -127,6 +127,10 @@ if(!function_exists('vTextBox')){
 		if ($disabled){
 			echo " disabled ";
 		}
+
+		if($maxlength != null){
+			echo " maxlength='" . $maxlength . "'";
+		}		
 
 		echo " ".$js."/>\n";
 
@@ -2210,4 +2214,48 @@ function stdToArray($obj){
   }
   return $reaged;
 }
+/* ***************************************************************** */
+
+/* ***************************************************************** */
+
+// UPDATE: 2023-02-01
+
+/* ***************************************************************** */
+
+if(!function_exists('vComboBoxMultiple')){
+
+	function vComboBoxMultiple($id,$name, $arrayData, $campoCodigo, $campoValor,$js=NULL,$selec=NULL,$placeholder){
+
+		echo "<select id='" . $id . "'multiple='multiple' name='" . $name . "' class='form-control select2' style='width: 100%'";
+
+		echo $js;
+
+		echo " data-placeholder='".$placeholder."'";
+
+		echo " > \n";
+
+		//--echo "<option value='0' disabled >Seleccione Opción</option>\n";
+
+		if(isset($arrayData)){
+
+			foreach($arrayData as $row){
+
+				echo "<option value='" . $row[$campoCodigo] . "' ";
+
+				echo (!is_bool(array_search($row[$campoCodigo],$selec,false))==true) ? ("selected=\"selected\"") : ("");
+
+				echo " >" . $row[$campoValor] . "</option>\n";
+
+			}
+
+		}else{
+			echo "<option value='0' >No se encontro datos</option>";
+		}
+
+		echo "</select>\n";
+
+	}
+
+}
+
 /* ***************************************************************** */

@@ -38,7 +38,7 @@
         $modelField = array(
           new modelFieldItem(array("nombre"=>"ID", "nombreData"=>"id","hAlign"=>"center","ancho"=>"60px")),
           new modelFieldItem(array("nombre"=>"Cliente", "nombreData"=>"cliente")),
-          new modelFieldItem(array("nombre"=>"Empleado", "nombreData"=>"empleado")),
+          new modelFieldItem(array("nombre"=>"Empleado", "nombreData"=>"proyecto")),
           new modelFieldItem(array("nombre"=>"Fecha", "nombreData"=>"fecha")),
           new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
         );

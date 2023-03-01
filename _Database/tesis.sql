@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2023 a las 04:55:27
+-- Tiempo de generación: 01-03-2023 a las 22:21:05
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -183,7 +183,32 @@ INSERT INTO `activity_logs` (`id`, `title`, `user`, `ip_address`, `created_at`, 
 (140, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:44:42', '2023-03-01 03:44:42'),
 (141, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:44:52', '2023-03-01 03:44:52'),
 (142, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:52:53', '2023-03-01 03:52:53'),
-(143, 'Nuevo #Cadena de Custodia creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:53:46', '2023-03-01 03:53:46');
+(143, 'Nuevo #Cadena de Custodia creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 03:53:46', '2023-03-01 03:53:46'),
+(144, 'Nuevo #Clientes creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 04:02:24', '2023-03-01 04:02:24'),
+(145, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 04:02:34', '2023-03-01 04:02:34'),
+(146, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 04:05:24', '2023-03-01 04:05:24'),
+(147, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 14:21:26', '2023-03-01 14:21:26'),
+(148, 'Nuevo #Empleados creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 14:41:08', '2023-03-01 14:41:08'),
+(149, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-01 14:46:15', '2023-03-01 14:46:15'),
+(150, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-01 19:58:03', '2023-03-01 19:58:03'),
+(151, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 20:28:07', '2023-03-01 20:28:07'),
+(152, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 20:35:34', '2023-03-01 20:35:34'),
+(153, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 20:37:19', '2023-03-01 20:37:19'),
+(154, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 20:37:45', '2023-03-01 20:37:45'),
+(155, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:01:24', '2023-03-01 21:01:24'),
+(156, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:04:21', '2023-03-01 21:04:21'),
+(157, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:09:20', '2023-03-01 21:09:20'),
+(158, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:09:34', '2023-03-01 21:09:34'),
+(159, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:09:38', '2023-03-01 21:09:38'),
+(160, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:09:42', '2023-03-01 21:09:42'),
+(161, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:10:50', '2023-03-01 21:10:50'),
+(162, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:11:02', '2023-03-01 21:11:02'),
+(163, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:11:20', '2023-03-01 21:11:20'),
+(164, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:12:30', '2023-03-01 21:12:30'),
+(165, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:12:36', '2023-03-01 21:12:36'),
+(166, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:16:55', '2023-03-01 21:16:55'),
+(167, '#Cadena_custodia #2030201 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:17:00', '2023-03-01 21:17:00'),
+(168, '#Cadena_custodia #20230200 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-01 21:18:19', '2023-03-01 21:18:19');
 
 -- --------------------------------------------------------
 
@@ -196,13 +221,16 @@ CREATE TABLE `cadena_custodia` (
   `id_cliente` int(11) DEFAULT NULL,
   `id_contacto` int(11) DEFAULT NULL,
   `id_proyecto` int(11) DEFAULT NULL,
-  `id_empleado` int(11) DEFAULT NULL,
-  `estado` bit(1) DEFAULT NULL,
+  `id_empleado` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `direccion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `distrito` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `provincia` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `departamento` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `celular` char(9) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `telefono` varchar(9) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `fecha` datetime DEFAULT NULL,
+  `estado` bit(1) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -211,9 +239,9 @@ CREATE TABLE `cadena_custodia` (
 -- Volcado de datos para la tabla `cadena_custodia`
 --
 
-INSERT INTO `cadena_custodia` (`id`, `id_cliente`, `id_contacto`, `id_proyecto`, `id_empleado`, `estado`, `direccion`, `distrito`, `provincia`, `departamento`, `fecha`, `created_at`, `updated_at`) VALUES
-('20230200', 1, 1, 1, 1, b'1', 'Paitr', 'Paita', NULL, NULL, '2023-02-09 00:00:00', '2023-03-01 03:53:46', NULL),
-('2030201', 1, 1, 1, 1, b'1', 'Hola', 'Hola', NULL, NULL, '2023-02-28 00:00:00', '2023-03-01 03:34:19', '2023-03-01 03:52:53');
+INSERT INTO `cadena_custodia` (`id`, `id_cliente`, `id_contacto`, `id_proyecto`, `id_empleado`, `direccion`, `distrito`, `provincia`, `departamento`, `celular`, `telefono`, `email`, `fecha`, `estado`, `created_at`, `updated_at`) VALUES
+('20230200', 2, 1, 1, '1,2', 'Paitr', 'Paita', 'Talara', 'Piura', '', '987654321', 'hola@gmail.com', '2023-03-01 00:00:00', b'1', '2023-03-01 03:53:46', '2023-03-01 21:18:19'),
+('2030201', 1, 1, 1, '1', 'Hola', 'Hola', 'Talara', 'Piura', '', '', '', '2023-02-28 00:00:00', b'1', '2023-03-01 03:34:19', '2023-03-01 21:17:00');
 
 -- --------------------------------------------------------
 
@@ -234,7 +262,8 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id`, `nombre_cliente`, `estado`, `created_at`, `updated_at`) VALUES
-(1, 'Fiorella Eunice Ancajima Socola', b'1', '2023-02-15 16:26:15', '2023-02-27 23:14:17');
+(1, 'Fiorella Eunice Ancajima Socola', b'1', '2023-02-15 16:26:15', '2023-02-27 23:14:17'),
+(2, 'Carlos Pasache Ordinola', b'1', '2023-03-01 04:02:24', '2023-03-01 04:02:26');
 
 -- --------------------------------------------------------
 
@@ -255,7 +284,8 @@ CREATE TABLE `empleado` (
 --
 
 INSERT INTO `empleado` (`id`, `nombre_empleado`, `created_at`, `updated_at`, `estado`) VALUES
-(1, 'Leandro Neira Chunga', '2023-02-27 23:33:27', '2023-02-27 23:33:35', b'1');
+(1, 'Leandro Neira Chunga', '2023-02-27 23:33:27', '2023-02-27 23:33:35', b'1'),
+(2, 'Anastacio Petronilo', '2023-03-01 14:41:08', '2023-03-01 14:41:10', b'1');
 
 -- --------------------------------------------------------
 
@@ -595,7 +625,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `phone`, `address`, `last_login`, `role`, `reset_token`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-03-01 01:02:34', 1, '', '2018-06-27 23:30:16', '0000-00-00 00:00:00');
+(1, 'Administrator', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-03-01 19:03:58', 1, '', '2018-06-27 23:30:16', '0000-00-00 00:00:00');
 
 --
 -- Índices para tablas volcadas
@@ -699,19 +729,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `activity_logs`
 --
 ALTER TABLE `activity_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=169;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `factura_detalle`

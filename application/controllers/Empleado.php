@@ -74,6 +74,7 @@ class Empleado extends MY_Controller {
 		$this->page_data['postAction'] = "empleado/nuevoModalAction";
         $data = array(
             'id'			=> "0",
+			'txtDni'		=> "",
 			'txtNombreEmpleado'		=> ""
         );
 		$dataAdicional = array(
