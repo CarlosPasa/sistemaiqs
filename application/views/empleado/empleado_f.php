@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <?php echo form_open_multipart($postAction, [ 'id' => 'frmFactura', 'class' => 'form-validate' ]); ?>
+    <?php echo form_open_multipart($postAction, [ 'id' => 'frmEmpleado', 'class' => 'form-validate' ]); ?>
 	<div class="col-lg-12">
 		<div class="box-body col-lg-6">
 			<?php vHidden('id', $id); ?>
@@ -52,124 +52,48 @@
 
 <?php include viewPath('includes/footer'); ?>
 
-
-<script type="text/javascript">
-	var $gridDetalle = {
-		"nombre": "gridDetalle",
-		"data": <?php echo json_encode($dataDetalle); ?>,
-		"modelField": <?php echo json_encode($modelFieldDetalle); ?>
-	};
-</script>
-
 <!-- DocumentReady() -->
 <script type="text/javascript">
-  $(document).ready(function() {
-	//Cargar Rejillas
-	vTableInit($gridDetalle);
+  $(document).ready(function() {;
   })
 </script>
 
 <!-- onSubmit() -->
 <script type="text/javascript">
-function onDetalleSubmit(){
-	$("#pageSpin").show();
-	var formData = new FormData($("#frmFactura")[0]);
-	$.ajax({
-		type: 'POST',
-		url: $("#frmFactura").attr("action"),
-		data: formData,
-		cache:false,
-		processData: false,
-		contentType: false,
-		success: function (results) {
-			$("#pageSpin").hide();
-			var obj = jQuery.parseJSON(results);
-			console.log(obj);
-			if (obj['STATUS']=='true'){
-				if (obj['mensaje'] != null ){
-					alerta('success',obj['mensaje'],'¡Importante!');					
-					//ShowDialogInformation('Mensaje', obj['mensaje'], obj['redirect_url'])
-				}
-				if (obj['redirect_url'] != null){
-					window.location.href = obj['redirect_url'];
-				}
-			}
-			else{
-				alerta('error',obj['mensaje'],'¡Importante!');
-				//ShowDialogWarning('Información', obj['mensaje'],'');
-			}
-		},
-		error: function(request, status, error){
-			$("#pageSpin").hide();
-			var $html = $('<div></div>');
-			$html.append(request.responseText);
-			ShowDialogError($html);
-		}
-	});
-}
-</script>
-
-<!-- Modal: gridDetalle -->
-<script type="text/javascript">
-	function onDetalle_reload(){
+	function onDetalleSubmit(){
 		$("#pageSpin").show();
+		var formData = new FormData($("#frmEmpleado")[0]);
 		$.ajax({
-			type: 'GET',
-			url: '<?php echo site_url('/factura/ajax_listarDetalle/') ?>' + '/' + $("#id").val(),
-			data: null,
-			dataType: 'html',
+			type: 'POST',
+			url: $("#frmEmpleado").attr("action"),
+			data: formData,
+			cache:false,
+			processData: false,
+			contentType: false,
 			success: function (results) {
-				resultsObj = jQuery.parseJSON(results);
-				$gridDetalle.data = resultsObj.data;
-				vTableRefresh($gridDetalle);
 				$("#pageSpin").hide();
+				var obj = jQuery.parseJSON(results);
+				console.log(obj);
+				if (obj['STATUS']=='true'){
+					if (obj['mensaje'] != null ){
+						alerta('success',obj['mensaje'],'¡Importante!');					
+						//ShowDialogInformation('Mensaje', obj['mensaje'], obj['redirect_url'])
+					}
+					if (obj['redirect_url'] != null){
+						window.location.href = obj['redirect_url'];
+					}
+				}
+				else{
+					alerta('error',obj['mensaje'],'¡Importante!');
+					//ShowDialogWarning('Información', obj['mensaje'],'');
+				}
+			},
+			error: function(request, status, error){
+				$("#pageSpin").hide();
+				var $html = $('<div></div>');
+				$html.append(request.responseText);
+				ShowDialogError($html);
 			}
 		});
-	}
-
-	function onDetalle_nuevo() {
-		$url = '<?php echo site_url('factura_detalle/nuevoModal') ?>';
-		$titulo = "Agregar Producto";
-		$("#pageSpin").show();
-		$.ajax({
-			type: 'GET',
-			url: $url,
-			data: { "id": 0, "idFactura": $("#id").val() },
-			dataType: 'html',
-			success: function (html) {
-				$("#pageSpin").hide();
-				$('#divDetalle').html(html);
-				$('#modal_detalle').modal('show');
-				$('#modal_detalle .modal-title').text($titulo);
-			}
-		});
-	}
-
-	function onDetalle_edit(_id) {
-		$url = "<?php echo site_url('factura_detalle/edit'); ?>" + "/" + _id;
-		$titulo = "Editar Producto";
-		$("#pageSpin").show();
-		$.ajax({
-			type: 'GET',
-			url: $url,
-			data: null,
-			dataType: 'html',
-			success: function (html) {
-				$("#pageSpin").hide();
-				$('#divDetalle').html(html);
-				$('#modal_detalle').modal('show');
-				$('#modal_detalle .modal-title').text($titulo);
-			}
-		});
-    }
-	
-	function onDetalle_delete(_id){
-		$url = "<?php echo site_url('factura_detalle/deleteAction'); ?>" + "/" + _id;
-		rpta = ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado',$url);
-	}
-	
-	function onDetalle_close() {
-		$('#modal_detalle').modal('hide');
-		onDetalle_reload();
 	}
 </script>

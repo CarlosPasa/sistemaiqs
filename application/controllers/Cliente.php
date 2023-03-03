@@ -96,15 +96,6 @@ class Cliente extends MY_Controller {
 						);
 		echo json_encode ($status);
 	}
-
-	public function ajax_listarDetalle($idCliente){
-		$data = $this->cliente_model->getDetalle($idCliente);;
-		$dataAdicional = array(
-			'data'		=> $data
-		);
-		echo json_encode($dataAdicional);
-	}
-
 }
 
 /* End of file Menu.php */

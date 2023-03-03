@@ -12,31 +12,26 @@
   
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="<?php echo $url->assets ?>bootstrap/css/bootstrap.min.css">
-  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/Ionicons/css/ionicons.min.css">
-  
   <!-- DataTables -->
   <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/datatables.net-bs/css/dataTables.bootstrap.min.css" />
-  
+  <!-- bootstrap datetimepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+   <!-- Timepicker  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css" />
   <!-- Select2 -->
   <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/select2/dist/css/select2.min.css" />
-
   <!-- daterange picker -->
   <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/bootstrap-daterangepicker/daterangepicker.css" />
-  
   <!-- bootstrap datepicker -->
   <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
-
   <!-- bootstrap Color picker -->
   <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.css" />
-
   <!-- Morris chart -->
   <link rel="stylesheet" href="<?php echo $url->assets ?>plugins/morris.js/morris.css">
   <!-- jvectormap -->
@@ -71,7 +66,6 @@
 
   <!-- jQuery 3 -->
   <script src="<?php echo $url->assets ?>js/jquery/jquery.min.js"></script>
-
 
   <!-- jQuery UI 1.11.4 -->
   <script src="<?php echo $url->assets ?>plugins/jqueryUi/jquery-ui.min.js"></script>

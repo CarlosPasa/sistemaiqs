@@ -11,6 +11,7 @@ class Cadena_custodia extends MY_Controller {
 		$this->load->model('cliente_model');
 		$this->load->model('empleado_model');
 		$this->load->model('proyecto_model');
+		$this->load->model('muestra_model');
 		//Textos
 		$this->page_data['page']->title = 'Cadena de Custodia';
 		$this->page_data['page']->menu = 'cadeba custodia';
@@ -44,11 +45,12 @@ class Cadena_custodia extends MY_Controller {
 					'txtEmail'=>"",
 					'txtTelefono'=>"",
 					'txtCelular'=>"",
-					'txtFecha'=>"",
+					'txtFecha'=>date("Y-m-d H:i:s"),
 					'chkCliente'=>"",
 					'chkIQS'=>"",
 					'cbEmpleado'=>"",
 					'txtAntecedentes'=>"",
+					'empleados'=>array(),
 					'cliente_data' => $this->cliente_model->getActive(),
 					'empleado_data' => $this->empleado_model->getActive(),
 					'proyecto_data' => $this->proyecto_model->getActive()
@@ -70,7 +72,7 @@ class Cadena_custodia extends MY_Controller {
 			}
 		}
 		$cadena_custodia = $this->cadena_model->create([
-			'id'=>'2023020001',
+			'id'=>$this->generarCodigo(),
 			'direccion'=>$this->input->post('txtDireccion'),
 			'distrito'=>$this->input->post('txtDistrito'),
 			'provincia'=>$this->input->post('txtProvincia'),
@@ -119,9 +121,10 @@ class Cadena_custodia extends MY_Controller {
 					'cliente_data' => $this->cliente_model->getActive(),
 					'empleado_data' => $this->empleado_model->getActive(),
 					'proyecto_data' => $this->proyecto_model->getActive(),
-					'empleados'=>explode(",",$registro->id_empleado)
+					'empleados'=>explode(",",$registro->id_empleado),
+					'dataDetalle' => $this->muestra_model->getMuestrasByIdCadena($id),
 				);
-		$this->load->view('cadena_custodia/cadena_custodia_f', $this->page_data + $data);
+		$this->load->view('cadena_custodia/cadena_custodia_f_edit', $this->page_data + $data);
 	}
 
 	public function editAction()
@@ -154,23 +157,43 @@ class Cadena_custodia extends MY_Controller {
 			'updated_at' => date("Y-m-d H:i:s"),
 		];
 		$registro = $this->cadena_model->update($id, $data);
+		$status = array(
+			"STATUS"      =>"true",
+			"mensaje"     =>"El registro se ha actualizado satisfactoriamente",
+			"redirect_url" => site_url('cadena_custodia')
+		);
 		$this->activity_model->action_edit("Cadena_custodia", $id);
 		$this->session->set_flashdata('alert-type', 'success');
 		$this->session->set_flashdata('alert', 'Registro actualizado satisfactoriamente');
-		redirect('cadena_custodia');
+		echo json_encode ($status);
 	}
 
 	public function deleteAction($id)
 	{
 		ifPermissions('cadena_custodia_delete');
-		$id = $this->obra_model->delete_logic($id);
-		$this->activity_model->action_delete("Obra", $id);
+		$id = $this->cadena_model->delete($id);
+		$this->activity_model->action_delete("Cadena", $id);
 		$status = array(
 						"STATUS"=>"true",
 						"mensaje"=>"Registo eliminado satisfactoriamente",
 						"redirect_url"=>site_url('cadena_custodia')
 						);
 		echo json_encode($status);
+	}
+
+	public function generarCodigo(){
+		$period=date("Y").date("m");
+		$total_registros = $this->cadena_model->getTotalNumberCadenaRecords($period);
+		$correlativo = str_pad($total_registros+1, 4, "0", STR_PAD_LEFT);
+		$codigo=$period.$correlativo;
+		return ($codigo);
+	}
+	public function listar_muestras($idCadena){
+		$data = $this->muestra_model->getMuestrasByIdCadena($idCadena);
+		$dataAdicional = array(
+			'data'		=> $data
+		);
+		echo json_encode($dataAdicional);
 	}
 }
 

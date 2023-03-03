@@ -43,6 +43,12 @@ class Cadena_model extends MY_Model {
 		return $query->result();
 	}
 
+	public function getTotalNumberCadenaRecords($period){
+		$this->db->from('cadena_custodia');
+		$this->db->like('id', $period, 'after');
+		$query = $this->db->get();
+		return $query->num_rows();
+	}
 }
 
 /* End of file Cadena_model.php */

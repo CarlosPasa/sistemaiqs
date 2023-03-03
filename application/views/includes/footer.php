@@ -18,10 +18,11 @@
 <!-- date-range-picker -->
 <script src="<?php echo $url->assets ?>plugins/moment/min/moment.min.js"></script>
 <script src="<?php echo $url->assets ?>plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js"></script>
 <!-- bootstrap datepicker -->
 <script src="<?php echo $url->assets ?>plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
+<!-- bootstrap datetimepicker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
 <!-- bootstrap datepicker -->
 <script src="<?php echo $url->assets ?>plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
 
@@ -45,6 +46,10 @@
 
 <!-- Loading spinner -->
 <script src="<?php echo $url->assets ?>plugins/spinner/spinner.js"></script>
+<!-- input mask -->
+<script src="<?php echo $url->assets ?>plugins/input-mask/jquery.inputmask.js"></script>
+<script src="<?php echo $url->assets ?>plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="<?php echo $url->assets ?>plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <div id="pageSpin"></div>
 <script>
 	$("#pageSpin").spinner();

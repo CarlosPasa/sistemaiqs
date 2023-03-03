@@ -82,4 +82,7 @@ function onClienteSubmit(){
 		}
 	});
 }
+function onCliente_close() {
+	$('#modal_detalle').modal('hide');
+}
 </script>
