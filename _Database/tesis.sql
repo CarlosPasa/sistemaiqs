@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-03-2023 a las 00:45:09
+-- Tiempo de generación: 06-03-2023 a las 02:26:06
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -288,7 +288,91 @@ INSERT INTO `activity_logs` (`id`, `title`, `user`, `ip_address`, `created_at`, 
 (245, '#Cadena_custodia #2023030002 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-03 23:41:46', '2023-03-03 23:41:46'),
 (246, '#Cadena_custodia #2023030002 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-03 23:41:52', '2023-03-03 23:41:52'),
 (247, '#Cadena_custodia #2023030001 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-03 23:42:03', '2023-03-03 23:42:03'),
-(248, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-03 23:44:40', '2023-03-03 23:44:40');
+(248, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-03 23:44:40', '2023-03-03 23:44:40'),
+(249, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-04 03:07:49', '2023-03-04 03:07:49'),
+(250, 'Nuevo #Cadena de Custodia creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-04 03:09:08', '2023-03-04 03:09:08'),
+(251, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-04 03:09:56', '2023-03-04 03:09:56'),
+(252, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-05 21:07:12', '2023-03-05 21:07:12'),
+(253, '#Cadena_custodia #2023020000 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 21:25:15', '2023-03-05 21:25:15'),
+(254, '#Cadena_custodia #2023020000 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 21:25:19', '2023-03-05 21:25:19'),
+(255, '#Cadena_custodia #2023020000 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 21:25:23', '2023-03-05 21:25:23'),
+(256, '#Cadena_custodia #2023020000 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 21:29:30', '2023-03-05 21:29:30'),
+(257, '#Cadena_custodia #2023020000 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 21:34:16', '2023-03-05 21:34:16'),
+(258, '#Cadena_custodia #2023020000 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 21:35:21', '2023-03-05 21:35:21'),
+(259, '#Cadena_custodia #2023020001 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 21:40:41', '2023-03-05 21:40:41'),
+(260, '#Cadena_custodia #2023030001 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 21:40:46', '2023-03-05 21:40:46'),
+(261, '#Cadena_custodia #2023030003 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 21:40:51', '2023-03-05 21:40:51'),
+(262, '#Cadena_custodia #2023030001 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 21:40:55', '2023-03-05 21:40:55'),
+(263, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 22:26:05', '2023-03-05 22:26:05'),
+(264, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 22:27:44', '2023-03-05 22:27:44'),
+(265, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 22:28:52', '2023-03-05 22:28:52'),
+(266, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 22:29:29', '2023-03-05 22:29:29'),
+(267, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 22:29:59', '2023-03-05 22:29:59'),
+(268, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 22:34:00', '2023-03-05 22:34:00'),
+(269, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 22:35:20', '2023-03-05 22:35:20'),
+(270, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-05 22:53:06', '2023-03-05 22:53:06'),
+(271, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-05 22:53:09', '2023-03-05 22:53:09'),
+(272, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-05 22:56:01', '2023-03-05 22:56:01'),
+(273, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-05 22:56:05', '2023-03-05 22:56:05'),
+(274, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 23:08:19', '2023-03-05 23:08:19'),
+(275, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 23:11:40', '2023-03-05 23:11:40'),
+(276, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 23:11:55', '2023-03-05 23:11:55'),
+(277, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-05 23:44:51', '2023-03-05 23:44:51'),
+(278, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:01:36', '2023-03-06 00:01:36'),
+(279, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:02:20', '2023-03-06 00:02:20'),
+(280, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:04:43', '2023-03-06 00:04:43'),
+(281, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:04:56', '2023-03-06 00:04:56'),
+(282, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:07:48', '2023-03-06 00:07:48'),
+(283, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:09:19', '2023-03-06 00:09:19'),
+(284, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:11:51', '2023-03-06 00:11:51'),
+(285, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:12:06', '2023-03-06 00:12:06'),
+(286, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:14:26', '2023-03-06 00:14:26'),
+(287, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:14:31', '2023-03-06 00:14:31'),
+(288, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:15:05', '2023-03-06 00:15:05'),
+(289, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:15:10', '2023-03-06 00:15:10'),
+(290, 'Nuevo #Cadena de Custodia creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:52:29', '2023-03-06 00:52:29'),
+(291, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:53:08', '2023-03-06 00:53:08'),
+(292, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:53:38', '2023-03-06 00:53:38'),
+(293, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:56:58', '2023-03-06 00:56:58'),
+(294, '#muestra #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:57:10', '2023-03-06 00:57:10'),
+(295, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:57:34', '2023-03-06 00:57:34'),
+(296, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 00:59:21', '2023-03-06 00:59:21'),
+(297, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 01:00:18', '2023-03-06 01:00:18'),
+(298, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 01:00:56', '2023-03-06 01:00:56'),
+(299, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 01:01:04', '2023-03-06 01:01:04'),
+(300, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 01:01:22', '2023-03-06 01:01:22'),
+(301, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 01:08:25', '2023-03-06 01:08:25'),
+(302, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 01:12:08', '2023-03-06 01:12:08'),
+(303, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-06 01:19:06', '2023-03-06 01:19:06'),
+(304, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-06 01:23:23', '2023-03-06 01:23:23'),
+(305, 'Administrator Logged in', '1', '::1', '2023-03-06 01:24:08', '2023-03-06 01:24:08');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `analisis`
+--
+
+CREATE TABLE `analisis` (
+  `id` varchar(16) COLLATE utf8_unicode_ci NOT NULL,
+  `idMuestra` varchar(13) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `nombre_analisis` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ma` char(2) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pr` char(2) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `estado` bit(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `analisis`
+--
+
+INSERT INTO `analisis` (`id`, `idMuestra`, `nombre_analisis`, `ma`, `pr`, `created_at`, `updated_at`, `estado`) VALUES
+('2023020000-01-01', '2023020000-01', 'TAH2', 'AF', 'AS', '2023-03-05 23:11:40', '2023-03-06 00:51:35', b'1'),
+('2023020000-02-01', '2023020000-02', 'SAD', 'AF', 'AS', '2023-03-06 00:04:56', NULL, b'1'),
+('2023030003-01-01', '2023030003-01', 'TAH', 'AF', 'AS', '2023-03-05 22:35:20', NULL, b'1'),
+('2023030004-01-01', '2023030004-01', 'TAH', 'AS', 'AF', '2023-03-06 01:00:56', '2023-03-06 01:01:17', b'1');
 
 -- --------------------------------------------------------
 
@@ -302,6 +386,7 @@ CREATE TABLE `cadena_custodia` (
   `id_contacto` int(11) DEFAULT NULL,
   `id_proyecto` int(11) DEFAULT NULL,
   `id_empleado` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `opcion` varchar(7) COLLATE utf8_unicode_ci DEFAULT NULL,
   `direccion` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `distrito` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `provincia` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -319,11 +404,13 @@ CREATE TABLE `cadena_custodia` (
 -- Volcado de datos para la tabla `cadena_custodia`
 --
 
-INSERT INTO `cadena_custodia` (`id`, `id_cliente`, `id_contacto`, `id_proyecto`, `id_empleado`, `direccion`, `distrito`, `provincia`, `departamento`, `celular`, `telefono`, `email`, `fecha`, `estado`, `created_at`, `updated_at`) VALUES
-('2023020000', 2, 1, 1, '1,2', 'Paita', 'Paita', 'Talara', 'Piura', '', '987654321', 'hola@gmail.com', '2023-03-01 00:00:00', b'1', '2023-03-01 03:53:46', '2023-03-02 03:17:07'),
-('2023020001', 1, 1, 1, '1', 'Hola', 'Hola', 'Talara', 'Piura', '', '', '', '2023-02-28 00:00:00', b'1', '2023-03-01 03:34:19', '2023-03-02 03:15:40'),
-('2023030001', 1, 2, 1, '1,3', 'Castilla', 'Piura', 'Talara', 'Piura', '', '', '', '2023-03-02 00:00:00', b'1', '2023-03-03 02:02:21', '2023-03-03 23:42:03'),
-('2023030002', 2, 2, 1, '1,2', 'Piura', 'Piura', 'Talara', 'Piura', '', '987654321', '', '2023-03-02 00:00:00', b'1', '2023-03-03 02:03:04', '2023-03-03 23:41:52');
+INSERT INTO `cadena_custodia` (`id`, `id_cliente`, `id_contacto`, `id_proyecto`, `id_empleado`, `opcion`, `direccion`, `distrito`, `provincia`, `departamento`, `celular`, `telefono`, `email`, `fecha`, `estado`, `created_at`, `updated_at`) VALUES
+('2023020000', 2, 1, 1, '1,2', 'CLIENTE', 'Paita', 'Paita', 'Talara', 'Piura', '', '987654321', 'hola@gmail.com', '2023-03-01 00:00:00', b'1', '2023-03-01 03:53:46', '2023-03-05 21:35:21'),
+('2023020001', 1, 1, 1, '1', 'IQS', 'Hola', 'Hola', 'Talara', 'Piura', '', '', '', '2023-02-28 00:00:00', b'1', '2023-03-01 03:34:19', '2023-03-05 21:40:41'),
+('2023030001', 1, 2, 1, '1,3', 'CLIENTE', 'Castilla', 'Piura', 'Talara', 'Piura', '', '', '', '2023-03-02 00:00:00', b'1', '2023-03-03 02:02:21', '2023-03-05 21:40:55'),
+('2023030002', 2, 2, 1, '1,2', NULL, 'Piura', 'Piura', 'Talara', 'Piura', '', '987654321', '', '2023-03-02 00:00:00', b'1', '2023-03-03 02:03:04', '2023-03-03 23:41:52'),
+('2023030003', 2, 1, 1, '1,2,3', 'IQS', 'Prueba 1', 'Piura', 'Talara', 'Piura', '988723123', '985465113', '', '2023-03-03 00:00:00', b'1', '2023-03-04 03:09:08', '2023-03-05 21:40:51'),
+('2023030004', 1, 2, 1, '1', 'IQS', 'Piura', 'Piura', 'Talara', 'Piura', '', '987654312', '', '2023-03-05 00:00:00', b'1', '2023-03-06 00:52:29', NULL);
 
 -- --------------------------------------------------------
 
@@ -373,23 +460,6 @@ INSERT INTO `empleado` (`id`, `nombre_empleado`, `created_at`, `updated_at`, `es
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `factura_detalle`
---
-
-CREATE TABLE `factura_detalle` (
-  `id` int(11) NOT NULL,
-  `id_factura` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL,
-  `cantidad` int(11) NOT NULL,
-  `precio` decimal(18,2) NOT NULL,
-  `estado` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `menu`
 --
 
@@ -423,7 +493,8 @@ INSERT INTO `menu` (`id`, `name`, `title`, `icon`, `type_object`, `object`, `ord
 (9, 'cliente', 'Cliente', 'fa fa-users', 'Action', '/cliente', '1', 0, 1, '2023-02-01 20:34:57', '2023-02-01 20:34:57'),
 (10, 'cadena_custodia', 'Cadena de custodia', 'fa fa-archive', 'Action', '/cadena_custodia', '1', 0, 1, '2023-02-09 13:43:52', '2023-02-09 13:43:52'),
 (11, 'empleado', 'Empleado', 'fa fa-users', 'Action', '/empleado', '2', 0, 1, NULL, NULL),
-(12, 'proyecto', 'Proyecto', 'fa fa-archive', 'Action', '/proyecto', '2', 0, 1, NULL, NULL);
+(12, 'proyecto', 'Proyecto', 'fa fa-archive', 'Action', '/proyecto', '2', 0, 1, NULL, NULL),
+(13, 'muestra', 'Muestra', 'fa fa-flask', 'Action', '/muestra', '2', 0, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -450,7 +521,15 @@ CREATE TABLE `muestra` (
 --
 
 INSERT INTO `muestra` (`id`, `idCadenaCustodia`, `codigo_campo`, `ubicacion`, `contenedor_p`, `contenedor_v`, `contenedor_otros`, `fecha_hora`, `created_at`, `updated_at`, `estado`) VALUES
-('2023030002-01', '2023030002', 'SAL WT', 'LAB 1', 2, 1, 2, '2023-03-03 21:15:00', '2023-03-03 22:59:47', '2023-03-03 23:43:11', b'1');
+('2023020000-01', '2023020000', 'SAL WT', 'LAB 1', 1, 2, 1, '2023-03-05 23:08:00', '2023-03-05 23:08:19', NULL, b'1'),
+('2023020000-02', '2023020000', 'PAN', 'LAB 2', 1, 1, 1, '2023-03-05 23:11:45', '2023-03-05 23:11:55', NULL, b'1'),
+('2023020000-03', '2023020000', 'SL WT', 'LAB 2', 1, 2, 2, '2023-03-06 00:04:45', '2023-03-06 00:04:43', NULL, b'1'),
+('2023030002-01', '2023030002', 'SAL WT', 'LAB 1', 2, 1, 2, '2023-03-03 21:15:00', '2023-03-03 22:59:47', '2023-03-03 23:43:11', b'1'),
+('2023030003-01', '2023030003', 'WT Lae', 'LAB1', 1, 2, 2, '2023-03-04 03:09:30', '2023-03-04 03:09:56', NULL, b'1'),
+('2023030004-01', '2023030004', 'WT', 'LAB 1', 1, 1, 1, '2023-03-06 00:52:00', '2023-03-06 00:53:08', NULL, b'1'),
+('2023030004-02', '2023030004', 'WT', 'AS', 1, 1, 1, '2023-03-06 00:53:30', '2023-03-06 00:53:38', NULL, b'1'),
+('2023030004-03', '2023030004', 'SA', 'Q', 1, 1, 1, '2023-03-06 00:57:30', '2023-03-06 00:57:34', '2023-03-06 01:02:00', b'1'),
+('2023030004-04', '2023030004', 'Q', 'ASA', 1, 1, 1, '2023-03-06 00:59:30', '2023-03-06 01:00:18', '2023-03-06 01:01:55', b'1');
 
 -- --------------------------------------------------------
 
@@ -508,7 +587,17 @@ INSERT INTO `permissions` (`id`, `title`, `code`) VALUES
 (37, 'empleado_add', 'empleado_add'),
 (38, 'empleado_edit', 'empleado_edit'),
 (39, 'empleado_delete', 'empleado_delete'),
-(40, 'empleado_view', 'view');
+(40, 'empleado_view', 'empleado_view'),
+(41, 'muestra_list', 'muestra_list'),
+(42, 'muestra_add', 'muestra_add'),
+(43, 'muestra_edit', 'muestra_edit'),
+(44, 'muestra_delete', 'muestra_delete'),
+(45, 'muestra_view', 'muestra_view'),
+(46, 'analisis_list', 'analisis_list'),
+(47, 'analisis_add', 'analisis_add'),
+(48, 'muestra_edit', 'muestra_edit'),
+(49, 'muestra_delete', 'muestra_delete'),
+(50, 'muestra_view', 'muestra_view');
 
 -- --------------------------------------------------------
 
@@ -562,28 +651,6 @@ INSERT INTO `proyecto` (`id`, `nombre_proyecto`, `estado`, `created_at`, `update
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `q_obra`
---
-
-CREATE TABLE `q_obra` (
-  `id` smallint(6) NOT NULL,
-  `o_nombre` varchar(250) DEFAULT NULL,
-  `o_id_tseleccion` tinyint(4) DEFAULT NULL,
-  `o_id_tcontratacion` tinyint(4) DEFAULT NULL,
-  `o_nro_proceso` varchar(3) DEFAULT NULL,
-  `o_monto` decimal(10,0) DEFAULT NULL,
-  `o_monto_contractual` decimal(10,0) DEFAULT NULL,
-  `o_fecha_inicio` date DEFAULT NULL,
-  `o_contracto` varchar(30) DEFAULT NULL,
-  `estado` tinyint(1) NOT NULL,
-  `o_alias` varchar(45) DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `roles`
 --
 
@@ -627,7 +694,9 @@ INSERT INTO `role_menus` (`id`, `role`, `menu`) VALUES
 (11, 1, 'cadena_custodia'),
 (12, 1, 'cliente'),
 (13, 1, 'empleado'),
-(14, 1, 'proyecto');
+(14, 1, 'proyecto'),
+(15, 1, 'muestra'),
+(16, 1, 'analisis');
 
 -- --------------------------------------------------------
 
@@ -685,7 +754,17 @@ INSERT INTO `role_permissions` (`id`, `role`, `permission`) VALUES
 (37, 1, 'cadena_custodia_add'),
 (38, 1, 'cadena_custodia_edit'),
 (39, 1, 'cadena_custodia_delete'),
-(40, 1, 'cadena_custodia_view');
+(40, 1, 'cadena_custodia_view'),
+(41, 1, 'muestra_list'),
+(42, 1, 'muestra_add'),
+(43, 1, 'muestra_edit'),
+(44, 1, 'muestra_delete'),
+(45, 1, 'muestra_view'),
+(46, 1, 'analisis_list'),
+(47, 1, 'analisis_add'),
+(48, 1, 'analisis_edit'),
+(49, 1, 'analisis_delete'),
+(50, 1, 'analisis_view');
 
 -- --------------------------------------------------------
 
@@ -735,7 +814,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `phone`, `address`, `last_login`, `role`, `reset_token`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-03-03 21:03:09', 1, '', '2018-06-27 23:30:16', '0000-00-00 00:00:00');
+(1, 'Administrator', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-03-06 01:03:24', 1, '', '2018-06-27 23:30:16', '0000-00-00 00:00:00');
 
 --
 -- Índices para tablas volcadas
@@ -745,6 +824,12 @@ INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `phone`, `ad
 -- Indices de la tabla `activity_logs`
 --
 ALTER TABLE `activity_logs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `analisis`
+--
+ALTER TABLE `analisis`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -763,12 +848,6 @@ ALTER TABLE `cliente`
 -- Indices de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `factura_detalle`
---
-ALTER TABLE `factura_detalle`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -799,12 +878,6 @@ ALTER TABLE `producto`
 -- Indices de la tabla `proyecto`
 --
 ALTER TABLE `proyecto`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `q_obra`
---
-ALTER TABLE `q_obra`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -845,7 +918,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `activity_logs`
 --
 ALTER TABLE `activity_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=249;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=306;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
@@ -860,22 +933,16 @@ ALTER TABLE `empleado`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `factura_detalle`
---
-ALTER TABLE `factura_detalle`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
@@ -890,12 +957,6 @@ ALTER TABLE `proyecto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `q_obra`
---
-ALTER TABLE `q_obra`
-  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
@@ -905,13 +966,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `role_menus`
 --
 ALTER TABLE `role_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `role_permissions`
 --
 ALTER TABLE `role_permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `settings`

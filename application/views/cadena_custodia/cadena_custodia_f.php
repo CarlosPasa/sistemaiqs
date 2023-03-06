@@ -115,8 +115,13 @@
         <div class="col-xs-1"><?php vLabel('txtCliente','Muestrado por:'); ?></div>
         <div class="col-xs-3"><?php vComboBoxMultiple('cbEmpleado','empleado[]', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$empleados,"Seleccione Muestrador"); ?></div>
         <!--div class="col-xs-3"><select class="form-control select2" multiple="multiple" data-placeholder="Seleccione Muestreador" style="width: 100%;" id="cbEmpleado"></select></div-->
+        <input class="form-check-input" type="radio" name="chkCliente" id="chkCliente" value="CLIENTE" >
+        <?php vLabel('chkCliente','CLIENTE'); ?>
+        <input class="form-check-input" type="radio" name="chkCliente" id="chkCliente2" value="IQS" checked>
+        <?php vLabel('chkCliente2','IQS'); ?>
+        <!--div class="col-xs-3"><select class="form-control select2" multiple="multiple" data-placeholder="Seleccione Muestreador" style="width: 100%;" id="cbEmpleado"></select></div>
         <div class="col-xs-1"><?php  vCheckBox('chkCliente','Cliente',$chkCliente, null,'1');?></div>
-        <div class="col-xs-1"><?php  vCheckBox('chkIQS','IQS',$chkIQS, null,'1');?></div>
+        <div class="col-xs-1"><?php  vCheckBox('chkIQS','IQS',$chkIQS, null,'1');?></div-->
         
       </div>
       <!--div class="form-group">

@@ -114,9 +114,13 @@
       <div class="row">
         <div class="col-xs-1"><?php vLabel('txtCliente','Muestrado por:'); ?></div>
         <div class="col-xs-3"><?php vComboBoxMultiple('cbEmpleado','empleado[]', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$empleados,"Seleccione Muestrador"); ?></div>
-        <!--div class="col-xs-3"><select class="form-control select2" multiple="multiple" data-placeholder="Seleccione Muestreador" style="width: 100%;" id="cbEmpleado"></select></div-->
+        <input class="form-check-input" type="radio" name="chkCliente" id="chkCliente" value="CLIENTE" <?php if($option == 'CLIENTE') echo 'checked'?> >
+        <?php vLabel('chkCliente','CLIENTE'); ?>
+        <input class="form-check-input" type="radio" name="chkCliente" id="chkCliente2" value="IQS" <?php if($option == 'IQS') echo 'checked'?>>
+        <?php vLabel('chkCliente2','IQS'); ?>
+        <!--div class="col-xs-3"><select class="form-control select2" multiple="multiple" data-placeholder="Seleccione Muestreador" style="width: 100%;" id="cbEmpleado"></select></div>
         <div class="col-xs-1"><?php  vCheckBox('chkCliente','Cliente',$chkCliente, null,'1');?></div>
-        <div class="col-xs-1"><?php  vCheckBox('chkIQS','IQS',$chkIQS, null,'1');?></div>
+        <div class="col-xs-1"><?php  vCheckBox('chkIQS','IQS',$chkIQS, null,'1');?></div-->
         
       </div>
       <!--div class="form-group">
@@ -138,6 +142,8 @@
       <div id="gridDetalle" >
         <?php
           $Actions = array(new modelFieldAction(array("class"=>"btn btn-sm btn-info","icono"=>"glyphicon glyphicon-pencil","tooltip"=>"Modificar","columnNameID"=>"id","onClick"=>'onDetalle_edit("_id_")')),
+                          new modelFieldAction(array("class"=>"btn btn-sm btn-warning", "icono"=>"fa fa-flask","tooltip"=>"Ver Analisis","columnNameID"=>"id","onClick"=>'listarMuestra("_id_")')),
+                          new modelFieldAction(array("class"=>"btn btn-sm btn-success", "icono"=>"fa fa-plus-square","tooltip"=>"Agregar Análisis","columnNameID"=>"id","onClick"=>'onNuevo_analisis("_id_")')),
                           new modelFieldAction(array("class"=>"btn btn-sm btn-danger", "icono"=>"glyphicon glyphicon-trash","tooltip"=>"Eliminar","columnNameID"=>"id","onClick"=>'onDetalle_delete("_id_")'))
             );
           $modelFieldDetalle = array();
@@ -265,7 +271,6 @@
       data: { "id": 0, "idCadena": $("#id").val() },
       dataType: 'html',
       success: function (html) {
-        console.log(html);
         $("#pageSpin").hide();
         $('#divDetalle').html(html);
         $('#modal_detalle').modal('show');
@@ -307,6 +312,38 @@
       }
     });
 	}
+  function onNuevo_analisis(_id) {
+    $url = '<?php echo site_url('analisis/nuevoModal') ?>'+ "/" + _id;
+    $idMuestra = _id;
+    $("#pageSpin").show();
+    $.ajax({
+      type: 'GET',
+      url: $url,
+      data: { "idMuestra": $idMuestra },
+      dataType: 'html',
+      success: function (html) {
+        $("#pageSpin").hide();
+        $('#divDetalle').html(html);
+        $('#modal_detalle').modal('show');
+      }
+    });
+  }
+  function listarMuestra(_id) {
+    $url = '<?php echo site_url('analisis/listarModal') ?>'+ "/" + _id;
+    $idMuestra = _id;
+    $("#pageSpin").show();
+    $.ajax({
+      type: 'GET',
+      url: $url,
+      data: { },
+      dataType: 'html',
+      success: function (html) {
+        $("#pageSpin").hide();
+        $('#divDetalle').html(html);
+        $('#modal_detalle').modal('show');
+      }
+    });
+  }
 </script>
 
 <?php include viewPath('includes/footer'); ?>

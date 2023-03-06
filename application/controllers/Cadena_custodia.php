@@ -85,6 +85,7 @@ class Cadena_custodia extends MY_Controller {
 			'telefono' => $this->input->post('txtTelefono'),
 			'celular' => $this->input->post('txtCelular'),
 			'email' => $this->input->post('txtEmail'),
+			'opcion' => $this->input->post('chkCliente'),
 			'created_at' => date("Y-m-d H:i:s"),
 			'estado' => '1'
 		]);
@@ -122,6 +123,7 @@ class Cadena_custodia extends MY_Controller {
 					'empleado_data' => $this->empleado_model->getActive(),
 					'proyecto_data' => $this->proyecto_model->getActive(),
 					'empleados'=>explode(",",$registro->id_empleado),
+					'option' => $registro->opcion,
 					'dataDetalle' => $this->muestra_model->getMuestrasByIdCadena($id),
 				);
 		$this->load->view('cadena_custodia/cadena_custodia_f_edit', $this->page_data + $data);
@@ -154,6 +156,7 @@ class Cadena_custodia extends MY_Controller {
 			'telefono' => $this->input->post('txtTelefono'),
 			'celular' => $this->input->post('txtCelular'),
 			'email' => $this->input->post('txtEmail'),
+			'opcion' => $this->input->post('chkCliente'),
 			'updated_at' => date("Y-m-d H:i:s"),
 		];
 		$registro = $this->cadena_model->update($id, $data);

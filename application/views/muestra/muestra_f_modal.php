@@ -85,7 +85,11 @@ $(document).ready(function(){
 </script>
 
 <script type="text/javascript">
-	//Other Script
+$(function() {
+    $('input').focusout(function() {	
+        this.value = this.value.toLocaleUpperCase();
+    });
+});
 </script>
 
 <!-- onSubmit() -->
@@ -106,8 +110,9 @@ function onMuestraSubmit(){
 			console.log(obj);
 			if (obj['STATUS']=='true'){
 				onMuestra_close();
+				onDetalle_reload();
 				alerta('success',obj['mensaje'],'¡Importante!');
-				if (obj['redirect_url'] != null){					
+				if (obj['redirect_url'] != null){
 					window.location.href = obj['redirect_url'];
 				}
 			}
@@ -126,7 +131,6 @@ function onMuestraSubmit(){
 }
 function onMuestra_close() {
 	$('#modal_detalle').modal('hide');
-	onDetalle_reload();
 }
 function hora(nombre){
 		$('#'+ nombre +'').timepicker({

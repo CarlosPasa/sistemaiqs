@@ -13,6 +13,7 @@ class Muestra extends MY_Controller {
 		$this->page_data['page']->menu = 'muestra';
 		$this->page_data['titulo'] = "Muestras";
   		$this->page_data['subTitulo'] = "Administrar";
+		$this->load->library('form_validation');//cargo la libreria de validacion
 	}
 
 	public function index()
@@ -125,13 +126,30 @@ class Muestra extends MY_Controller {
 					'contenedor_otros'=>$this->input->post('txtCO'),
 					'estado' => '1'
  		);
-		$muestra = $this->muestra_model->create($data);
-		$this->activity_model->action_create("Muestra");
-		$status = array(
-						"STATUS"      =>"true",
-						"mensaje"     =>"",						
-						);
-		echo json_encode ($status);
+		 $config = array(
+			array('field' => 'txtCodigoCampo','label' => 'Codigo Campo',	'rules' => 'required'),
+            array('field' => 'txtUbicacion','label' => 'Ubicación',	'rules' => 'required'),
+			array('field' => 'txtFechaMuestreo','label' => 'Fecha de muestreo',	'rules' => 'required'),
+			array('field' => 'txtCP','label' => 'Contenedores P',	'rules' => 'required'),
+            array('field' => 'txtCV','label' => 'Contenedores V',	'rules' => 'required'),
+			array('field' => 'txtCO','label' => 'Contenedores Otros',	'rules' => 'required'),
+		);
+		$this->form_validation->set_rules($config);
+		if($this->form_validation->run() == FALSE){
+			$status = array(
+				"STATUS"  =>"false",
+				"mensaje" => validation_errors(),//muestra los mensaje de la validacion
+				);
+			echo json_encode ($status);
+		}else{
+			$muestra = $this->muestra_model->create($data);
+			$this->activity_model->action_create("Muestra");
+			$status = array(
+							"STATUS"      =>"true",
+							"mensaje"     =>"Se registro correctamente la muestra",						
+							);
+			echo json_encode ($status);
+		}
 	}
 
 	public function generarCodigo($idCadena){
