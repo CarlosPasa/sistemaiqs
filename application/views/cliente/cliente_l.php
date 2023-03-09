@@ -30,9 +30,7 @@
 
     </div>
     <div class="box-body">
-
-      <?php
-      
+      <?php      
         $Actions = array();
           if (hasPermissions('cliente_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("cliente/edit"),"id"));
           if (hasPermissions('cliente_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("cliente/deleteAction"),"id"));

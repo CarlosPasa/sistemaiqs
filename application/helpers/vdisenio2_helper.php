@@ -1064,6 +1064,16 @@ class modelFieldAction{
 		return new modelFieldAction(array("url"=>$url."/_id_", "columnNameID"=>$columnNameID, "class"=>"btn btn-sm btn-danger", "icono"=>"glyphicon glyphicon-trash","titulo"=>"Eliminar","onClick"=>"ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado','_url_')"));
 
 	}
+	// Creado el 08/03/2023
+	public static function btnEditJS($js, $columnNameID){
+		return new modelFieldAction(array("class"=>"btn btn-sm btn-info","icono"=>"glyphicon glyphicon-pencil","tooltip"=>"Modificar","columnNameID"=>$columnNameID,"onClick"=>$js."('_id_')"));
+	}
+	public static function btnVerAnalisisJS($js, $columnNameID){
+		return new modelFieldAction(array("class"=>"btn btn-sm btn-warning", "icono"=>"fa fa-flask","tooltip"=>"Ver Analisis","columnNameID"=>$columnNameID,"onClick"=>$js."('_id_')"));
+	}
+	public static function btnCrearAnalisisJS($js, $columnNameID){
+		return new modelFieldAction(array("class"=>"btn btn-sm btn-success", "icono"=>"fa fa-plus-square","tooltip"=>"Agregar Análisis","columnNameID"=>$columnNameID,"onClick"=>$js."('_id_')"));
+	}
 
 }
 

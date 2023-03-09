@@ -8,6 +8,7 @@ class Empleado extends MY_Controller {
 		parent::__construct();
 		//Models
 		$this->load->model('empleado_model');
+		$this->load->library('form_validation');//cargo la libreria de validacion
 		//Textos
 		$this->page_data['page']->title = 'Empleados';
 		$this->page_data['page']->menu = 'empleado';
@@ -88,14 +89,25 @@ class Empleado extends MY_Controller {
 					'nombre_empleado' => $this->input->post('txtNombreEmpleado'),
 					'estado' => '1'
  		);
-		$empleado = $this->empleado_model->create($data);
-		$this->activity_model->action_create("Empleados");
-		$status = array(
-						"STATUS"      =>"true",
-						"mensaje"     =>"",
-						"redirect_url" => 'empleado/edit/'.$empleado
-						);
-		echo json_encode ($status);
+		$config = array(
+			array('field' => 'txtNombreEmpleado','label' => 'Nombre del Empleado', 'rules' => 'required')
+		);
+		$this->form_validation->set_rules($config);
+		if($this->form_validation->run() == FALSE){
+			$status = array(
+				"STATUS"  =>"false",
+				"mensaje" => validation_errors(),//muestra los mensaje de la validacion
+				);
+			echo json_encode ($status);
+		}else{
+			$this->activity_model->action_create("Empleados");
+			$status = array(
+							"STATUS"      =>"true",
+							"mensaje"     =>"",
+							"redirect_url" => 'empleado/edit/'.$empleado
+							);
+			echo json_encode ($status);
+		}
 	}
 }
 

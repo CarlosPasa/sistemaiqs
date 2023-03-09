@@ -126,7 +126,8 @@ class Cadena_custodia extends MY_Controller {
 					'option' => $registro->opcion,
 					'dataDetalle' => $this->muestra_model->getMuestrasByIdCadena($id),
 				);
-		$this->load->view('cadena_custodia/cadena_custodia_f_edit', $this->page_data + $data);
+		//$this->load->view('cadena_custodia/cadena_custodia_f_edit', $this->page_data + $data);
+		$this->load->view('cadena_custodia/cadena_custodia_f_edit2', $this->page_data + $data);
 	}
 
 	public function editAction()
