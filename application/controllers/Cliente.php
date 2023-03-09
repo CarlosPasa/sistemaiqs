@@ -87,9 +87,7 @@ class Cliente extends MY_Controller {
 		$data = array(
 					'nombre_cliente' => $this->input->post('txtNombreCliente'),
 					'estado' => '1'
- 		);
-		$cliente = $this->cliente_model->create($data);
-		$this->activity_model->action_create("Clientes");
+ 		);		
 		$config = array(
 			array('field' => 'txtNombreCliente','label' => 'Nombre del Cliente', 'rules' => 'required')
 		);
@@ -101,6 +99,8 @@ class Cliente extends MY_Controller {
 				);
 			echo json_encode ($status);
 		}else{
+			$cliente = $this->cliente_model->create($data);
+			$this->activity_model->action_create("Clientes");
 			$status = array(
 							"STATUS"      =>"true",
 							"mensaje"     =>"",
