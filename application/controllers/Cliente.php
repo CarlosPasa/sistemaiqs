@@ -8,6 +8,7 @@ class Cliente extends MY_Controller {
 		parent::__construct();
 		//Models
 		$this->load->model('cliente_model');
+		$this->load->library('form_validation');//cargo la libreria de validacion
 		//Textos
 		$this->page_data['page']->title = 'Clientes';
 		$this->page_data['page']->menu = 'cliente';
@@ -89,12 +90,24 @@ class Cliente extends MY_Controller {
  		);
 		$cliente = $this->cliente_model->create($data);
 		$this->activity_model->action_create("Clientes");
-		$status = array(
-						"STATUS"      =>"true",
-						"mensaje"     =>"",
-						"redirect_url" => 'cliente/edit/'.$cliente
-						);
-		echo json_encode ($status);
+		$config = array(
+			array('field' => 'txtNombreCliente','label' => 'Nombre del Cliente', 'rules' => 'required')
+		);
+		$this->form_validation->set_rules($config);
+		if($this->form_validation->run() == FALSE){
+			$status = array(
+				"STATUS"  =>"false",
+				"mensaje" => validation_errors(),//muestra los mensaje de la validacion
+				);
+			echo json_encode ($status);
+		}else{
+			$status = array(
+							"STATUS"      =>"true",
+							"mensaje"     =>"",
+							"redirect_url" => 'cliente/edit/'.$cliente
+							);
+			echo json_encode ($status);
+		}
 	}
 }
 

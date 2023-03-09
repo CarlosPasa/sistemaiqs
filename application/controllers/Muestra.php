@@ -126,7 +126,7 @@ class Muestra extends MY_Controller {
 					'contenedor_otros'=>$this->input->post('txtCO'),
 					'estado' => '1'
  		);
-		 $config = array(
+		$config = array(
 			array('field' => 'txtCodigoCampo','label' => 'Codigo Campo',	'rules' => 'required'),
             array('field' => 'txtUbicacion','label' => 'Ubicación',	'rules' => 'required'),
 			array('field' => 'txtFechaMuestreo','label' => 'Fecha de muestreo',	'rules' => 'required'),

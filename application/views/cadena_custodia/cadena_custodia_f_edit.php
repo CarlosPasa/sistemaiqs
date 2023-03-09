@@ -30,98 +30,93 @@
     <?php echo form_open_multipart($postAction,vFormAtributos("frmCadenaCustodia"), [ 'class' => 'form-validate' ]); ?>
     <div class="box-body">
       <?php vHidden('id', $id); ?>
-      <div class="row">
-        <div class="col-xs-4">
-          <?php vLabel('txtCliente','Cliente'); ?>
-        </div>
-        <div class="col-xs-4" >
-          <?php vLabel('txtContacto','Contacto'); ?>
-        </div>
-        <div class="col-xs-4" >
-          <?php vLabel('txtProyecto','Proyecto/Programa'); ?>
-        </div>
+      <div class="col-xs-12 col-md-1">
+        <?php vLabel('txtCliente','Cliente'); ?>        
       </div>
       <div class="row">
-				<div class="col-xs-4">
+        <div class="col-xs-12 col-md-3">
           <?php vComboBoxLiveSearch('cbCliente', stdToArray($cliente_data), 'id', 'nombre_cliente',NULL,$cbCliente); ?>
-      	</div>
-        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-12 col-md-1">
+          <?php vLabel('txtContacto','Contacto'); ?>        
+        </div>
+        <div class="col-xs-12 col-md-3">
           <?php vComboBoxLiveSearch('cbContacto', stdToArray($cliente_data), 'id', 'nombre_cliente',NULL,$cbContacto); ?>
-      	</div>
-        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-12 col-md-1">
+          <?php vLabel('txtProyecto','Proyecto/Programa'); ?>        
+        </div>
+        <div class="col-xs-12 col-md-2">
           <?php vComboBoxLiveSearch('cbProyecto', stdToArray($proyecto_data), 'id', 'nombre_proyecto',NULL,$cbProyecto); ?>
-      	</div>
+        </div>
       </div>
       <br>
       <div class="row">
-        <div class="col-xs-3">
+        <div class="col-xs-12 col-md-1">
           <?php vLabel('txtDireccion','Dirección'); ?>
         </div>
-        <div class="col-xs-3" >
+        <div class="col-xs-12 col-md-2">
+          <?php vTextBox('txtDireccion',$txtDireccion, 'Ingrese Dirección',null,null,null,null,false,"required"); ?>
+        </div>
+        <div class="col-xs-12 col-md-1">
           <?php vLabel('txtDistrito','Distrito'); ?>
         </div>
-        <div class="col-xs-3" >
+        <div class="col-xs-12 col-md-2">
+          <?php vTextBox('txtDistrito',$txtDistrito, 'Ingrese Distrito',null,null,null,null,false,"required"); ?>
+        </div>
+        <div class="col-xs-12 col-md-1">
           <?php vLabel('txtProvincia','Provincia'); ?>
         </div>
-        <div class="col-xs-3" >
+        <div class="col-xs-12 col-md-2">
+          <?php vTextBox('txtProvincia',$txtProvincia, 'Ingrese Provincia',null,null,null,null,false,"required"); ?>
+        </div>
+        <div class="col-xs-12 col-md-1">
           <?php vLabel('txtDepartamento','Departamento'); ?>
         </div>
-      </div>
-      <div class="row">
-				<div class="col-xs-3">
-          <?php vTextBox('txtDireccion',$txtDireccion, 'Ingrese Dirección',null,null,null,null,false,"required"); ?>
-      	</div>
-        <div class="col-xs-3">
-          <?php vTextBox('txtDistrito',$txtDistrito, 'Ingrese Distrito',null,null,null,null,false,"required"); ?>
-      	</div>
-        <div class="col-xs-3">
-          <?php vTextBox('txtProvincia',$txtProvincia, 'Ingrese Provincia',null,null,null,null,false,"required"); ?>
-      	</div>
-        <div class="col-xs-3">
+        <div class="col-xs-12 col-md-2">
           <?php vTextBox('txtDepartamento',$txtDepartamento, 'Ingrese Departamento',null,null,null,null,false,"required"); ?>
-      	</div>
+        </div>
       </div>
       <br>
       <div class="row">
-        <div class="col-xs-3">
+        <div class="col-xs-12 col-md-1">
           <?php vLabel('txtEmail','Email'); ?>
         </div>
-        <div class="col-xs-3" >
-          <?php vLabel('txtTelefono','Teléfono'); ?>
-        </div>
-        <div class="col-xs-3" >
-          <?php vLabel('txtCelular','Celular'); ?>
-        </div>
-        <div class="col-xs-3" >
-          <?php vLabel('txtFecha','Fecha'); ?>
-        </div>
-      </div>
-      <div class="row">
-				<div class="col-xs-3">
+        <div class="col-xs-12 col-md-2">
           <?php vTextBox('txtEmail',$txtEmail, 'Ingrese email',null,null,null,null,false,""); ?>
       	</div>
-        <div class="col-xs-3">
+        <div class="col-xs-12 col-md-1">
+          <?php vLabel('txtTelefono','Teléfono'); ?>
+        </div>
+        <div class="col-xs-12 col-md-2">
           <?php vTextBox('txtTelefono',$txtTelefono, 'Ingrese Teléfono',null,null,null,null,false,"",null,9); ?>
       	</div>
-        <div class="col-xs-3">
+        <div class="col-xs-12 col-md-1">
+          <?php vLabel('txtCelular','Celular'); ?>
+        </div>
+        <div class="col-xs-12 col-md-2">
           <?php vTextBox('txtCelular',$txtCelular, 'Ingrese Celular',null,null,null,null,false,"",null,9); ?>
       	</div>
-        <div class="col-xs-2">
+        <div class="col-xs-12 col-md-1">
+          <?php vLabel('txtFecha','Fecha'); ?>
+        </div>
+        <div class="col-xs-12 col-md-2">
           <?php vDateTimePicker('txtFecha',$txtFecha, null,null,true,true); ?>
       	</div>
       </div>
       <br>
       <div class="row">
-        <div class="col-xs-1"><?php vLabel('txtCliente','Muestrado por:'); ?></div>
-        <div class="col-xs-3"><?php vComboBoxMultiple('cbEmpleado','empleado[]', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$empleados,"Seleccione Muestrador"); ?></div>
-        <input class="form-check-input" type="radio" name="chkCliente" id="chkCliente" value="CLIENTE" <?php if($option == 'CLIENTE') echo 'checked'?> >
-        <?php vLabel('chkCliente','CLIENTE'); ?>
-        <input class="form-check-input" type="radio" name="chkCliente" id="chkCliente2" value="IQS" <?php if($option == 'IQS') echo 'checked'?>>
-        <?php vLabel('chkCliente2','IQS'); ?>
-        <!--div class="col-xs-3"><select class="form-control select2" multiple="multiple" data-placeholder="Seleccione Muestreador" style="width: 100%;" id="cbEmpleado"></select></div>
-        <div class="col-xs-1"><?php  vCheckBox('chkCliente','Cliente',$chkCliente, null,'1');?></div>
-        <div class="col-xs-1"><?php  vCheckBox('chkIQS','IQS',$chkIQS, null,'1');?></div-->
-        
+        <div class="col-xs-12 col-md-4">
+          <?php vLabel('txtCliente','Muestrado por:'); ?>
+          <?php vComboBoxMultiple('cbEmpleado','empleado[]', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$empleados,"Seleccione Muestrador"); ?>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <br>
+          <input class="form-check-input" type="radio" name="chkCliente" id="chkCliente" value="CLIENTE" <?php if($option == 'CLIENTE') echo 'checked'?> >
+          <?php vLabel('chkCliente','CLIENTE'); ?>
+          <input class="form-check-input" type="radio" name="chkCliente" id="chkCliente2" value="IQS" <?php if($option == 'IQS') echo 'checked'?>>
+          <?php vLabel('chkCliente2','IQS'); ?>
+        </div>      
       </div>
       <!--div class="form-group">
         <?php vLabel('txtMuestrador','Monto'); ?>

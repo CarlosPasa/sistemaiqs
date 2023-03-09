@@ -10,10 +10,14 @@ function vTableInit(tblObject) {
         "<div id='" + divName + "' style='display:none; position: absolute;top: 50%;left: 50%;width: 100%;height: 40px;font-weight: bold;color: navy;'>" +
         "<div class='fa fa-spinner fa-spin'></div><span>Actualizando...</span>" +
         "</div>" +
+        "<div class='table-responsive'>"+
+        "<div id='table_wrapper' class='dataTables_wrapper form-inline dt-bootstrap no-footer'>"+
         "<table id='" + tblName + "' class='table table-striped table-bordered' cellspacing='0' width='100%'>" +
         "<thead></thead>" +
         "<tbody></tbody>" +
-        "</table>"
+        "</table>"+
+        "</div>"+
+        "</div>"
     );
     //tHead
     if (tblObject.modelField != null) {

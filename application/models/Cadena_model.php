@@ -39,6 +39,7 @@ class Cadena_model extends MY_Model {
             ->join('proyecto', 'cadena_custodia.id_proyecto = proyecto	.id','inner');
 		$this->db->where('cadena_custodia.estado','1');
 		$this->db->group_by('cadena_custodia.id');
+		$this->db->order_by('id', 'DESC');
 		$query = $this->db->get();
 		return $query->result();
 	}
