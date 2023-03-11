@@ -45,3 +45,63 @@
 	height: 100%;
 	padding: 150px 60px;
 }
+@media (max-width: 375px) {
+	.login-page-side .login-box{
+		margin: auto;
+		right: 0;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+	}
+	.login-page-side .login-box .login-box-body{
+		height: 100%;
+		padding: 150px 60px;
+	}
+}
+@media (max-width: 414px) {
+	.login-page-side .login-box{
+		margin: auto;
+		right: 0;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+	}
+	.login-page-side .login-box .login-box-body{
+		height: 100%;
+		padding: 150px 60px;
+	}
+}
+@media (max-width: 667px) {
+	.login-page-side .login-box{
+		margin: auto;
+		right: 0;
+		position: absolute;
+		height: 100%;
+		top: -150px;
+		bottom: 0;
+		width: 100%;
+	}
+	.login-page-side .login-box .login-box-body{
+		height: 120%;
+		padding: 150px 60px;
+	}
+}
+@media (max-width: 915px) {
+	.login-page-side .login-box{
+		margin: auto;
+		right: 0;
+		position: absolute;
+		height: 110%;
+		top: -40px;
+		bottom: 0;
+		width: 100%;
+	}
+	.login-page-side .login-box .login-box-body{
+		height: 100%;
+		padding: 150px 60px;
+	}
+}

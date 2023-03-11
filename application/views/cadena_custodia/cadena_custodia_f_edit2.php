@@ -182,7 +182,7 @@
               <th class="text-center" width="120px"></th>
               <th class="text-center" width="457.267px"></th>
               <th class="text-center" width="64.86px"></th>
-              <th class="text-center"width="77.43px"></th>
+              <th class="text-center" width="77.43px"></th>
               <th class="text-center" width="70px"></th>
               <th class="text-center" width="91.03"></th>
               <th class="text-center" width="157px"></th>
@@ -192,10 +192,52 @@
           </tbody>
         </table>
       </div>
+      <div class='table-responsive'>
+    <table id='table' class='table table-striped table-bordered' cellspacing='1' width='60%'>
+        <thead>
+          <tr>
+            <th class='text-center' width="220px">Datos</th>
+            <th class='text-center'>Responsable</th>
+            <th class='text-center'>Organización</th>
+            <th class='text-center'>Datos</th>
+            <th class='text-center'>Hora</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class='text-left'>Muestrado por:</th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+          </tr>
+          <tr>
+            <th class='text-left'>Muestrado por:</th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+          </tr>
+          <tr>
+            <th class='text-left'>Ingresado por:</th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+          </tr>
+          <tr>
+            <th class='text-left'>Recibido en Laboratorio por:</th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+            <th class='text-center'></th>
+          </tr>          
+        </tbody>
+      </table>
+    </div>
       <div id="divDetalle"></div>
     </div>
-	</div>
-
+	</div>  
 	<br><br>
 
     <div class="box-footer">

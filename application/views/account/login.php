@@ -6,7 +6,7 @@
   <div class="login-logo">
     <a href="<?php echo url('/') ?>"><b>Admin</b> Panel</a>
   </div>
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Bienvenido a IQS</p>
 
     <?php if(isset($message)): ?>
       <div class="alert alert-<?php echo $message_type ?>">
@@ -23,13 +23,13 @@
 
     <form action="<?php echo url('/login/check') ?>" method="post" autocomplete="off">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Enter Username or Email..." value="<?php echo post('username') ?>" name="username" autofocus />
+        <input type="text" class="form-control" placeholder="Ingrese usuario" value="<?php echo post('username') ?>" name="username" autofocus />
         <span class="fa fa-user form-control-feedback"></span>
         <?php echo form_error('username', '<div class="error" style="color: red;">', '</div>'); ?>
       </div>
 
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="password">
+        <input type="password" class="form-control" placeholder="Ingrese contraseña" name="password">
         <span class="fa fa-lock form-control-feedback"></span>
         <?php echo form_error('password', '<div class="error" style="color: red;">', '</div>'); ?>
       </div>
@@ -44,13 +44,13 @@
         <!-- /.col -->
         <?php // echo md5('admin') ?>
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
 
-    <a href="<?php echo url('login/forget?username='.post('username')) ?>">Forgot your password ?</a><br>
+    <!--a href="<?php echo url('login/forget?username='.post('username')) ?>">Forgot your password ?</a><br-->
     <!-- <a href="register.html" class="text-center">Register a new membership</a> -->
 
   </div>
