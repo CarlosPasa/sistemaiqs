@@ -199,38 +199,38 @@
             <th class='text-center' width="220px">Datos</th>
             <th class='text-center'>Responsable</th>
             <th class='text-center'>Organización</th>
-            <th class='text-center'>Datos</th>
+            <th class='text-center'>Fecha</th>
             <th class='text-center'>Hora</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th class='text-left'>Muestrado por:</th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
+            <th class='text-left'>Transportado por:</th>
+            <td class='text-center'><?php echo $persona_transportado?></td>            
+            <td class='text-center'>IQS</td>
+            <td class='text-center'><?php echo $fecha_transporte?></td>
+            <td class='text-center'><?php echo $hora_transporte?></td>
           </tr>
           <tr>
-            <th class='text-left'>Muestrado por:</th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
+            <th class='text-left'>Entregado por:</th>
+            <td class='text-center'><?php echo $persona_entrega?></td>            
+            <td class='text-center'>IQS</td>
+            <td class='text-center'><?php echo $fecha_entrega?></td>
+            <td class='text-center'><?php echo $hora_entrega?></td>
           </tr>
           <tr>
             <th class='text-left'>Ingresado por:</th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
+            <td class='text-center'><?php echo $persona_ingreso?></td>            
+            <td class='text-center'>IQS</td>
+            <td class='text-center'><?php echo $fecha_ingreso?></td>
+            <td class='text-center'><?php echo $hora_ingreso?></td>
           </tr>
           <tr>
             <th class='text-left'>Recibido en Laboratorio por:</th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
-            <th class='text-center'></th>
+            <td class='text-center'><?php echo $laboratorista?></td>            
+            <td class='text-center'>IQS</td>
+            <td class='text-center'><?php echo $fecha_laboratorio?></td>
+            <td class='text-center'><?php echo $hora_laboratorio?></td>
           </tr>          
         </tbody>
       </table>
