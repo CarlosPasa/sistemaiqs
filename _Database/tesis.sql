@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-03-2023 a las 06:51:03
+-- Tiempo de generación: 12-03-2023 a las 07:40:13
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -854,13 +854,18 @@ ALTER TABLE `activity_logs`
 -- Indices de la tabla `analisis`
 --
 ALTER TABLE `analisis`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idMuestra` (`idMuestra`);
 
 --
 -- Indices de la tabla `cadena_custodia`
 --
 ALTER TABLE `cadena_custodia`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idUser` (`idUser`),
+  ADD KEY `id_cliente` (`id_cliente`),
+  ADD KEY `id_contacto` (`id_contacto`),
+  ADD KEY `id_proyecto` (`id_proyecto`);
 
 --
 -- Indices de la tabla `cliente`
@@ -884,7 +889,8 @@ ALTER TABLE `menu`
 -- Indices de la tabla `muestra`
 --
 ALTER TABLE `muestra`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idCadenaCustodia` (`idCadenaCustodia`);
 
 --
 -- Indices de la tabla `permissions`
@@ -997,6 +1003,29 @@ ALTER TABLE `settings`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `analisis`
+--
+ALTER TABLE `analisis`
+  ADD CONSTRAINT `analisis_ibfk_1` FOREIGN KEY (`idMuestra`) REFERENCES `muestra` (`id`);
+
+--
+-- Filtros para la tabla `cadena_custodia`
+--
+ALTER TABLE `cadena_custodia`
+  ADD CONSTRAINT `cadena_custodia_ibfk_1` FOREIGN KEY (`id_proyecto`) REFERENCES `proyecto` (`id`),
+  ADD CONSTRAINT `cadena_custodia_ibfk_2` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `muestra`
+--
+ALTER TABLE `muestra`
+  ADD CONSTRAINT `muestra_ibfk_1` FOREIGN KEY (`idCadenaCustodia`) REFERENCES `cadena_custodia` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
