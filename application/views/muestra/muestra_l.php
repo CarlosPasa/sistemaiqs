@@ -36,12 +36,12 @@
           if (hasPermissions('muestra_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("muestra/edit"),"id"));
           if (hasPermissions('muestra_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("muestra/deleteAction"),"id"));
         $modelField = array(
-          new modelFieldItem(array("nombre"=>"ID", "nombreData"=>"id","hAlign"=>"center","ancho"=>"60px")),
+          new modelFieldItem(array("nombre"=>"ID", "nombreData"=>"id","hAlign"=>"center")),
           new modelFieldItem(array("nombre"=>"Codigo de Campo/Puntos de Muestreo", "nombreData"=>"codigo_campo","hAlign"=>"center")),
           new modelFieldItem(array("nombre"=>"Locación/Ubicación", "nombreData"=>"ubicacion","hAlign"=>"center")),
-          new modelFieldItem(array("nombre"=>"CP", "nombreData"=>"contenedor_p","hAlign"=>"right","ancho"=>"30px")),
-          new modelFieldItem(array("nombre"=>"CV", "nombreData"=>"contenedor_v","hAlign"=>"right","ancho"=>"30px")),
-          new modelFieldItem(array("nombre"=>"C Otros", "nombreData"=>"contenedor_otros","hAlign"=>"right","ancho"=>"30px")),
+          new modelFieldItem(array("nombre"=>"CP", "nombreData"=>"contenedor_p","hAlign"=>"right")),
+          new modelFieldItem(array("nombre"=>"CV", "nombreData"=>"contenedor_v","hAlign"=>"right")),
+          new modelFieldItem(array("nombre"=>"C Otros", "nombreData"=>"contenedor_otros","hAlign"=>"right")),
           new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
         );
         vTable($modelField, stdToArray($muestras), 0, 'tlbListado');

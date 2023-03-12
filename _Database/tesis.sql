@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-03-2023 a las 02:26:06
+-- Tiempo de generación: 12-03-2023 a las 06:51:03
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -345,7 +345,47 @@ INSERT INTO `activity_logs` (`id`, `title`, `user`, `ip_address`, `created_at`, 
 (302, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-06 01:12:08', '2023-03-06 01:12:08'),
 (303, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-06 01:19:06', '2023-03-06 01:19:06'),
 (304, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-06 01:23:23', '2023-03-06 01:23:23'),
-(305, 'Administrator Logged in', '1', '::1', '2023-03-06 01:24:08', '2023-03-06 01:24:08');
+(305, 'Administrator Logged in', '1', '::1', '2023-03-06 01:24:08', '2023-03-06 01:24:08'),
+(306, 'Administrator Logged in', '1', '::1', '2023-03-09 02:33:17', '2023-03-09 02:33:17'),
+(307, 'User: Administrator Logged Out', '1', '::1', '2023-03-09 02:43:32', '2023-03-09 02:43:32'),
+(308, 'Administrator Logged in', '1', '::1', '2023-03-09 02:43:37', '2023-03-09 02:43:37'),
+(309, 'Administrator Logged in', '1', '::1', '2023-03-09 02:50:26', '2023-03-09 02:50:26'),
+(310, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '::1', '2023-03-09 03:03:52', '2023-03-09 03:03:52'),
+(311, '#muestra #1 creada por el usuario:Administrator', '1', '::1', '2023-03-09 03:04:42', '2023-03-09 03:04:42'),
+(312, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '::1', '2023-03-09 03:04:51', '2023-03-09 03:04:51'),
+(313, 'Nuevo #Clientes creado por el usuario:Administrator', '1', '::1', '2023-03-09 03:19:04', '2023-03-09 03:19:04'),
+(314, '#Cadena_custodia #2023030002 creada por el usuario:Administrator', '1', '::1', '2023-03-09 03:59:45', '2023-03-09 03:59:45'),
+(315, 'User: Administrator Logged Out', '1', '::1', '2023-03-09 04:02:47', '2023-03-09 04:02:47'),
+(316, 'Administrator Logged in', '1', '::1', '2023-03-09 04:03:03', '2023-03-09 04:03:03'),
+(317, 'User: Administrator Logged Out', '1', '::1', '2023-03-09 04:03:41', '2023-03-09 04:03:41'),
+(318, 'Administrator Logged in', '1', '::1', '2023-03-09 04:03:55', '2023-03-09 04:03:55'),
+(319, 'User: Administrator Logged Out', '1', '::1', '2023-03-09 04:12:10', '2023-03-09 04:12:10'),
+(320, 'Administrator Logged in', '1', '::1', '2023-03-09 04:12:14', '2023-03-09 04:12:14'),
+(321, 'Nuevo #Clientes creado por el usuario:Administrator', '1', '::1', '2023-03-09 04:13:25', '2023-03-09 04:13:25'),
+(322, 'Nuevo #Clientes creado por el usuario:Administrator', '1', '::1', '2023-03-09 04:13:33', '2023-03-09 04:13:33'),
+(323, 'Nuevo #Clientes creado por el usuario:Administrator', '1', '::1', '2023-03-09 04:14:37', '2023-03-09 04:14:37'),
+(324, 'Nuevo #Clientes creado por el usuario:Administrator', '1', '::1', '2023-03-09 04:14:49', '2023-03-09 04:14:49'),
+(325, 'Nuevo #Empleados creado por el usuario:Administrator', '1', '::1', '2023-03-09 04:16:07', '2023-03-09 04:16:07'),
+(326, 'Nuevo #Empleados creado por el usuario:Administrator', '1', '::1', '2023-03-09 04:16:15', '2023-03-09 04:16:15'),
+(327, 'User: Administrator Logged Out', '1', '::1', '2023-03-09 04:23:23', '2023-03-09 04:23:23'),
+(328, 'Administrator Logged in', '1', '::1', '2023-03-09 04:23:26', '2023-03-09 04:23:26'),
+(329, 'User: Administrator Logged Out', '1', '::1', '2023-03-09 04:25:06', '2023-03-09 04:25:06'),
+(330, 'Administrator Logged in', '1', '::1', '2023-03-09 04:25:21', '2023-03-09 04:25:21'),
+(331, '#muestra #1 creada por el usuario:Administrator', '1', '::1', '2023-03-09 04:54:22', '2023-03-09 04:54:22'),
+(332, 'Nuevo #Muestra creado por el usuario:Administrator', '1', '::1', '2023-03-09 05:21:22', '2023-03-09 05:21:22'),
+(333, 'Administrator Logged in', '1', '::1', '2023-03-09 23:03:26', '2023-03-09 23:03:26'),
+(334, 'User: Administrator Logged Out', '1', '::1', '2023-03-09 23:05:48', '2023-03-09 23:05:48'),
+(335, 'Administrator Logged in', '1', '::1', '2023-03-09 23:13:42', '2023-03-09 23:13:42'),
+(336, 'User: Administrator Logged Out', '1', '::1', '2023-03-09 23:14:20', '2023-03-09 23:14:20'),
+(337, 'Administrator Logged in', '1', '::1', '2023-03-09 23:21:53', '2023-03-09 23:21:53'),
+(338, 'Administrator Logged in', '1', '::1', '2023-03-10 14:48:53', '2023-03-10 14:48:53'),
+(339, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-11 20:17:39', '2023-03-11 20:17:39'),
+(340, '#Cadena_custodia #2023030004 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-11 20:19:38', '2023-03-11 20:19:38'),
+(341, '#Cadena_custodia #2023030001 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-11 20:19:46', '2023-03-11 20:19:46'),
+(342, '#Cadena_custodia #2023020001 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-11 20:20:40', '2023-03-11 20:20:40'),
+(343, 'Administrator Logged in', '1', '::1', '2023-03-12 05:02:24', '2023-03-12 05:02:24'),
+(344, '#Cadena_custodia #2023030004 creada por el usuario:Administrator', '1', '::1', '2023-03-12 05:11:07', '2023-03-12 05:11:07'),
+(345, 'User: Administrator Logged Out', '1', '::1', '2023-03-12 05:20:37', '2023-03-12 05:20:37');
 
 -- --------------------------------------------------------
 
@@ -396,6 +436,15 @@ CREATE TABLE `cadena_custodia` (
   `email` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `fecha` datetime DEFAULT NULL,
   `estado` bit(1) DEFAULT NULL,
+  `id_persona_transporte` int(11) DEFAULT NULL,
+  `fecha_transporte` timestamp NULL DEFAULT NULL,
+  `id_persona_entrega` int(11) DEFAULT NULL,
+  `fecha_entrega` timestamp NULL DEFAULT NULL,
+  `id_persona_ingreso` int(11) DEFAULT NULL,
+  `fecha_ingreso` timestamp NULL DEFAULT NULL,
+  `id_laboratorista` int(11) DEFAULT NULL,
+  `fecha_laboratorio` timestamp NULL DEFAULT NULL,
+  `idUser` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -404,13 +453,13 @@ CREATE TABLE `cadena_custodia` (
 -- Volcado de datos para la tabla `cadena_custodia`
 --
 
-INSERT INTO `cadena_custodia` (`id`, `id_cliente`, `id_contacto`, `id_proyecto`, `id_empleado`, `opcion`, `direccion`, `distrito`, `provincia`, `departamento`, `celular`, `telefono`, `email`, `fecha`, `estado`, `created_at`, `updated_at`) VALUES
-('2023020000', 2, 1, 1, '1,2', 'CLIENTE', 'Paita', 'Paita', 'Talara', 'Piura', '', '987654321', 'hola@gmail.com', '2023-03-01 00:00:00', b'1', '2023-03-01 03:53:46', '2023-03-05 21:35:21'),
-('2023020001', 1, 1, 1, '1', 'IQS', 'Hola', 'Hola', 'Talara', 'Piura', '', '', '', '2023-02-28 00:00:00', b'1', '2023-03-01 03:34:19', '2023-03-05 21:40:41'),
-('2023030001', 1, 2, 1, '1,3', 'CLIENTE', 'Castilla', 'Piura', 'Talara', 'Piura', '', '', '', '2023-03-02 00:00:00', b'1', '2023-03-03 02:02:21', '2023-03-05 21:40:55'),
-('2023030002', 2, 2, 1, '1,2', NULL, 'Piura', 'Piura', 'Talara', 'Piura', '', '987654321', '', '2023-03-02 00:00:00', b'1', '2023-03-03 02:03:04', '2023-03-03 23:41:52'),
-('2023030003', 2, 1, 1, '1,2,3', 'IQS', 'Prueba 1', 'Piura', 'Talara', 'Piura', '988723123', '985465113', '', '2023-03-03 00:00:00', b'1', '2023-03-04 03:09:08', '2023-03-05 21:40:51'),
-('2023030004', 1, 2, 1, '1', 'IQS', 'Piura', 'Piura', 'Talara', 'Piura', '', '987654312', '', '2023-03-05 00:00:00', b'1', '2023-03-06 00:52:29', NULL);
+INSERT INTO `cadena_custodia` (`id`, `id_cliente`, `id_contacto`, `id_proyecto`, `id_empleado`, `opcion`, `direccion`, `distrito`, `provincia`, `departamento`, `celular`, `telefono`, `email`, `fecha`, `estado`, `id_persona_transporte`, `fecha_transporte`, `id_persona_entrega`, `fecha_entrega`, `id_persona_ingreso`, `fecha_ingreso`, `id_laboratorista`, `fecha_laboratorio`, `idUser`, `created_at`, `updated_at`) VALUES
+('2023020000', 2, 1, 1, '1,2', 'CLIENTE', 'Paita', 'Paita', 'Talara', 'Piura', '', '987654321', 'hola@gmail.com', '2023-03-01 00:00:00', b'1', 1, '2023-03-02 03:53:46', 2, '2023-03-03 03:53:46', 1, '2023-03-04 03:53:46', NULL, NULL, NULL, '2023-03-01 03:53:46', '2023-03-05 21:35:21'),
+('2023020001', 1, 1, 1, '1', 'IQS', 'Hola', 'Hola', 'Talara', 'Piura', '', '', '', '2023-02-28 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-03-01 03:34:19', '2023-03-11 20:20:40'),
+('2023030001', 3, 2, 1, '1,3', 'CLIENTE', 'Castilla', 'Piura', 'Talara', 'Piura', '', '', '', '2023-03-02 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-03-03 02:02:21', '2023-03-11 20:19:46'),
+('2023030002', 2, 2, 1, '1,2', 'IQS', 'Piura', 'Piura', 'Talara', 'Piura', '', '987654321', '', '2023-03-02 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-03-03 02:03:04', '2023-03-09 03:59:45'),
+('2023030003', 2, 1, 1, '1,2,3', 'IQS', 'Prueba 1', 'Piura', 'Talara', 'Piura', '988723123', '985465113', '', '2023-03-03 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-03-04 03:09:08', '2023-03-05 21:40:51'),
+('2023030004', 1, 2, 1, '1', 'IQS', 'Piura', 'Piura', 'Talara', 'Piura', '', '987654312', '', '2023-03-05 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-03-06 00:52:29', '2023-03-12 05:11:07');
 
 -- --------------------------------------------------------
 
@@ -455,7 +504,9 @@ CREATE TABLE `empleado` (
 INSERT INTO `empleado` (`id`, `nombre_empleado`, `created_at`, `updated_at`, `estado`) VALUES
 (1, 'Leandro Neira Chunga', '2023-02-27 23:33:27', '2023-02-27 23:33:35', b'1'),
 (2, 'Anastacio Petronilo Cleto', '2023-03-01 14:41:08', '2023-03-03 17:59:39', b'1'),
-(3, 'ANCAJIMA SOCOLA, EUNICE FIORELLA', '2023-03-02 03:19:27', NULL, b'1');
+(3, 'ANCAJIMA SOCOLA, EUNICE FIORELLA', '2023-03-02 03:19:27', NULL, b'1'),
+(4, 'ALEJANDRO SAENZ', '2023-03-09 04:16:07', '2023-03-09 04:26:48', b'1'),
+(5, 'PEDRO PEDRIN', '2023-03-09 04:16:15', '2023-03-09 04:26:58', b'1');
 
 -- --------------------------------------------------------
 
@@ -526,10 +577,11 @@ INSERT INTO `muestra` (`id`, `idCadenaCustodia`, `codigo_campo`, `ubicacion`, `c
 ('2023020000-03', '2023020000', 'SL WT', 'LAB 2', 1, 2, 2, '2023-03-06 00:04:45', '2023-03-06 00:04:43', NULL, b'1'),
 ('2023030002-01', '2023030002', 'SAL WT', 'LAB 1', 2, 1, 2, '2023-03-03 21:15:00', '2023-03-03 22:59:47', '2023-03-03 23:43:11', b'1'),
 ('2023030003-01', '2023030003', 'WT Lae', 'LAB1', 1, 2, 2, '2023-03-04 03:09:30', '2023-03-04 03:09:56', NULL, b'1'),
-('2023030004-01', '2023030004', 'WT', 'LAB 1', 1, 1, 1, '2023-03-06 00:52:00', '2023-03-06 00:53:08', NULL, b'1'),
+('2023030004-01', '2023030004', 'WT', 'LAB 1', 1, 1, 1, '2023-03-06 00:52:00', '2023-03-06 00:53:08', '2023-03-09 05:21:08', b'1'),
 ('2023030004-02', '2023030004', 'WT', 'AS', 1, 1, 1, '2023-03-06 00:53:30', '2023-03-06 00:53:38', NULL, b'1'),
 ('2023030004-03', '2023030004', 'SA', 'Q', 1, 1, 1, '2023-03-06 00:57:30', '2023-03-06 00:57:34', '2023-03-06 01:02:00', b'1'),
-('2023030004-04', '2023030004', 'Q', 'ASA', 1, 1, 1, '2023-03-06 00:59:30', '2023-03-06 01:00:18', '2023-03-06 01:01:55', b'1');
+('2023030004-04', '2023030004', 'Q', 'ASA', 1, 1, 2, '2023-03-06 00:59:30', '2023-03-06 01:00:18', '2023-03-09 05:21:14', b'1'),
+('2023030004-05', '2023030004', 'SDASD', 'ASDAS', 2, 2, 2, '2023-03-09 05:21:15', '2023-03-09 05:21:22', NULL, b'1');
 
 -- --------------------------------------------------------
 
@@ -598,34 +650,6 @@ INSERT INTO `permissions` (`id`, `title`, `code`) VALUES
 (48, 'muestra_edit', 'muestra_edit'),
 (49, 'muestra_delete', 'muestra_delete'),
 (50, 'muestra_view', 'muestra_view');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `producto`
---
-
-CREATE TABLE `producto` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
-  `estado` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `producto`
---
-
-INSERT INTO `producto` (`id`, `nombre`, `estado`, `created_at`, `updated_at`) VALUES
-(1, 'Libro', 1, '2023-02-01 20:33:21', '2023-02-01 20:33:21'),
-(2, 'Cuaderno', 1, '2023-02-01 20:33:21', '2023-02-01 20:33:21'),
-(3, 'Lapicero', 1, '2023-02-01 20:33:21', '2023-02-01 20:33:21'),
-(4, 'Lapiz', 1, '2023-02-01 20:33:21', '2023-02-01 20:33:21'),
-(5, 'Libro', 1, '2023-02-01 20:34:31', '2023-02-01 20:34:31'),
-(6, 'Cuaderno', 1, '2023-02-01 20:34:31', '2023-02-01 20:34:31'),
-(7, 'Lapicero', 1, '2023-02-01 20:34:31', '2023-02-01 20:34:31'),
-(8, 'Lapiz', 1, '2023-02-01 20:34:31', '2023-02-01 20:34:31');
 
 -- --------------------------------------------------------
 
@@ -814,7 +838,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `phone`, `address`, `last_login`, `role`, `reset_token`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-03-06 01:03:24', 1, '', '2018-06-27 23:30:16', '0000-00-00 00:00:00');
+(1, 'Administrator', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-03-12 05:03:02', 1, '', '2018-06-27 23:30:16', '0000-00-00 00:00:00');
 
 --
 -- Índices para tablas volcadas
@@ -869,12 +893,6 @@ ALTER TABLE `permissions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `producto`
---
-ALTER TABLE `producto`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `proyecto`
 --
 ALTER TABLE `proyecto`
@@ -918,7 +936,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `activity_logs`
 --
 ALTER TABLE `activity_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=306;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=346;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
@@ -930,7 +948,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `menu`
@@ -943,12 +961,6 @@ ALTER TABLE `menu`
 --
 ALTER TABLE `permissions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
-
---
--- AUTO_INCREMENT de la tabla `producto`
---
-ALTER TABLE `producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `proyecto`
