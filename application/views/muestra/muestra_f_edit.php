@@ -83,7 +83,7 @@
         <?php      
        $Actions = array();
        if (hasPermissions('analisis_edit')) array_push($Actions, new modelFieldAction(array("class"=>"btn btn-sm btn-info","icono"=>"glyphicon glyphicon-pencil","tooltip"=>"Modificar","columnNameID"=>"id","onClick"=>"onAnalisis_edit('"."_id_"."')")));
-       if (hasPermissions('analisis_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("analisis/deleteAction"),"id"));
+       if (hasPermissions('analisis_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("analisis/deleteMuestraAction"),"id"));
        $modelField = array(
          new modelFieldItem(array("nombre"=>"ID", "nombreData"=>"id","hAlign"=>"center","ancho"=>"60px")),
          new modelFieldItem(array("nombre"=>"Codigo de Campo/Puntos de Muestreo", "nombreData"=>"nombre_analisis","hAlign"=>"center")),
@@ -133,6 +133,11 @@
   vFormValidator_number('#frmMuestra #txtCP');
   vFormValidator_number('#frmMuestra #txtCV');
   vFormValidator_number('#frmMuestra #txtCO');
+  $(function() {
+    $('input').focusout(function() {	
+        this.value = this.value.toLocaleUpperCase();
+    });
+  });
   function onDetalle_reload(){
     location.reload();
     /*$.ajax({

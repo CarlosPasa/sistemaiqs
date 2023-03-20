@@ -144,6 +144,19 @@ class Analisis extends MY_Controller {
 		$this->page_data['analisis'] = $this->analisis_model->getAnalisisByidMuestra($id);
 		$this->load->view('analisis/analisis_l_modal', $this->page_data + $data);
     }
+	public function deleteMuestraAction($id)
+	{
+		//ifPermissions('analisis_delete');
+		$idCadena=$id;
+		$id = $this->analisis_model->delete($id);
+		$this->activity_model->action_delete("Analisis", $id);
+		$status = array(
+						"STATUS"=>"true",
+						"mensaje"=>"Registo eliminado satisfactoriamente",
+						"redirect_url"=>site_url('muestra/editMuestra/'.substr($idCadena,0,13))
+						);
+		echo json_encode($status);
+	}
 }
 
 /* End of file Menu.php */
