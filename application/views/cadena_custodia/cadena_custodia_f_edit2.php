@@ -262,7 +262,7 @@
 		"data": <?php echo json_encode($dataDetalle); ?>,
 		"modelField": <?php echo json_encode($modelFieldDetalle); ?>
 	};*/
-  $('table').DataTable({"autoWidth": false});
+  //$('table').DataTable({"autoWidth": false});
 </script>
 <script>
   $(document).ready(function() {

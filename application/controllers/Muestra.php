@@ -8,6 +8,7 @@ class Muestra extends MY_Controller {
 		parent::__construct();
 		//Models
 		$this->load->model('muestra_model');
+		$this->load->model('analisis_model');
 		//Textos
 		$this->page_data['page']->title = 'Muestras';
 		$this->page_data['page']->menu = 'muestra';
@@ -161,6 +162,56 @@ class Muestra extends MY_Controller {
 	public function listar_muestras($idCadena){
 		$data = $this->muestra_model->getMuestrasByIdCadena($idCadena);
 		echo json_encode($data);
+	}
+	public function editMuestra($id)
+	{
+		//ifPermissions('cliente_edit');
+		$this->page_data['return_url'] = "muestra";
+		$this->page_data['postAction'] = "muestra/editMuestraAction";
+		$this->page_data['accion'] = "Editar muestra ".$id;
+		$idCadena = $this->input->get('idCadena', TRUE);
+		$registro = $this->muestra_model->getById($id);
+		$hora= substr($registro->fecha_hora,10);
+		$fecha= substr($registro->fecha_hora,0,10);
+        $data = array(
+            'id'			=> $registro->id,
+			'txtCodigoCampo'	=> $registro->codigo_campo,
+			'txtUbicacion'	=> $registro->ubicacion,
+			'txtFechaMuestreo'	=> $fecha,
+			'txtHora'	=> $hora,
+			'txtCP'	=> $registro->contenedor_p,
+			'txtCV'	=>$registro->contenedor_v,
+			'txtCO'	=> $registro->contenedor_otros,
+			'idCadena'	=> $idCadena
+        );
+		$dataAdicional = array(
+			'dataDetalle' => $this->analisis_model->getAnalisisByidMuestra($id),
+        );
+		$this->load->view('muestra/muestra_f_edit', $this->page_data + $data + $dataAdicional);
+	}
+	public function editMuestraAction()
+	{
+		$id = $this->input->post('id');
+		$idCadena=$this->input->post('idCadena');
+		$fecha=$this->format_date($this->input->post('txtFechaMuestreo'));
+		$hora=$this->input->post('txtHora');
+		$fechaHora=$fecha." ".$hora;
+		$data = array(
+					'codigo_campo'=>$this->input->post('txtCodigoCampo'),
+					'ubicacion'=>$this->input->post('txtUbicacion'),
+					'fecha_hora'=>$fechaHora,
+					'contenedor_p'=>$this->input->post('txtCP'),
+					'contenedor_v'=>$this->input->post('txtCV'),
+					'contenedor_otros'=>$this->input->post('txtCO'),
+					'updated_at' => date("Y-m-d H:i:s"),
+ 		);
+		$registro = $this->muestra_model->update($id, $data);
+		$status = array(
+						"STATUS"      =>"true",
+						"mensaje"     =>"El registro se ha actualizado satisfactoriamente",
+						"redirect_url" => site_url('muestra')
+						);
+		echo json_encode ($status);
 	}
 }
 

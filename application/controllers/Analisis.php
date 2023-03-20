@@ -48,6 +48,8 @@ class Analisis extends MY_Controller {
 		$id = $this->input->post('id');
 		$data = array(
 					'nombre_analisis' => $this->input->post('txtNombreAnalisis'),
+					'ma' => $this->input->post('txtMa'),
+					'pr' => $this->input->post('txtPr'),
 					'updated_at' => date("Y-m-d H:i:s"),
 		);
 		$registro = $this->analisis_model->update($id, $data);

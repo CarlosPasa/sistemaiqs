@@ -18,22 +18,22 @@
 
       <div class="box-tools pull-right">
         <?php 
-        if (hasPermissions('muestra_add'))
-          vButtonDefault("btnMuestraNuevo", "Nuevo", "", "fa fa-plus", "btn btn-primary", "onMuestra_nuevo()","", false);
+        if (hasPermissions('cadena_custodia_add'))
+          vButton('btnNuevo', 'Nuevo', "cadena_custodia/nuevo", "fa fa-plus", "btn btn-primary");
         ?>
-        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+        <!--button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                 title="Collapse">
           <i class="fa fa-minus"></i></button>
         <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-          <i class="fa fa-times"></i></button>
+          <i class="fa fa-times"></i></button-->
       </div>
 
     </div>
     <div class="box-body">
 
-      <?php      
+    <?php      
         $Actions = array();
-          if (hasPermissions('muestra_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("muestra/edit"),"id"));
+          if (hasPermissions('muestra_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("muestra/editMuestra"),"id"));
           if (hasPermissions('muestra_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("muestra/deleteAction"),"id"));
         $modelField = array(
           new modelFieldItem(array("nombre"=>"ID", "nombreData"=>"id","hAlign"=>"center")),
@@ -54,35 +54,8 @@
 </section>
 <!-- /.content -->
 
-<div id="divMuestra"></div>
-
 <?php include viewPath('includes/footer'); ?>
 
 <script>
-  $('table').DataTable({"autoWidth": false});
-</script>
-
-<!-- Muestra: Modal -->
-<script type="text/javascript">
-  function onMuestra_nuevo() {
-    $url = '<?php echo site_url('muestra/nuevoModal') ?>';
-    $titulo = "Agregar Muestra";
-    $("#pageSpin").show();
-    $.ajax({
-      type: 'GET',
-      url: $url,
-      data: { "idMuestra": 0 },
-      dataType: 'html',
-      success: function (html) {
-        $("#pageSpin").hide();
-        $('#divMuestra').html(html);
-        $('#modal_muestra').modal('show');
-        $('#modal_muestra .modal-title').text($titulo);
-      }
-    });
-  }
-
-  function onMuestra_close() {
-    $('#modal_muestra').modal('hide');
-  }
+  $('table').DataTable({"order": [[0, "desc"]],"autoWidth": false});
 </script>

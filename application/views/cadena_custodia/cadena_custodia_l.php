@@ -56,5 +56,5 @@
 <?php include viewPath('includes/footer'); ?>
 
 <script>
-  $('table').DataTable({"order": [[1, "desc"]],"autoWidth": false});
+  $('table').DataTable({"order": [[0, "desc"]],"autoWidth": false});
 </script>

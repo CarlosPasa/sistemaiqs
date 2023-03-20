@@ -21,8 +21,8 @@
 							$modelField = array(
 								new modelFieldItem(array("nombre"=>"ID", "nombreData"=>"id","hAlign"=>"center","ancho"=>"60px")),
 								new modelFieldItem(array("nombre"=>"Codigo de Campo/Puntos de Muestreo", "nombreData"=>"nombre_analisis","hAlign"=>"center")),
-								new modelFieldItem(array("nombre"=>"Locación/Ubicación", "nombreData"=>"ma","hAlign"=>"center")),
-								new modelFieldItem(array("nombre"=>"CP", "nombreData"=>"pr","hAlign"=>"right","ancho"=>"30px")),
+								new modelFieldItem(array("nombre"=>"Ma", "nombreData"=>"ma","hAlign"=>"center")),
+								new modelFieldItem(array("nombre"=>"Pr", "nombreData"=>"pr","hAlign"=>"right","ancho"=>"30px")),
 								new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
 							);
 							vTable($modelField, stdToArray($analisis), 0, 'tlbListado');
