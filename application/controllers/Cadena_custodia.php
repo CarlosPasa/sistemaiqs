@@ -219,6 +219,59 @@ class Cadena_custodia extends MY_Controller {
 		);
 		echo json_encode($dataAdicional);
 	}
+	public function view($id)
+	{
+		ifPermissions('cadena_custodia_edit');
+		$this->page_data['accion'] = "Editar cadena_custodia ".$id;
+		$this->page_data['return_url'] = "cadena_custodia";
+		$this->page_data['postAction'] = "cadena_custodia/editAction";
+		$registro = $this->cadena_model->getById($id);
+		$persona_transportado = $registro->id_persona_transporte ? $this->empleado_model->getById($registro->id_persona_transporte) : (object)['nombre_empleado'=>''];
+		$persona_entrega = $registro->id_persona_entrega ? $this->empleado_model->getById($registro->id_persona_entrega) : (object)['nombre_empleado'=>''];
+		$persona_ingreso = $registro->id_persona_ingreso ? $this->empleado_model->getById($registro->id_persona_ingreso): (object)['nombre_empleado'=>''];
+		$laboratorista = $registro->id_laboratorista ? $this->empleado_model->getById($registro->id_laboratorista) : (object)['nombre_empleado'=>''];
+		$data = array(
+					'id' => $registro->id,
+					'cbCliente' => $registro->id_cliente,
+					'cbContacto' => $registro->id_contacto,
+					'txtDistrito' => $registro->distrito,
+					'txtDireccion'=>$registro->direccion,
+					'cbProyecto'=>"",
+					'txtProvincia'=>$registro->provincia,
+					'txtDepartamento'=>$registro->departamento,
+					'txtEmail'=>$registro->email,
+					'txtTelefono'=>$registro->telefono,
+					'txtCelular'=>$registro->celular,
+					'txtFecha'=>$registro->fecha,
+					'chkCliente'=>"",
+					'chkIQS'=>"",
+					'cbEmpleado'=>"",
+					'txtAntecedentes'=>"",
+					'cliente_data' => $this->cliente_model->getActive(),
+					'empleado_data' => $this->empleado_model->getActive(),
+					'proyecto_data' => $this->proyecto_model->getActive(),
+					'empleados'=>explode(",",$registro->id_empleado),
+					'option' => $registro->opcion,
+					'persona_transportado' => $persona_transportado->nombre_empleado,
+					'fecha_transporte'=> '',
+					'hora_transporte'=> '',
+					'persona_entrega' => $persona_entrega->nombre_empleado,
+					'fecha_entrega'=> '',
+					'hora_entrega'=> '',
+					'persona_ingreso' => $persona_ingreso->nombre_empleado,
+					'fecha_ingreso'=> '',
+					'hora_ingreso'=> '',
+					'laboratorista' => $laboratorista->nombre_empleado,
+					'fecha_laboratorio'=> '',
+					'hora_laboratorio'=> '',
+					'dataDetalle' => $this->muestra_model->getMuestrasByIdCadena($id),
+				);
+		if($registro->fecha_transporte) $data['fecha_transporte'] = date('d/m/Y',strtotime($registro->fecha_transporte)); $data['hora_transporte'] = substr($registro->fecha_transporte,10);
+		if($registro->fecha_entrega) $data['fecha_entrega'] = date('d/m/Y',strtotime($registro->fecha_entrega));$data['hora_entrega'] = substr($registro->fecha_entrega,10);
+		if($registro->fecha_ingreso) $data['fecha_ingreso'] = date('d/m/Y',strtotime($registro->fecha_ingreso));$data['hora_ingreso'] = substr($registro->fecha_ingreso,10);
+		if($registro->fecha_laboratorio) $data['fecha_laboratorio'] = date('d/m/Y',strtotime($registro->fecha_laboratorio));$data['hora_laboratorio'] = substr($registro->fecha_laboratorio,10);
+		$this->load->view('cadena_custodia/cadena_custodia_f_view', $this->page_data + $data);
+	}
 }
 
 /* End of file Cadena_custodia.php */

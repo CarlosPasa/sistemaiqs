@@ -34,6 +34,7 @@
       <?php
         $Actions = array();
           if (hasPermissions('cadena_custodia_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("cadena_custodia/edit"),"id"));
+          if (hasPermissions('cadena_custodia_edit')) array_push($Actions, modelFieldAction::btnview(site_url("cadena_custodia/view"),"id"));
           if (hasPermissions('cadena_custodia_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("cadena_custodia/deleteAction"),"id"));
         $modelField = array(
           new modelFieldItem(array("nombre"=>"ID", "nombreData"=>"id","hAlign"=>"center","ancho"=>"60px")),
