@@ -966,6 +966,8 @@ class modelFieldItem{
 	
 	public $enlaceUrl="";
 
+	public $title="";
+
 	function __construct(array $prop=array()){
 
 		foreach($prop as $key => $value){
@@ -1049,19 +1051,19 @@ class modelFieldAction{
 
 	public static function btnView($url, $columnNameID){
 
-		return new modelFieldAction(array("url"=>$url."/_id_", "columnNameID"=>$columnNameID, "class"=>"btn btn-sm btn-info", "icono"=>"glyphicon glyphicon-zoom-in","titulo"=>"Ver Detalle"));
+		return new modelFieldAction(array("url"=>$url."/_id_", "columnNameID"=>$columnNameID, "class"=>"btn btn-sm btn-info", "icono"=>"glyphicon glyphicon-zoom-in","tooltip"=>"Ver Detalle"));
 
 	}
 
 	public static function btnEdit($url, $columnNameID){
 
-		return new modelFieldAction(array("url"=>$url."/_id_", "columnNameID"=>$columnNameID, "class"=>"btn btn-sm btn-primary", "icono"=>"glyphicon glyphicon-pencil","titulo"=>"Editar"));
+		return new modelFieldAction(array("url"=>$url."/_id_", "columnNameID"=>$columnNameID, "class"=>"btn btn-sm btn-primary", "icono"=>"glyphicon glyphicon-pencil","tooltip"=>"Editar"));
 
 	}
 
 	public static function btnDelete($url, $columnNameID){
 
-		return new modelFieldAction(array("url"=>$url."/_id_", "columnNameID"=>$columnNameID, "class"=>"btn btn-sm btn-danger", "icono"=>"glyphicon glyphicon-trash","titulo"=>"Eliminar","onClick"=>"ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado','_url_')"));
+		return new modelFieldAction(array("url"=>$url."/_id_", "columnNameID"=>$columnNameID, "class"=>"btn btn-sm btn-danger", "icono"=>"glyphicon glyphicon-trash","tooltip"=>"Eliminar","onClick"=>"ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado','_url_')"));
 
 	}
 	// Creado el 08/03/2023
@@ -1135,7 +1137,7 @@ if(!function_exists('vTable')){
 
 			else{
 
-				echo "<th class='text-center'>";
+				echo "<th class='text-center' title='$item->title'>";
 				if ($item->nombreData === 'multi_selection'){
 					echo "<input type='checkbox' name='" . $id . "CheckedAll' id='" . $id . "CheckedAll' />";
 				}

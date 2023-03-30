@@ -41,7 +41,7 @@
           <?php vLabel('txtContacto','Contacto'); ?>        
         </div>
         <div class="col-xs-12 col-md-3">
-          <?php vComboBoxLiveSearch('cbContacto', stdToArray($cliente_data), 'id', 'nombre_cliente',NULL,$cbContacto); ?>
+          <?php vComboBoxLiveSearch('cbContacto', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$cbContacto); ?>
         </div>
         <div class="col-xs-12 col-md-1">
           <?php vLabel('txtProyecto','Proyecto/Programa'); ?>        

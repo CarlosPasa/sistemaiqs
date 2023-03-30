@@ -41,7 +41,7 @@
           <?php vLabel('txtContacto','Contacto'); ?>        
         </div>
         <div class="col-xs-12 col-md-3">
-          <?php vComboBoxLiveSearch('cbContacto', stdToArray($cliente_data), 'id', 'nombre_cliente',NULL,$cbContacto); ?>
+          <?php vComboBoxLiveSearch('cbContacto', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$cbContacto); ?>
         </div>
         <div class="col-xs-12 col-md-1">
           <?php vLabel('txtProyecto','Proyecto/Programa'); ?>        
@@ -167,8 +167,8 @@
           new modelFieldItem(array("nombre"=>"Locación/Ubicación", "nombreData"=>"ubicacion","hAlign"=>"center","ancho"=>"100px")),
           new modelFieldItem(array("nombre"=>"Fecha de Muestreo", "nombreData"=>"fecha","hAlign"=>"right","ancho"=>"74px","hAlign"=>"center")),
           new modelFieldItem(array("nombre"=>"Hora de Muestreo", "nombreData"=>"hora","hAlign"=>"right","ancho"=>"67px","hAlign"=>"center")),
-          new modelFieldItem(array("nombre"=>"CP", "nombreData"=>"contenedor_p","hAlign"=>"right","ancho"=>"30px")),
-          new modelFieldItem(array("nombre"=>"CV", "nombreData"=>"contenedor_v","hAlign"=>"right","ancho"=>"30px")),
+          new modelFieldItem(array("nombre"=>"CP", "nombreData"=>"contenedor_p","hAlign"=>"right","ancho"=>"30px","title"=>"Contenedores P")),
+          new modelFieldItem(array("nombre"=>"CV", "nombreData"=>"contenedor_v","hAlign"=>"right","ancho"=>"30px","title"=>"Contenedores V")),
           new modelFieldItem(array("nombre"=>"C Otros", "nombreData"=>"contenedor_otros","hAlign"=>"right","ancho"=>"30px")),
           new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
         );

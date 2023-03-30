@@ -46,7 +46,7 @@
           <?php vComboBoxLiveSearch('cbCliente', stdToArray($cliente_data), 'id', 'nombre_cliente',NULL,$cbCliente); ?>
       	</div>
         <div class="col-xs-4">
-          <?php vComboBoxLiveSearch('cbContacto', stdToArray($cliente_data), 'id', 'nombre_cliente',NULL,$cbContacto); ?>
+          <?php vComboBoxLiveSearch('cbContacto', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$cbContacto); ?>
       	</div>
         <div class="col-xs-4">
           <?php vComboBoxLiveSearch('cbProyecto', stdToArray($proyecto_data), 'id', 'nombre_proyecto',NULL,$cbProyecto); ?>
