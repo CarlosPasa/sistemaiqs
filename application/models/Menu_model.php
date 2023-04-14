@@ -34,6 +34,13 @@ class Menu_model extends MY_Model {
 		return $this->db->get($this->table)->result();
 	}
 
+	public function getMenusPadres()
+	{
+		$this->db->where('type_object','Menu');
+		$this->db->order_by("order", "asc");
+		return $this->db->get($this->table)->result();
+	}
+
 }
 
 /* End of file Menu_model.php */

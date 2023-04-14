@@ -1962,7 +1962,7 @@ if(!function_exists('vCheckBox_TextBox')){
 
 if(!function_exists('vComboBoxLiveSearch')){
 
-	function vComboBoxLiveSearch($id, $arrayData, $campoCodigo, $campoValor,$js=NULL,$selec=NULL){
+	function vComboBoxLiveSearch($id, $arrayData, $campoCodigo, $campoValor,$js=NULL,$selec=NULL,$default=false){
 
 		echo "<select id='" . $id . "' name='" . $id . "' class='form-control input-md selectpicker' ";
 
@@ -1972,7 +1972,9 @@ if(!function_exists('vComboBoxLiveSearch')){
 
 		echo " > \n";
 
-		//--echo "<option value='0' disabled >Seleccione Opción</option>\n";
+		if($default == true){
+			echo "<option value>Seleccione Opción</option>\n";
+		} 
 
 		if(isset($arrayData)){
 

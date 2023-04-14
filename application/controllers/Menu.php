@@ -32,11 +32,14 @@ class Menu extends MY_Controller {
 		$data = array(
 					'id' => "0",
 					'txtName' => "",
+					'txtTitulo' => "",
 					'txtIcon' => "",
 					'txtTypeObject' => "",
 					'txtObject' => "",
 					'txtOrder' => "",
 					'txtMenuPadreID' => "",
+					'data_padres'=>$this->menu_model->getMenusPadres(),
+					'data_tipo_objeto'=>array(array('id' => 'Action','tipo' => 'Action'),array('id' => 'Menu','tipo' => 'Menu')),
 				);
 		$this->load->view('menu/menu_f', $this->page_data + $data);
 	}
@@ -47,6 +50,7 @@ class Menu extends MY_Controller {
 		postAllowed();
 		$color = $this->menu_model->create([
 			'name' => $this->input->post('txtName'),
+			'title' => $this->input->post('txtTitulo'),
 			'icon' => $this->input->post('txtIcon'),
 			'type_object' => $this->input->post('txtTypeObject'),
 			'object' => $this->input->post('txtObject'),
@@ -71,11 +75,14 @@ class Menu extends MY_Controller {
 		$data = array(
 					'id' => $registro->id,
 					'txtName' => $registro->name,
+					'txtTitulo' => $registro->title,
 					'txtIcon' => $registro->icon,
 					'txtTypeObject' => $registro->type_object,
 					'txtObject' => $registro->object,
 					'txtOrder' => $registro->order,
 					'txtMenuPadreID' => $registro->menu_padre_id,
+					'data_padres'=>$this->menu_model->getMenusPadres(),
+					'data_tipo_objeto'=>array(array('id' => 'Action','tipo' => 'Action'),array('id' => 'Menu','tipo' => 'Menu')),
 				);
 		$this->load->view('menu/menu_f', $this->page_data + $data);
 	}
@@ -87,6 +94,7 @@ class Menu extends MY_Controller {
 		$id = $this->input->post('id');
 		$data = [
 			'name' => $this->input->post('txtName'),
+			'title' => $this->input->post('txtTitulo'),
 			'icon' => $this->input->post('txtIcon'),
 			'type_object' => $this->input->post('txtTypeObject'),
 			'object' => $this->input->post('txtObject'),

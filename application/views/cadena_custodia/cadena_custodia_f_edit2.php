@@ -235,6 +235,16 @@
         </tbody>
       </table>
     </div>
+    <div class="col-lg-12">
+      <div class="col-lg-6">
+        <?php vLabel('taRMuestra','Observaciones de Recepción de Muestra'); ?>
+        <?php vTextBoxArea($textAreaM, $textAreaM,5) ?>
+      </div>
+      <div class="col-lg-6">
+        <?php vLabel('taRLaboratorio','Observaciones de Laboratorio'); ?>
+        <?php vTextBoxArea($textAreaL, $textAreaL,5) ?>
+      </div>      
+    </div>
       <div id="divDetalle"></div>
     </div>
 	</div>  

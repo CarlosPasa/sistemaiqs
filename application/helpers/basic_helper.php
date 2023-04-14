@@ -381,7 +381,7 @@ if (!function_exists('ifPermissions')) {
 		}
 
 		$CI->session->set_flashdata('alert-type', 'danger');
-		$CI->session->set_flashdata('alert', 'You dont have permissions to this Section !');
+		$CI->session->set_flashdata('alert', 'No tienes permisos para esta acción');
 
 
 		redirect('/', 'refresh');

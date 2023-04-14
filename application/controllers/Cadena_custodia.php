@@ -140,6 +140,8 @@ class Cadena_custodia extends MY_Controller {
 					'laboratorista' => $laboratorista->nombre_empleado,
 					'fecha_laboratorio'=> '',
 					'hora_laboratorio'=> '',
+					'textAreaM'=> $registro->obs_muestra,
+					'textAreaL'=> $registro->obs_laboratorio,
 					'dataDetalle' => $this->muestra_model->getMuestrasByIdCadena($id),
 				);
 		if($registro->fecha_transporte) $data['fecha_transporte'] = date('d/m/Y',strtotime($registro->fecha_transporte)); $data['hora_transporte'] = substr($registro->fecha_transporte,10);
@@ -178,6 +180,8 @@ class Cadena_custodia extends MY_Controller {
 			'celular' => $this->input->post('txtCelular'),
 			'email' => $this->input->post('txtEmail'),
 			'opcion' => $this->input->post('chkCliente'),
+			'obs_muestra' => $this->input->post('textAreaM'),
+			'obs_laboratorio' => $this->input->post('textAreaL'),
 			'updated_at' => date("Y-m-d H:i:s"),
 		];
 		$registro = $this->cadena_model->update($id, $data);

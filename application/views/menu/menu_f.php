@@ -19,11 +19,11 @@
         <a href="<?php echo url('/'.$return_url) ?>" class="btn btn-flat btn-default">
           <i class="fa fa-arrow-left"></i> &nbsp;&nbsp; Regresar
         </a>
-        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+        <!--button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                 title="Collapse">
           <i class="fa fa-minus"></i></button>
         <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-          <i class="fa fa-times"></i></button>
+          <i class="fa fa-times"></i></button-->
       </div>
     </div>
 
@@ -35,12 +35,17 @@
         <?php vTextBox('txtName',$txtName, 'Ingrese nombre',null,null,null,null,false,"required"); ?>
       </div>
       <div class="form-group">
+        <?php vLabel('txtTitulo','Titulo'); ?>
+        <?php vTextBox('txtTitulo',$txtTitulo, 'Ingrese titulo de menu',null,null,null,null,false,"required"); ?>
+      </div>
+      <div class="form-group">
         <?php vLabel('txtIcon','Icono'); ?>
         <?php vTextBox('txtIcon',$txtIcon, 'Ingrese icono',null,null,null,null,false,"required"); ?>
       </div>
       <div class="form-group">
         <?php vLabel('txtTypeObject','Tipo Objeto'); ?>
-        <?php vTextBox('txtTypeObject',$txtTypeObject, 'Ingrese tipo objeto',null,null,null,null,false,"required"); ?>
+        <?php vComboBoxLiveSearch('txtTypeObject', stdToArray($data_tipo_objeto), 'id', 'tipo',NULL,$txtTypeObject,true); ?>
+        <!--?php vTextBox('txtTypeObject',$txtTypeObject, 'Ingrese tipo objeto',null,null,null,null,false,"required"); ?-->
       </div>
       <div class="form-group">
         <?php vLabel('txtObject','Objeto'); ?>
@@ -52,7 +57,8 @@
       </div>
       <div class="form-group">
         <?php vLabel('txtMenuPadreID','Menu Padre ID'); ?>
-        <?php vTextBox('txtMenuPadreID',$txtMenuPadreID, 'Ingrese ID Menu Padre',null,null,null,null,false,"required"); ?>
+        <?php vComboBoxLiveSearch('txtMenuPadreID', stdToArray($data_padres), 'id', 'title',NULL,$txtMenuPadreID,true); ?>
+        <!--?php vTextBox('txtMenuPadreID',$txtMenuPadreID, 'Ingrese ID Menu Padre',null,null,null,null,false,"required"); ?-->
       </div>
 
     </div>

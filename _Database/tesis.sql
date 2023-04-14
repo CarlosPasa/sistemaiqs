@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-03-2023 a las 23:13:03
+-- Tiempo de generación: 04-04-2023 a las 04:38:16
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.3.31
 
@@ -401,7 +401,65 @@ INSERT INTO `activity_logs` (`id`, `title`, `user`, `ip_address`, `created_at`, 
 (358, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-20 22:01:50', '2023-03-20 22:01:50'),
 (359, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-20 22:03:27', '2023-03-20 22:03:27'),
 (360, '#Analisis #1 creada por el usuario:Administrator', '1', '127.0.0.1', '2023-03-20 22:03:43', '2023-03-20 22:03:43'),
-(361, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-20 22:03:55', '2023-03-20 22:03:55');
+(361, 'Nuevo #Analisis creado por el usuario:Administrator', '1', '127.0.0.1', '2023-03-20 22:03:55', '2023-03-20 22:03:55'),
+(362, 'Administrator Logged in', '1', '::1', '2023-03-27 22:38:02', '2023-03-27 22:38:02'),
+(363, 'User: Administrator Logged Out', '1', '::1', '2023-03-27 22:58:57', '2023-03-27 22:58:57'),
+(364, 'Administrator Logged in', '1', '::1', '2023-03-27 22:59:02', '2023-03-27 22:59:02'),
+(365, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-27 23:02:40', '2023-03-27 23:02:40'),
+(366, 'User: Administrator Logged Out', '1', '::1', '2023-03-27 23:02:55', '2023-03-27 23:02:55'),
+(367, 'Administrator Logged in', '1', '::1', '2023-03-27 23:03:05', '2023-03-27 23:03:05'),
+(368, 'User: Administrator Logged Out', '1', '::1', '2023-03-27 23:03:48', '2023-03-27 23:03:48'),
+(369, 'Administrator Logged in', '1', '::1', '2023-03-27 23:03:59', '2023-03-27 23:03:59'),
+(370, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-27 23:04:23', '2023-03-27 23:04:23'),
+(371, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-27 23:04:27', '2023-03-27 23:04:27'),
+(372, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-27 23:04:37', '2023-03-27 23:04:37'),
+(373, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-27 23:12:48', '2023-03-27 23:12:48'),
+(374, 'User: Administrator Logged Out', '1', '::1', '2023-03-27 23:32:19', '2023-03-27 23:32:19'),
+(375, 'Administrator Logged in', '1', '::1', '2023-03-27 23:32:23', '2023-03-27 23:32:23'),
+(376, 'User: Administrator Logged Out', '1', '::1', '2023-03-27 23:33:33', '2023-03-27 23:33:33'),
+(377, 'Administrator Logged in', '1', '::1', '2023-03-27 23:33:37', '2023-03-27 23:33:37'),
+(378, 'Administrator Logged in', '1', '::1', '2023-03-28 03:30:25', '2023-03-28 03:30:25'),
+(379, 'User: Administrator Logged Out', '1', '::1', '2023-03-28 03:30:30', '2023-03-28 03:30:30'),
+(380, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-29 03:31:13', '2023-03-29 03:31:13'),
+(381, 'User: Administrator Logged Out', '1', '127.0.0.1', '2023-03-29 04:10:12', '2023-03-29 04:10:12'),
+(382, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-29 04:10:52', '2023-03-29 04:10:52'),
+(383, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-29 13:19:24', '2023-03-29 13:19:24'),
+(384, 'Administrator Logged in', '1', '127.0.0.1', '2023-03-30 00:04:24', '2023-03-30 00:04:24'),
+(385, 'Administrator Logged in', '1', '::1', '2023-03-30 02:11:33', '2023-03-30 02:11:33'),
+(386, 'User: Administrator Logged Out', '1', '::1', '2023-03-30 02:12:00', '2023-03-30 02:12:00'),
+(387, 'Administrator Logged in', '1', '::1', '2023-03-30 02:12:04', '2023-03-30 02:12:04'),
+(388, 'User: Administrator Logged Out', '1', '::1', '2023-03-30 02:12:11', '2023-03-30 02:12:11'),
+(389, 'Administrator Logged in', '1', '::1', '2023-03-30 04:15:35', '2023-03-30 04:15:35'),
+(390, 'New Role #2 Created by User: #1', '1', '::1', '2023-03-30 05:11:30', '2023-03-30 05:11:30'),
+(391, 'Role #2 Updated by User: #1', '1', '::1', '2023-03-30 05:12:11', '2023-03-30 05:12:11'),
+(392, 'New User $2 Created by User:Administrator', '1', '::1', '2023-03-30 05:13:11', '2023-03-30 05:13:11'),
+(393, 'User: Administrator Logged Out', '1', '::1', '2023-03-30 05:13:18', '2023-03-30 05:13:18'),
+(394, 'Supervisor Logged in', '2', '::1', '2023-03-30 05:13:24', '2023-03-30 05:13:24'),
+(395, 'User: Supervisor Logged Out', '2', '::1', '2023-03-30 05:13:56', '2023-03-30 05:13:56'),
+(396, 'Administrator Logged in', '1', '::1', '2023-03-30 05:14:00', '2023-03-30 05:14:00'),
+(397, 'Administrator Logged in', '1', '::1', '2023-04-01 02:59:44', '2023-04-01 02:59:44'),
+(398, 'Nuevo #Menu creado por el usuario:Administrator', '1', '::1', '2023-04-01 03:06:10', '2023-04-01 03:06:10'),
+(399, 'Role #1 Updated by User: #1', '1', '::1', '2023-04-01 03:07:21', '2023-04-01 03:07:21'),
+(400, 'User: Administrator Logged Out', '1', '::1', '2023-04-01 03:07:27', '2023-04-01 03:07:27'),
+(401, 'Administrator Logged in', '1', '::1', '2023-04-01 03:07:34', '2023-04-01 03:07:34'),
+(402, '#Menu #14 creada por el usuario:Administrator', '1', '::1', '2023-04-01 03:24:50', '2023-04-01 03:24:50'),
+(403, 'User: Administrator Logged Out', '1', '::1', '2023-04-01 03:24:56', '2023-04-01 03:24:56'),
+(404, 'Administrator Logged in', '1', '::1', '2023-04-01 03:25:00', '2023-04-01 03:25:00'),
+(405, '#Menu #14 creada por el usuario:Administrator', '1', '::1', '2023-04-01 03:25:18', '2023-04-01 03:25:18'),
+(406, 'User: Administrator Logged Out', '1', '::1', '2023-04-01 03:25:45', '2023-04-01 03:25:45'),
+(407, 'Supervisor Logged in', '2', '::1', '2023-04-01 03:25:52', '2023-04-01 03:25:52'),
+(408, 'User: Supervisor Logged Out', '2', '::1', '2023-04-01 03:26:09', '2023-04-01 03:26:09'),
+(409, 'Administrator Logged in', '1', '::1', '2023-04-01 03:26:12', '2023-04-01 03:26:12'),
+(410, '#Menu #14 creada por el usuario:Administrator', '1', '::1', '2023-04-01 03:45:07', '2023-04-01 03:45:07'),
+(411, '#Menu #14 creada por el usuario:Administrator', '1', '::1', '2023-04-01 03:45:39', '2023-04-01 03:45:39'),
+(412, 'User: Administrator Logged Out', '1', '::1', '2023-04-01 03:45:50', '2023-04-01 03:45:50'),
+(413, 'Administrator Logged in', '1', '::1', '2023-04-01 03:45:53', '2023-04-01 03:45:53'),
+(414, 'User: Administrator Logged Out', '1', '::1', '2023-04-01 03:47:19', '2023-04-01 03:47:19'),
+(415, 'Supervisor Logged in', '2', '::1', '2023-04-01 03:47:26', '2023-04-01 03:47:26'),
+(416, 'User: Supervisor Logged Out', '2', '::1', '2023-04-01 03:47:37', '2023-04-01 03:47:37'),
+(417, 'Administrator Logged in', '1', '::1', '2023-04-01 03:47:41', '2023-04-01 03:47:41'),
+(418, '#Cadena_custodia #2023030004 creada por el usuario:Administrator', '1', '::1', '2023-04-01 04:17:09', '2023-04-01 04:17:09'),
+(419, '#Cadena_custodia #2023030004 creada por el usuario:Administrator', '1', '::1', '2023-04-01 04:17:45', '2023-04-01 04:17:45');
 
 -- --------------------------------------------------------
 
@@ -454,14 +512,16 @@ CREATE TABLE `cadena_custodia` (
   `email` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `fecha` datetime DEFAULT NULL,
   `estado` bit(1) DEFAULT NULL,
-  `id_persona_transporte` int(11) DEFAULT NULL,
+  `id_persona_transporte` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `fecha_transporte` timestamp NULL DEFAULT NULL,
-  `id_persona_entrega` int(11) DEFAULT NULL,
+  `id_persona_entrega` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `fecha_entrega` timestamp NULL DEFAULT NULL,
-  `id_persona_ingreso` int(11) DEFAULT NULL,
+  `id_persona_ingreso` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `fecha_ingreso` timestamp NULL DEFAULT NULL,
-  `id_laboratorista` int(11) DEFAULT NULL,
+  `id_laboratorista` int(100) DEFAULT NULL,
   `fecha_laboratorio` timestamp NULL DEFAULT NULL,
+  `obs_muestra` text COLLATE utf8_unicode_ci NOT NULL,
+  `obs_laboratorio` text COLLATE utf8_unicode_ci NOT NULL,
   `idUser` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL
@@ -471,13 +531,13 @@ CREATE TABLE `cadena_custodia` (
 -- Volcado de datos para la tabla `cadena_custodia`
 --
 
-INSERT INTO `cadena_custodia` (`id`, `id_cliente`, `id_contacto`, `id_proyecto`, `id_empleado`, `opcion`, `direccion`, `distrito`, `provincia`, `departamento`, `celular`, `telefono`, `email`, `fecha`, `estado`, `id_persona_transporte`, `fecha_transporte`, `id_persona_entrega`, `fecha_entrega`, `id_persona_ingreso`, `fecha_ingreso`, `id_laboratorista`, `fecha_laboratorio`, `idUser`, `created_at`, `updated_at`) VALUES
-('2023020000', 2, 1, 1, '1,2', 'CLIENTE', 'Paita', 'Paita', 'Talara', 'Piura', '', '987654321', 'hola@gmail.com', '2023-03-01 00:00:00', b'1', 1, '2023-03-02 03:53:46', 2, '2023-03-03 03:53:46', 1, '2023-03-04 03:53:46', NULL, NULL, NULL, '2023-03-01 03:53:46', '2023-03-05 21:35:21'),
-('2023020001', 1, 1, 1, '1', 'IQS', 'Hola', 'Hola', 'Talara', 'Piura', '', '', '', '2023-02-28 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-03-01 03:34:19', '2023-03-11 20:20:40'),
-('2023030001', 3, 2, 1, '1,3', 'CLIENTE', 'Castilla', 'Piura', 'Talara', 'Piura', '', '', '', '2023-03-02 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-03-03 02:02:21', '2023-03-11 20:19:46'),
-('2023030002', 2, 2, 1, '1,2', 'IQS', 'Piura', 'Piura', 'Talara', 'Piura', '', '987654321', '', '2023-03-02 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-03-03 02:03:04', '2023-03-09 03:59:45'),
-('2023030003', 2, 1, 1, '1,2,3', 'IQS', 'Prueba 1', 'Piura', 'Talara', 'Piura', '988723123', '985465113', '', '2023-03-03 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-03-04 03:09:08', '2023-03-05 21:40:51'),
-('2023030004', 1, 2, 1, '1', 'IQS', 'Piura', 'Piura', 'Talara', 'Piura', '', '987654312', '', '2023-03-05 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-03-06 00:52:29', '2023-03-12 05:11:07');
+INSERT INTO `cadena_custodia` (`id`, `id_cliente`, `id_contacto`, `id_proyecto`, `id_empleado`, `opcion`, `direccion`, `distrito`, `provincia`, `departamento`, `celular`, `telefono`, `email`, `fecha`, `estado`, `id_persona_transporte`, `fecha_transporte`, `id_persona_entrega`, `fecha_entrega`, `id_persona_ingreso`, `fecha_ingreso`, `id_laboratorista`, `fecha_laboratorio`, `obs_muestra`, `obs_laboratorio`, `idUser`, `created_at`, `updated_at`) VALUES
+('2023020000', 2, 1, 1, '1,2', 'CLIENTE', 'Paita', 'Paita', 'Talara', 'Piura', '', '987654321', 'hola@gmail.com', '2023-03-01 00:00:00', b'1', '1', '2023-03-02 03:53:46', '2', '2023-03-03 03:53:46', '1', '2023-03-04 03:53:46', NULL, NULL, '', '', NULL, '2023-03-01 03:53:46', '2023-03-05 21:35:21'),
+('2023020001', 1, 1, 1, '1', 'IQS', 'Hola', 'Hola', 'Talara', 'Piura', '', '', '', '2023-02-28 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', NULL, '2023-03-01 03:34:19', '2023-03-11 20:20:40'),
+('2023030001', 3, 2, 1, '1,3', 'CLIENTE', 'Castilla', 'Piura', 'Talara', 'Piura', '', '', '', '2023-03-02 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', NULL, '2023-03-03 02:02:21', '2023-03-11 20:19:46'),
+('2023030002', 2, 2, 1, '1,2', 'IQS', 'Piura', 'Piura', 'Talara', 'Piura', '', '987654321', '', '2023-03-02 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', NULL, '2023-03-03 02:03:04', '2023-03-09 03:59:45'),
+('2023030003', 2, 1, 1, '1,2,3', 'IQS', 'Prueba 1', 'Piura', 'Talara', 'Piura', '988723123', '985465113', '', '2023-03-03 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', NULL, '2023-03-04 03:09:08', '2023-03-05 21:40:51'),
+('2023030004', 1, 2, 1, '1', 'IQS', 'Piura', 'Piura', 'Talara', 'Piura', '', '987654312', '', '2023-03-05 00:00:00', b'1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', NULL, '2023-03-06 00:52:29', '2023-04-01 04:17:45');
 
 -- --------------------------------------------------------
 
@@ -563,7 +623,8 @@ INSERT INTO `menu` (`id`, `name`, `title`, `icon`, `type_object`, `object`, `ord
 (10, 'cadena_custodia', 'Cadena de custodia', 'fa fa-archive', 'Action', '/cadena_custodia', '1', 0, 1, '2023-02-09 13:43:52', '2023-02-09 13:43:52'),
 (11, 'empleado', 'Empleado', 'fa fa-users', 'Action', '/empleado', '2', 0, 1, NULL, NULL),
 (12, 'proyecto', 'Proyecto', 'fa fa-archive', 'Action', '/proyecto', '2', 0, 1, NULL, NULL),
-(13, 'muestra', 'Muestra', 'fa fa-flask', 'Action', '/muestra', '2', 0, 1, NULL, NULL);
+(13, 'muestra', 'Muestra', 'fa fa-flask', 'Action', '/muestra', '2', 0, 1, NULL, NULL),
+(14, 'menu', 'Menu', 'fa fa-cog', 'Action', '/menu', '3.1', 7, 1, '2023-04-01 03:06:10', '2023-04-01 03:45:39');
 
 -- --------------------------------------------------------
 
@@ -706,7 +767,8 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `title`) VALUES
-(1, 'Admin');
+(1, 'Admin'),
+(2, 'Supervisor');
 
 -- --------------------------------------------------------
 
@@ -738,7 +800,11 @@ INSERT INTO `role_menus` (`id`, `role`, `menu`) VALUES
 (13, 1, 'empleado'),
 (14, 1, 'proyecto'),
 (15, 1, 'muestra'),
-(16, 1, 'analisis');
+(17, 2, 'dashboard'),
+(18, 2, 'cadena_custodia'),
+(19, 2, 'empleado'),
+(20, 2, 'users'),
+(21, 1, 'menu');
 
 -- --------------------------------------------------------
 
@@ -804,9 +870,16 @@ INSERT INTO `role_permissions` (`id`, `role`, `permission`) VALUES
 (45, 1, 'muestra_view'),
 (46, 1, 'analisis_list'),
 (47, 1, 'analisis_add'),
-(48, 1, 'analisis_edit'),
-(49, 1, 'analisis_delete'),
-(50, 1, 'analisis_view');
+(51, 2, 'cadena_custodia_list'),
+(52, 2, 'cadena_custodia_add'),
+(53, 2, 'cadena_custodia_edit'),
+(54, 2, 'cadena_custodia_delete'),
+(55, 2, 'cadena_custodia_view'),
+(56, 2, 'empleado_list'),
+(57, 2, 'empleado_add'),
+(58, 2, 'empleado_edit'),
+(59, 2, 'empleado_delete'),
+(60, 2, 'empleado_view');
 
 -- --------------------------------------------------------
 
@@ -856,7 +929,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `phone`, `address`, `last_login`, `role`, `reset_token`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-03-20 20:03:52', 1, '', '2018-06-27 23:30:16', '0000-00-00 00:00:00');
+(1, 'Administrator', 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-04-01 03:03:47', 1, '', '2018-06-27 23:30:16', '0000-00-00 00:00:00'),
+(2, 'Supervisor', 'supervisor', 'supervisor@gmail', '21232f297a57a5a743894a0e4a801fc3', '', '', '2023-04-01 03:03:47', 2, '', '2023-03-30 05:13:11', '2023-03-30 05:13:11');
 
 --
 -- Índices para tablas volcadas
@@ -960,7 +1034,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `activity_logs`
 --
 ALTER TABLE `activity_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=362;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=420;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
@@ -978,7 +1052,7 @@ ALTER TABLE `empleado`
 -- AUTO_INCREMENT de la tabla `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `permissions`
@@ -996,19 +1070,19 @@ ALTER TABLE `proyecto`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `role_menus`
 --
 ALTER TABLE `role_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `role_permissions`
 --
 ALTER TABLE `role_permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT de la tabla `settings`
@@ -1020,7 +1094,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
