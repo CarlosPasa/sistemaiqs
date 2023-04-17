@@ -19,11 +19,6 @@
         <a href="<?php echo url('/'.$return_url) ?>" class="btn btn-flat btn-default">
           <i class="fa fa-arrow-left"></i> &nbsp;&nbsp; Regresar
         </a>
-        <!--button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                title="Collapse">
-          <i class="fa fa-minus"></i></button>
-        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-          <i class="fa fa-times"></i></button-->
       </div>
     </div>
 
@@ -41,7 +36,7 @@
           <?php vLabel('txtContacto','Contacto'); ?>        
         </div>
         <div class="col-xs-12 col-md-3">
-          <?php vComboBoxLiveSearch('cbContacto', stdToArray($empleado_data), 'id', 'nombre_empleado',NULL,$cbContacto); ?>
+          <?php vComboBoxLiveSearch('cbContacto', stdToArray($cliente_data), 'id', 'nombre_cliente',NULL,$cbContacto); ?>
         </div>
         <div class="col-xs-12 col-md-1">
           <?php vLabel('txtProyecto','Proyecto/Programa'); ?>        
@@ -131,9 +126,6 @@
 
     <div class="col-lg-12">
     <div class="box-header with-border">
-      <div class="row text-right" style="padding-right: 1.5%;">
-        <?php	vButtonDefault("btnDetalleNuevo", "Agregar muestra", "", "fa fa-plus", "btn btn-primary", "onMuestra_nuevo()","",false);	?>
-      </div>
       <div id="gridDetalle" >
         <?php
         /*
@@ -157,20 +149,21 @@
         ?>
         <?php      
         $Actions = array();
+        /*
         array_push($Actions, modelFieldAction::btnEditJS("onDetalle_edit","id"));
         array_push($Actions, modelFieldAction::btnVerAnalisisJS("listarMuestra","id"));
         array_push($Actions, modelFieldAction::btnCrearAnalisisJS("onNuevo_analisis","id"));
-        array_push($Actions, modelFieldAction::btnDelete(site_url("muestra/deleteAction"),"id"));
+        array_push($Actions, modelFieldAction::btnDelete(site_url("muestra/deleteAction"),"id"));*/
         $modelField = array(
           new modelFieldItem(array("nombre"=>"Código de Muestra", "nombreData"=>"id","","ancho"=>"115px","hAlign"=>"center")),
           new modelFieldItem(array("nombre"=>"Código de Campo/Puntos de Muestreo", "nombreData"=>"codigo_campo","ancho"=>"300px")),
           new modelFieldItem(array("nombre"=>"Locación/Ubicación", "nombreData"=>"ubicacion","hAlign"=>"center","ancho"=>"100px")),
           new modelFieldItem(array("nombre"=>"Fecha de Muestreo", "nombreData"=>"fecha","hAlign"=>"right","ancho"=>"74px","hAlign"=>"center")),
           new modelFieldItem(array("nombre"=>"Hora de Muestreo", "nombreData"=>"hora","hAlign"=>"right","ancho"=>"67px","hAlign"=>"center")),
-          new modelFieldItem(array("nombre"=>"CP", "nombreData"=>"contenedor_p","hAlign"=>"right","ancho"=>"30px","title"=>"Contenedores P")),
-          new modelFieldItem(array("nombre"=>"CV", "nombreData"=>"contenedor_v","hAlign"=>"right","ancho"=>"30px","title"=>"Contenedores V")),
+          new modelFieldItem(array("nombre"=>"CP", "nombreData"=>"contenedor_p","hAlign"=>"right","ancho"=>"30px")),
+          new modelFieldItem(array("nombre"=>"CV", "nombreData"=>"contenedor_v","hAlign"=>"right","ancho"=>"30px")),
           new modelFieldItem(array("nombre"=>"C Otros", "nombreData"=>"contenedor_otros","hAlign"=>"right","ancho"=>"30px")),
-          new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
+          //new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
         );
         vTable($modelField, stdToArray($dataDetalle), 0, 'gridDetalle');
       ?>
@@ -235,30 +228,13 @@
         </tbody>
       </table>
     </div>
-    <div class="col-lg-12">
-      <div class="col-lg-6">
-        <?php vLabel('taRMuestra','Observaciones de Recepción de Muestra'); ?>
-        <?php vTextBoxArea($textAreaM, $textAreaM,5) ?>
-      </div>
-      <div class="col-lg-6">
-        <?php vLabel('taRLaboratorio','Observaciones de Laboratorio'); ?>
-        <?php vTextBoxArea($textAreaL, $textAreaL,5) ?>
-      </div>      
-    </div>
       <div id="divDetalle"></div>
     </div>
 	</div>  
 	<br><br>
 
     <div class="box-footer">
-
-		<div class="box-tools pull-right">
-
-			<button type="button" class="btn btn-flat btn-success" onClick="onDetalleDatos()"><i class="fa fa-save"></i> Guardar</button>
-
-		</div>
-
-	</div>
+	  </div>
   </div>
   <!-- /.box -->
   
@@ -272,7 +248,7 @@
 		"data": <?php echo json_encode($dataDetalle); ?>,
 		"modelField": <?php echo json_encode($modelFieldDetalle); ?>
 	};*/
-  //$('table').DataTable({"autoWidth": false});
+  $('table').DataTable({"autoWidth": false});
 </script>
 <script>
   $(document).ready(function() {
@@ -348,7 +324,7 @@
   }
   function onDetalle_delete(_id){
     $url = "<?php echo site_url('muestra/deleteAction'); ?>" + "/" + _id;
-    rpta = ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado?',$url);    
+    rpta = ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado',$url);    
   }
   function onDetalleDatos(){
     var formData = new FormData($("#frmCadenaCustodia")[0]);

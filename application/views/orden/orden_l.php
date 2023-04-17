@@ -18,14 +18,14 @@
 
       <div class="box-tools pull-right">
         <?php 
-        if (hasPermissions('obra_add'))
-          vButton('btnNuevo', 'Nuevo', "obra/nuevo", "fa fa-plus", "btn btn-primary");
+        if (hasPermissions('cadena_custodia_add'))
+          vButton('btnNuevo', 'Nuevo', "cadena_custodia/nuevo", "fa fa-plus", "btn btn-primary");
         ?>
-        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+        <!--button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                 title="Collapse">
           <i class="fa fa-minus"></i></button>
         <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-          <i class="fa fa-times"></i></button>
+          <i class="fa fa-times"></i></button-->
       </div>
 
     </div>
@@ -33,15 +33,17 @@
 
       <?php
         $Actions = array();
-          if (hasPermissions('obra_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("obra/edit"),"id"));
-          if (hasPermissions('obra_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("obra/deleteAction"),"id"));
+          if (hasPermissions('cadena_custodia_edit')) array_push($Actions, modelFieldAction::btnEdit(site_url("cadena_custodia/edit"),"id"));
+          if (hasPermissions('cadena_custodia_edit')) array_push($Actions, modelFieldAction::btnview(site_url("cadena_custodia/view"),"id"));
+          //if (hasPermissions('cadena_custodia_delete')) array_push($Actions, modelFieldAction::btnDelete(site_url("cadena_custodia/deleteAction"),"id"));
         $modelField = array(
           new modelFieldItem(array("nombre"=>"ID", "nombreData"=>"id","hAlign"=>"center","ancho"=>"60px")),
-          new modelFieldItem(array("nombre"=>"Nombre", "nombreData"=>"o_nombre")),
-          new modelFieldItem(array("nombre"=>"Monto", "nombreData"=>"o_monto","hAlign"=>"right")),
+          new modelFieldItem(array("nombre"=>"Cliente", "nombreData"=>"cliente")),
+          new modelFieldItem(array("nombre"=>"Empleado", "nombreData"=>"proyecto")),
+          new modelFieldItem(array("nombre"=>"Fecha", "nombreData"=>"fecha")),
           new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
         );
-        vTable($modelField, stdToArray($obra), 0, 'tlbListado');
+        vTable($modelField, stdToArray($cadena), 0, 'tlbListado');
       ?>
     </div>
     <!-- /.box-body -->
@@ -54,5 +56,5 @@
 <?php include viewPath('includes/footer'); ?>
 
 <script>
-  $('table').DataTable({"autoWidth": false});
+  $('table').DataTable({"order": [[0, "desc"]],"autoWidth": false});
 </script>

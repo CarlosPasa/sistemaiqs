@@ -111,5 +111,5 @@ class Empleado extends MY_Controller {
 	}
 }
 
-/* End of file Menu.php */
-/* Location: ./application/controllers/Menu.php */
+/* End of file Empleado.php */
+/* Location: ./application/controllers/Empleado.php */

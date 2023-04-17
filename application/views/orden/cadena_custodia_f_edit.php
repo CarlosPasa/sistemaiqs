@@ -136,7 +136,6 @@
       </div>
       <div id="gridDetalle" >
         <?php
-        /*
           $Actions = array(new modelFieldAction(array("class"=>"btn btn-sm btn-info","icono"=>"glyphicon glyphicon-pencil","tooltip"=>"Modificar","columnNameID"=>"id","onClick"=>'onDetalle_edit("_id_")')),
                           new modelFieldAction(array("class"=>"btn btn-sm btn-warning", "icono"=>"fa fa-flask","tooltip"=>"Ver Analisis","columnNameID"=>"id","onClick"=>'listarMuestra("_id_")')),
                           new modelFieldAction(array("class"=>"btn btn-sm btn-success", "icono"=>"fa fa-plus-square","tooltip"=>"Agregar Análisis","columnNameID"=>"id","onClick"=>'onNuevo_analisis("_id_")')),
@@ -153,27 +152,8 @@
           array_push($modelFieldDetalle, new modelFieldItem(array("nombre"=>"C Otros", "nombreData"=>"contenedor_otros","hAlign"=>"right","ancho"=>"30px")) );
           array_push($modelFieldDetalle,
                   new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
-                  );*/
+                  );
         ?>
-        <?php      
-        $Actions = array();
-        array_push($Actions, modelFieldAction::btnEditJS("onDetalle_edit","id"));
-        array_push($Actions, modelFieldAction::btnVerAnalisisJS("listarMuestra","id"));
-        array_push($Actions, modelFieldAction::btnCrearAnalisisJS("onNuevo_analisis","id"));
-        array_push($Actions, modelFieldAction::btnDelete(site_url("muestra/deleteAction"),"id"));
-        $modelField = array(
-          new modelFieldItem(array("nombre"=>"Código de Muestra", "nombreData"=>"id","","ancho"=>"115px","hAlign"=>"center")),
-          new modelFieldItem(array("nombre"=>"Código de Campo/Puntos de Muestreo", "nombreData"=>"codigo_campo","ancho"=>"300px")),
-          new modelFieldItem(array("nombre"=>"Locación/Ubicación", "nombreData"=>"ubicacion","hAlign"=>"center","ancho"=>"100px")),
-          new modelFieldItem(array("nombre"=>"Fecha de Muestreo", "nombreData"=>"fecha","hAlign"=>"right","ancho"=>"74px","hAlign"=>"center")),
-          new modelFieldItem(array("nombre"=>"Hora de Muestreo", "nombreData"=>"hora","hAlign"=>"right","ancho"=>"67px","hAlign"=>"center")),
-          new modelFieldItem(array("nombre"=>"CP", "nombreData"=>"contenedor_p","hAlign"=>"right","ancho"=>"30px","title"=>"Contenedores P")),
-          new modelFieldItem(array("nombre"=>"CV", "nombreData"=>"contenedor_v","hAlign"=>"right","ancho"=>"30px","title"=>"Contenedores V")),
-          new modelFieldItem(array("nombre"=>"C Otros", "nombreData"=>"contenedor_otros","hAlign"=>"right","ancho"=>"30px")),
-          new modelFieldItem(array("nombre"=>"Acciones", "arrayAcciones"=>$Actions,"hAlign"=>"center","ancho"=>"150px"))
-        );
-        vTable($modelField, stdToArray($dataDetalle), 0, 'gridDetalle');
-      ?>
       </div>
       <div style=" position: relative;top: -20px;">
         <table id="gridDetalle_table" class="table table-hover" cellspacing="0" width="100%" >
@@ -182,7 +162,7 @@
               <th class="text-center" width="120px"></th>
               <th class="text-center" width="457.267px"></th>
               <th class="text-center" width="64.86px"></th>
-              <th class="text-center" width="77.43px"></th>
+              <th class="text-center"width="77.43px"></th>
               <th class="text-center" width="70px"></th>
               <th class="text-center" width="91.03"></th>
               <th class="text-center" width="157px"></th>
@@ -192,62 +172,10 @@
           </tbody>
         </table>
       </div>
-      <div class='table-responsive'>
-    <table id='table' class='table table-striped table-bordered' cellspacing='1' width='60%'>
-        <thead>
-          <tr>
-            <th class='text-center' width="220px">Datos</th>
-            <th class='text-center'>Responsable</th>
-            <th class='text-center'>Organización</th>
-            <th class='text-center'>Fecha</th>
-            <th class='text-center'>Hora</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th class='text-left'>Transportado por:</th>
-            <td class='text-center'><?php echo $persona_transportado?></td>            
-            <td class='text-center'>IQS</td>
-            <td class='text-center'><?php echo $fecha_transporte?></td>
-            <td class='text-center'><?php echo $hora_transporte?></td>
-          </tr>
-          <tr>
-            <th class='text-left'>Entregado por:</th>
-            <td class='text-center'><?php echo $persona_entrega?></td>            
-            <td class='text-center'>IQS</td>
-            <td class='text-center'><?php echo $fecha_entrega?></td>
-            <td class='text-center'><?php echo $hora_entrega?></td>
-          </tr>
-          <tr>
-            <th class='text-left'>Ingresado por:</th>
-            <td class='text-center'><?php echo $persona_ingreso?></td>            
-            <td class='text-center'>IQS</td>
-            <td class='text-center'><?php echo $fecha_ingreso?></td>
-            <td class='text-center'><?php echo $hora_ingreso?></td>
-          </tr>
-          <tr>
-            <th class='text-left'>Recibido en Laboratorio por:</th>
-            <td class='text-center'><?php echo $laboratorista?></td>            
-            <td class='text-center'>IQS</td>
-            <td class='text-center'><?php echo $fecha_laboratorio?></td>
-            <td class='text-center'><?php echo $hora_laboratorio?></td>
-          </tr>          
-        </tbody>
-      </table>
-    </div>
-    <div class="col-lg-12">
-      <div class="col-lg-6">
-        <?php vLabel('taRMuestra','Observaciones de Recepción de Muestra'); ?>
-        <?php vTextBoxArea($textAreaM, $textAreaM,5) ?>
-      </div>
-      <div class="col-lg-6">
-        <?php vLabel('taRLaboratorio','Observaciones de Laboratorio'); ?>
-        <?php vTextBoxArea($textAreaL, $textAreaL,5) ?>
-      </div>      
-    </div>
       <div id="divDetalle"></div>
     </div>
-	</div>  
+	</div>
+
 	<br><br>
 
     <div class="box-footer">
@@ -267,12 +195,11 @@
 <!-- /.content -->
 <script type="text/javascript">
   //Rellenar la tabla
-	/*var $gridDetalle = {
+	var $gridDetalle = {
 		"nombre": "gridDetalle",
 		"data": <?php echo json_encode($dataDetalle); ?>,
 		"modelField": <?php echo json_encode($modelFieldDetalle); ?>
-	};*/
-  //$('table').DataTable({"autoWidth": false});
+	};
 </script>
 <script>
   $(document).ready(function() {
@@ -291,7 +218,7 @@
         }
     });
     //Cargar Rejillas
-    //vTableInit($gridDetalle);
+    vTableInit($gridDetalle);
     $('#chkIQS').change(function () {
         if ($(this).prop('checked')) {
             $('#chkCliente').prop('checked', false);
@@ -302,8 +229,7 @@
   vFormValidator_number('#frmCadenaCustodia #txtTelefono');
   vFormValidator_number('#frmCadenaCustodia #txtCelular');
   function onDetalle_reload(){
-    location.reload();
-    /*$.ajax({
+    $.ajax({
       type: 'GET',
       url: '<?php echo site_url('/cadena_custodia/listar_muestras') ?>' + '/' + $("#id").val(),
       data: null,
@@ -311,10 +237,10 @@
       success: function (results) {
         resultsObj = jQuery.parseJSON(results);
         $gridDetalle.data = resultsObj.data;
-        vTableRefresh($gridDetalle);        
+        vTableRefresh($gridDetalle);
         $("#pageSpin").hide();
       }
-    });*/
+    });
   }
   function onMuestra_nuevo() {
     $url = '<?php echo site_url('muestra/nuevoModal') ?>';
@@ -348,7 +274,7 @@
   }
   function onDetalle_delete(_id){
     $url = "<?php echo site_url('muestra/deleteAction'); ?>" + "/" + _id;
-    rpta = ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado?',$url);    
+    rpta = ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado',$url);    
   }
   function onDetalleDatos(){
     var formData = new FormData($("#frmCadenaCustodia")[0]);

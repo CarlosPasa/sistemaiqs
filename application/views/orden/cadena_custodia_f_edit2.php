@@ -348,7 +348,7 @@
   }
   function onDetalle_delete(_id){
     $url = "<?php echo site_url('muestra/deleteAction'); ?>" + "/" + _id;
-    rpta = ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado?',$url);    
+    rpta = ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado',$url);    
   }
   function onDetalleDatos(){
     var formData = new FormData($("#frmCadenaCustodia")[0]);

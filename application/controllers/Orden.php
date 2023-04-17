@@ -1,27 +1,27 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Cliente extends MY_Controller {
+class Orden extends MY_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
 		//Models
-		$this->load->model('cliente_model');
+		$this->load->model('cadena_model');
 		$this->load->library('form_validation');//cargo la libreria de validacion
 		//Textos
-		$this->page_data['page']->title = 'Clientes';
+		$this->page_data['page']->title = 'Ordenes';
 		$this->page_data['page']->menu = 'cliente';
-		$this->page_data['titulo'] = "Clientes";
+		$this->page_data['titulo'] = "Ordenes";
   		$this->page_data['subTitulo'] = "Administrar";
 	}
 
 	public function index()
 	{
-		ifPermissions('cliente_list');
-  		$this->page_data['tablaTitulo'] = "Lista de Clientes";
-		$this->page_data['clientes'] = $this->cliente_model->getActive();
-		$this->load->view('cliente/cliente_l', $this->page_data);
+		ifPermissions('cadena_custodia_list');
+  		$this->page_data['tablaTitulo'] = "Lista de Ordenes de ensayo";
+		$this->page_data['cadena'] = $this->cadena_model->getAllCabecera();
+		$this->load->view('orden/orden_l', $this->page_data);
 	}
 
 	public function edit($id)
@@ -33,7 +33,7 @@ class Cliente extends MY_Controller {
 		$registro = $this->cliente_model->getById($id);
 		$data = array(
 					'id' => $registro->id,
-					'txtNombreCliente' => $registro->nombre_cliente
+					'txtNombreOrden' => $registro->nombre_cliente
 		);
 		$dataAdicional = array(			
 		);
@@ -44,7 +44,7 @@ class Cliente extends MY_Controller {
 	{
 		$id = $this->input->post('id');
 		$data = array(
-					'nombre_cliente' => $this->input->post('txtNombreCliente'),
+					'nombre_cliente' => $this->input->post('txtNombreOrden'),
 					'updated_at' => date("Y-m-d H:i:s"),
 		);
 		$registro = $this->cliente_model->update($id, $data);
@@ -59,7 +59,7 @@ class Cliente extends MY_Controller {
 	{
 		ifPermissions('cliente_delete');
 		$id = $this->cliente_model->delete_logic($id);
-		$this->activity_model->action_delete("Cliente", $id);
+		$this->activity_model->action_delete("Orden", $id);
 		$status = array(
 						"STATUS"=>"true",
 						"mensaje"=>"Registo eliminado satisfactoriamente",
@@ -75,7 +75,7 @@ class Cliente extends MY_Controller {
 		$this->page_data['postAction'] = "cliente/nuevoModalAction";
         $data = array(
             'id'			=> "0",
-			'txtNombreCliente'		=> ""
+			'txtNombreOrden'		=> ""
         );
 		$dataAdicional = array(
         );
@@ -85,11 +85,11 @@ class Cliente extends MY_Controller {
 	public function nuevoModalAction()
     {
 		$data = array(
-					'nombre_cliente' => $this->input->post('txtNombreCliente'),
+					'nombre_cliente' => $this->input->post('txtNombreOrden'),
 					'estado' => '1'
  		);		
 		$config = array(
-			array('field' => 'txtNombreCliente','label' => 'Nombre del Cliente', 'rules' => 'required')
+			array('field' => 'txtNombreOrden','label' => 'Nombre del Ordene', 'rules' => 'required')
 		);
 		$this->form_validation->set_rules($config);
 		if($this->form_validation->run() == FALSE){
@@ -100,7 +100,7 @@ class Cliente extends MY_Controller {
 			echo json_encode ($status);
 		}else{
 			$cliente = $this->cliente_model->create($data);
-			$this->activity_model->action_create("Clientes");
+			$this->activity_model->action_create("Ordenes");
 			$status = array(
 							"STATUS"      =>"true",
 							"mensaje"     =>"",
@@ -111,5 +111,5 @@ class Cliente extends MY_Controller {
 	}
 }
 
-/* End of file Cliente.php */
-/* Location: ./application/controllers/Cliente.php */
+/* End of file Orden.php */
+/* Location: ./application/controllers/Orden.php */

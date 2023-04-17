@@ -1063,7 +1063,7 @@ class modelFieldAction{
 
 	public static function btnDelete($url, $columnNameID){
 
-		return new modelFieldAction(array("url"=>$url."/_id_", "columnNameID"=>$columnNameID, "class"=>"btn btn-sm btn-danger", "icono"=>"glyphicon glyphicon-trash","tooltip"=>"Eliminar","onClick"=>"ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado','_url_')"));
+		return new modelFieldAction(array("url"=>$url."/_id_", "columnNameID"=>$columnNameID, "class"=>"btn btn-sm btn-danger", "icono"=>"glyphicon glyphicon-trash","tooltip"=>"Eliminar","onClick"=>"ShowDialogQuestion('PREGUNTA','¿Desea eliminar el registro seleccionado?','_url_')"));
 
 	}
 	// Creado el 08/03/2023
