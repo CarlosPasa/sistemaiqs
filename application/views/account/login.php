@@ -4,9 +4,9 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
   <div class="login-logo">
-    <a href="<?php echo url('/') ?>"><b>Admin</b> Panel</a>
+    <a href="<?php echo url('/') ?>"><b>Bienvenido a IQS</b></a>
   </div>
-    <p class="login-box-msg">Bienvenido a IQS</p>
+    <p class="login-box-msg">Gestionamos Análisis Petroquimicos de Calidad</p>
 
     <?php if(isset($message)): ?>
       <div class="alert alert-<?php echo $message_type ?>">
